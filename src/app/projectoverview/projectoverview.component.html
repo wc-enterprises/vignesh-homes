@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="heropage">
+      <div style="height: 90px; width: 100%"></div>
+      <app-navbar style="position: fixed; z-index: 1"></app-navbar>
+      <div class="breadcrumbs">
+        <span class="home-breadcrumbs">Home</span>
+        ><span class="residential-breadcrumbs"> Residential </span>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button>Location</button>
+      <button>Floor plan</button>
+      <button>Specification</button>
+    </div>
+
+    <div class="project-intro-mainbox">
+      <div class="project-intro-subbox">
+        <span class="project-title"> GOTETY RESIDENCY</span>
+        <span class="project-image">
+          <img src="/assets/project-image.svg" />
+        </span>
+        <span class="project-content"
+          >Usually, land owners opt for joint venture property development if
+          they have a vacant plot that they want to develop, if the property is
+          being divided amongst siblings or if the owner is looking to renovate
+          the existing flat/apartment, where the FSI (Floor Space Index) is
+          revised.
+        </span>
+      </div>
+    </div>
+
+    <div class="project-location-mainbox">
+      <div class="project-location-subbox">
+        <span class="location-head"> LOCATION</span>
+        <div class="location-container-box">
+          <div class="location-container-subbox">
+            <span class="location-address"
+              >No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai
+              - 600089.
+            </span>
+            <div class="location-content-box">
+              <span class="location-content"
+                >Usually, land owners opt for joint venture property development
+                if they have a vacant plot that they want to develop, if the
+                property is being divided amongst siblings or if the owner is
+                looking to renovate the existing flat/apartment, where the FSI
+                (Floor Space Index) is revised.
+              </span>
+              <span class="location-content"
+                >Usually, land owners opt for joint venture property development
+                if they have a vacant plot that they want to develop, if the
+                property is being divided amongst siblings or if the owner is
+                looking to renovate the existing flat/apartment, where the FSI
+                (Floor Space Index) is revised.
+              </span>
+            </div>
+          </div>
+          <span class="location-image">
+            <img src="/assets/map.svg" />
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="floorplan-mainbox">
+      <div class="floorplan-subbox">
+        <span class="project-title"> FLOOR PLAN</span>
+
+        <div class="floorplan-container-box">
+          <img src="/assets/left-arrow.svg" class="arrow-button left" />
+
+          <div class="floorplan-container" #floorplanContainer>
+            <span class="floorplan-img" *ngFor="let plan of floorPlans">
+              <img [src]="plan.imgSrc" />
+            </span>
+          </div>
+
+          <img src="/assets/right-arrow.svg" class="arrow-button right" />
+        </div>
+      </div>
+    </div>
+
+    <div class="specification-mainbox">
+      <div class="specification-subbox">
+        <span class="specification-head"> SPECIFICATION</span>
+        <div class="grid-sec">
+          <div
+            class="specification-grid-box"
+            *ngFor="let spec of specifications"
+          >
+            <span class="specification-title">{{ spec.title }}</span>
+            <span class="specification-content">{{ spec.content }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<body>
+  <div class="nav-container">
+    <div class="logo-container" style="cursor: pointer">
+      <img src="/assets/logo.svg" alt="logo" />
+      <span>
+        <h5>VIGNESH HOMES</h5>
+        <h2>Builders & Contractors</h2>
+      </span>
+    </div>
+    <!--Laptop screen nav content-->
+    <div id="sidemenu">
+      <span class="sidemenucont">
+        <a>Home</a>
+      </span>
+      <span class="sidemenucont">
+        <a>Commercial</a>
+      </span>
+      <span class="sidemenucont">
+        <a>Joint venture</a>
+      </span>
+      <span class="sidemenucont"><a>About us</a></span>
+      <span class="sidemenucont">
+        <a>Contact</a>
+      </span>
+      <img
+        id="menu-icon"
+        style="cursor: pointer"
+        src="/assets/menu-icon.svg"
+        alt="menu-icon"
+      />
+    </div>
+    <!--Side nav for mobile and tab-->
+    <div
+      id="mySidenav"
+      class="sidenav"
+      [ngStyle]="{ 'width.px': sidenavWidth }"
+    >
+      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()"
+        >&times;</a
+      >
+      <a>Home</a>
+      <a>Commercial</a>
+      <a>Joint venture</a>
+      <a>About us</a>
+      <a>Contact</a>
+    </div>
+  </div>
+</body>
