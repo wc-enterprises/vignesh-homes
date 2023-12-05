@@ -6,6 +6,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TestimonialcardComponent } from '../testimonialcard/testimonialcard.component';
 import { ProjectcardComponent } from '../projectcard/projectcard.component';
+import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -15,6 +17,7 @@ import { ProjectcardComponent } from '../projectcard/projectcard.component';
     CommonModule,
     TestimonialcardComponent,
     ProjectcardComponent,
+    RouterModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
@@ -68,6 +71,18 @@ export class HomeComponent {
   //     address: 'Mr. siv, Flat No - 201, Saiakshi Gardens.',
   //   },
   // ];
+
+  cardData = {
+    image: '/assets/comingsoon-img.svg',
+    title: 'Premium 2 & 1 BHK flats for sale in Valasaravakkam, Chennai.',
+    approval: 'CMDA Approved',
+    foundation: 'Pile Foundation',
+    structure: 'Stilt + 3 Floor',
+    salableArea: '-',
+    unitType: '2 & 1 BHK',
+    totalUnit: '6',
+    projectHighlight: 'Lift, Video Door, CCTV & EV Charging Point.',
+  };
 
   testimonials = [
     {
@@ -127,6 +142,27 @@ export class HomeComponent {
     container.scrollLeft += scrollAmount;
   }
   cardsData = [
+    {
+      projectImage: '/assets/project1.svg',
+      saleTag: '/assets/forsale.svg',
+      projectTitle: 'GOTETY RESIDENCY',
+      projectSubtitle:
+        'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
+    },
+    {
+      projectImage: '/assets/project2.svg',
+      saleTag: '/assets/ongoing.svg',
+      projectTitle: 'GOTETY RESIDENCY',
+      projectSubtitle:
+        'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
+    },
+    {
+      projectImage: '/assets/project3.svg',
+      saleTag: '/assets/complete.svg',
+      projectTitle: 'GOTETY RESIDENCY',
+      projectSubtitle:
+        'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
+    },
     {
       projectImage: '/assets/project1.svg',
       saleTag: '/assets/forsale.svg',

@@ -67,3 +67,29 @@ body {
   line-height: 29px; /* Adjusted line height for better visual appearance */
   overflow: hidden;
 }
+
+@media (max-width: 1025px) {
+  .project-card {
+    width: 300px;
+  }
+
+  .project-image {
+    height: 230px;
+    border-radius: 12px;
+  }
+  .project-details {
+    padding: 12px 0px;
+    gap: 8px;
+  }
+
+  .project-title {
+    height: 22px;
+    font-size: 16px;
+  }
+
+  .project-subtitle {
+    height: 50px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+}

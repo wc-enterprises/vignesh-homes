@@ -146,3 +146,145 @@ body::-webkit-scrollbar {
   gap: 20px;
   flex-wrap: wrap;
 }
+@media (max-width: 426px) {
+  #heropage {
+    height: 70%;
+    padding-bottom: 40px;
+  }
+  #heropage span {
+    font-size: 20px;
+    padding: 0px 20px;
+  }
+  .tabs {
+    padding: 8px 0px;
+    gap: 7px;
+  }
+  .tabs button {
+    padding: 8px 8px;
+    font-size: 12px;
+    gap: 7px;
+    line-height: 20px;
+  }
+  .project-show-mainbox {
+    padding: 40px 20px;
+  }
+  .project-show-subbox {
+    width: 100%;
+    gap: 30px;
+  }
+  .project-show-maindetails {
+    width: 100%;
+    gap: 20px;
+  }
+  .project-show-detail-head {
+    font-size: 22px;
+  }
+  .project-show-subdetails {
+    gap: 25px;
+  }
+  .project-show-subdetails span {
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .project-show-subdetails button {
+    width: 220px;
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .project-card-sec {
+    gap: 20px;
+  }
+}
+@media (min-width: 426px) and (max-width: 769px) {
+  #heropage {
+    height: 65%;
+    padding-bottom: 40px;
+  }
+  #heropage span {
+    font-size: 24px;
+  }
+  .tabs {
+    padding: 8px 0px;
+  }
+  .tabs button {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+  .project-show-mainbox {
+    padding: 50px 40px;
+  }
+  .project-show-subbox {
+    width: 100%;
+    gap: 30px;
+  }
+  .project-show-maindetails {
+    width: 80%;
+    gap: 20px;
+  }
+  .project-show-detail-head {
+    font-size: 24px;
+  }
+  .project-show-subdetails {
+    gap: 25px;
+  }
+  .project-show-subdetails span {
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .project-show-subdetails button {
+    width: 250px;
+    padding: 12px 20px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .project-card-sec {
+    gap: 20px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1025px) {
+  #heropage {
+    height: 60%;
+    padding-bottom: 40px;
+  }
+  #heropage span {
+    font-size: 28px;
+  }
+  .tabs {
+    padding: 10px 0px;
+  }
+  .tabs button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .project-show-mainbox {
+    padding: 50px 40px;
+  }
+  .project-show-subbox {
+    width: 100%;
+    gap: 40px;
+  }
+  .project-show-maindetails {
+    width: 80%;
+    gap: 30px;
+  }
+  .project-show-detail-head {
+    font-size: 30px;
+  }
+  .project-show-subdetails {
+    gap: 25px;
+  }
+  .project-show-subdetails span {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .project-show-subdetails button {
+    width: 300px;
+    padding: 13px 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .project-card-sec {
+    gap: 20px;
+  }
+}

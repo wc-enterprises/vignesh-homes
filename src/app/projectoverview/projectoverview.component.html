@@ -75,15 +75,11 @@
         <span class="project-title"> FLOOR PLAN</span>
 
         <div class="floorplan-container-box">
-          <img src="/assets/left-arrow.svg" class="arrow-button left" />
-
           <div class="floorplan-container" #floorplanContainer>
             <span class="floorplan-img" *ngFor="let plan of floorPlans">
               <img [src]="plan.imgSrc" />
             </span>
           </div>
-
-          <img src="/assets/right-arrow.svg" class="arrow-button right" />
         </div>
       </div>
     </div>

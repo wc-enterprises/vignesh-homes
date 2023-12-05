@@ -26,8 +26,8 @@
       <div style="height: 40px; width: 100%"></div>
     </div>
     <div class="project-container">
-      <div class="coming-soon-subcontainer">
-        <div class="coming-soon-header">
+      <div class="project-subcontainer">
+        <div class="project-header">
           <span> OUR PROJECT’S </span>
           <img src="/assets/line.svg" />
         </div>
@@ -42,7 +42,9 @@
               ></app-projectcard>
             </div>
           </div>
-          <button class="explore-button">explore more</button>
+          <button class="explore-button" [routerLink]="['/projectsec']">
+            explore more
+          </button>
         </div>
       </div>
     </div>
@@ -55,43 +57,54 @@
 
         <div class="coming-soon-card">
           <span class="coming-soon-card-img"
-            ><img src="/assets/comingsoon-img.svg"
+            ><img [src]="cardData.image"
           /></span>
           <div class="coming-soon-card-container">
-            <span class="coming-soon-card-container-head"
-              >Premium 2 & 1 BHK flats for sale in Valasaravakkam,
-              Chennai.</span
-            >
+            <span class="coming-soon-card-container-head">{{
+              cardData.title
+            }}</span>
             <div class="coming-soon-card-details">
               <div class="coming-soon-card-detail-sec">
                 <span class="coming-soon-card-head">APPROVAL</span>
-                <span class="coming-soon-card-subhead">CMDA Approved</span>
+                <span class="coming-soon-card-subhead">{{
+                  cardData.approval
+                }}</span>
               </div>
               <div class="coming-soon-card-detail-sec">
                 <span class="coming-soon-card-head">FOUNDATION</span>
-                <span class="coming-soon-card-subhead">Pile Foundation</span>
+                <span class="coming-soon-card-subhead">{{
+                  cardData.foundation
+                }}</span>
               </div>
               <div class="coming-soon-card-detail-sec">
                 <span class="coming-soon-card-head">STRUCTURE </span>
-                <span class="coming-soon-card-subhead">Stilt + 3 Floor</span>
+                <span class="coming-soon-card-subhead">{{
+                  cardData.structure
+                }}</span>
               </div>
               <div class="coming-soon-card-detail-sec">
                 <span class="coming-soon-card-head">SALABLE AREA</span>
-                <span class="coming-soon-card-subhead">-</span>
+                <span class="coming-soon-card-subhead">{{
+                  cardData.salableArea
+                }}</span>
               </div>
               <div class="coming-soon-card-detail-sec">
                 <span class="coming-soon-card-head">UNIT TYPE</span>
-                <span class="coming-soon-card-subhead">2 & 1 BHK</span>
+                <span class="coming-soon-card-subhead">{{
+                  cardData.unitType
+                }}</span>
               </div>
               <div class="coming-soon-card-detail-sec">
                 <span class="coming-soon-card-head">TOTAL UNIT</span>
-                <span class="coming-soon-card-subhead">6</span>
+                <span class="coming-soon-card-subhead">{{
+                  cardData.totalUnit
+                }}</span>
               </div>
               <div class="coming-soon-card-detail-sec">
                 <span class="coming-soon-card-head">PROJECT HIGHLIGHT</span>
-                <span class="coming-soon-card-subhead"
-                  >Lift, Video Door, CCTV & EV Charging Point.</span
-                >
+                <span class="coming-soon-card-subhead">{{
+                  cardData.projectHighlight
+                }}</span>
               </div>
             </div>
           </div>
@@ -223,11 +236,11 @@
         </div> -->
 
         <div class="testimonials-container-box">
-          <img
+          <!-- <img
             src="/assets/left-arrow.svg"
             (click)="moveLeft()"
             class="arrow-button left"
-          />
+          /> -->
 
           <div class="testimonials-container" #testimonialsContainer>
             <ng-container *ngFor="let testimonial of testimonials">
@@ -238,11 +251,11 @@
             </ng-container>
           </div>
 
-          <img
+          <!-- <img
             src="/assets/right-arrow.svg"
             (click)="moveRight()"
             class="arrow-button right"
-          />
+          /> -->
         </div>
       </div>
     </div>
