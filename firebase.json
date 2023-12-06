@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/vignesh-homes",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

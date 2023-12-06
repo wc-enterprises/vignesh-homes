@@ -15,9 +15,9 @@ export const routes: Routes = [
   { path: 'aboutus', component: AboutusComponent },
   { path: 'jointventure', component: JointventureComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'overview', component: ProjectoverviewComponent },
-  { path: '', component: ProjectsecComponent },
+  { path: 'projectsec', component: ProjectsecComponent },
 
   { path: 'projectcard', component: ProjectcardComponent },
   { path: 'tmcard', component: TestimonialcardComponent },
