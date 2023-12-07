@@ -1,0 +1,9 @@
+<div id="mySidenav" [style.width.px]="sidenavWidth">
+  <a [routerLink]="'/'">Home</a>
+  <a [routerLink]="'/projectsec'">Commercial</a>
+  <a [routerLink]="'/aboutus'">About Us</a>
+  <a [routerLink]="'/contact'">Contact</a>
+</div>
+
+<button (click)="openNav()">Open SideNav</button>
+<button (click)="closeNav()">Close SideNav</button>

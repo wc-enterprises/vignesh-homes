@@ -12,4 +12,10 @@ export class ProjectcardComponent {
   @Input() saleTag: string = '';
   @Input() projectTitle: string = '';
   @Input() projectSubtitle: string = '';
+
+  // constructor(private router: Router) {}
+
+  // navigateToProjectSec() {
+  //   this.router.navigate(['/projectsec']);
+  // }
 }

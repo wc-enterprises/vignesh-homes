@@ -35,6 +35,7 @@
           <div class="project-card-sec">
             <div *ngFor="let cardData of cardsData">
               <app-projectcard
+                routerLink="projectsec"
                 [projectImage]="cardData.projectImage"
                 [saleTag]="cardData.saleTag"
                 [projectTitle]="cardData.projectTitle"
@@ -42,9 +43,14 @@
               ></app-projectcard>
             </div>
           </div>
-          <button class="explore-button" [routerLink]="['/projectsec']">
-            explore more
-          </button>
+
+          <a
+            class="explore-button"
+            style="text-decoration: none"
+            routerLink="/projectsec"
+          >
+            Explore more</a
+          >
         </div>
       </div>
     </div>

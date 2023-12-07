@@ -1,21 +1,42 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  Output,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-
+import { Router, RouterModule } from '@angular/router';
+import { HomeComponent } from '../home/home.component';
+import { ContactComponent } from '../contact/contact.component';
+import { ProjectsecComponent } from '../projectsec/projectsec.component';
+import { AboutusComponent } from '../aboutus/aboutus.component';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
-  // sidenavWidth: number = 0;
-  // viewportScroller: any;
-  // openNav(): void {
-  //   this.sidenavWidth = 250; // Set the width when opening the side nav
+  sidenavWidth: number = 0;
+
+  // openNav() {
+  //   this.sidenavWidth = 250;
   // }
-  // closeNav(): void {
-  //   this.sidenavWidth = 0; // Set the width to 0 when closing the side nav
-  // }
+  openNav() {
+    this.sidenavWidth = 250;
+    console.log('Side nav opened. sidenavWidth:', this.sidenavWidth);
+  }
+
+  closeNav() {
+    this.sidenavWidth = 0;
+  }
+
+  constructor(private router: Router) {}
+
+  navigateToHome(): void {
+    this.router.navigate(['/']);
+  }
 }

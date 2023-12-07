@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
@@ -9,16 +9,28 @@ import { TestimonialcardComponent } from './testimonialcard/testimonialcard.comp
 import { ProjectcardComponent } from './projectcard/projectcard.component';
 import { ProjectoverviewComponent } from './projectoverview/projectoverview.component';
 import { ProjectsecComponent } from './projectsec/projectsec.component';
+import { ComingsoonComponent } from './comingsoon/comingsoon.component';
+import { CompletedComponent } from './completed/completed.component';
+import { ForsaleComponent } from './forsale/forsale.component';
+import { OngoingComponent } from './ongoing/ongoing.component';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
 export const routes: Routes = [
   { path: 'navbar', component: NavbarComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'aboutus', component: AboutusComponent },
   { path: 'jointventure', component: JointventureComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
+
   { path: 'overview', component: ProjectoverviewComponent },
-  { path: '', component: ProjectsecComponent },
+  { path: 'projectsec', component: ProjectsecComponent },
 
   { path: 'projectcard', component: ProjectcardComponent },
   { path: 'tmcard', component: TestimonialcardComponent },
+  { path: 'comingsoon', component: ComingsoonComponent },
+  { path: 'forsale', component: ForsaleComponent },
+  { path: 'completed', component: CompletedComponent },
+  { path: 'ongoing', component: OngoingComponent },
 ];

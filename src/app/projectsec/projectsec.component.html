@@ -17,11 +17,10 @@
 
     <div class="tabs">
       <div class="tabs">
-        <button (click)="filterProjects('forsale')">For sale</button>
-        <button (click)="filterProjects('ongoing')">Ongoing</button>
-        <button (click)="filterProjects('complete')">Completed</button>
-
-        <button (click)="filterProjects('Coming soon')">Coming soon</button>
+        <button>For sale</button>
+        <button>Ongoing</button>
+        <button>Completed</button>
+        <button>Coming soon</button>
       </div>
     </div>
 
@@ -39,7 +38,9 @@
               dreams become addresses. Take the first step in owning a piece of
               architectural excellence.</span
             >
-            <button>GET IN TOUCH</button>
+            <a style="text-decoration: none" [routerLink]="['/contact']"
+              >GET IN TOUCH</a
+            >
           </div>
           <div></div>
         </div>
