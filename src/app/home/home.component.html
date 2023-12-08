@@ -1,201 +1,187 @@
-<html>
-  <head>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <div id="heropage">
-      <div style="height: 90px; width: 100%"></div>
-      <app-navbar
-        style="position: fixed; z-index: 1"
-        scrollColorChange
-      ></app-navbar>
-      <div class="hero-container">
-        <div class="hero-head">
-          <span class="hero-cont">VIGNESH HOMES</span>
-          <span class="hero-cont1">Builders & Contractors</span>
-        </div>
-        <span class="hero-subhead">
-          We strive to build homes and happiness with the utmost excellence,
-          unsurpassed quality, and innovation you deserve.
-        </span>
-      </div>
-      <div style="height: 40px; width: 100%"></div>
+<div id="heropage">
+  <div style="height: 90px; width: 100%"></div>
+  <app-navbar
+    style="position: fixed; z-index: 1"
+    scrollColorChange
+  ></app-navbar>
+  <div class="hero-container">
+    <div class="hero-head">
+      <span class="hero-cont">VIGNESH HOMES</span>
+      <span class="hero-cont1">Builders & Contractors</span>
     </div>
-    <div class="project-container">
-      <div class="project-subcontainer">
-        <div class="project-header">
-          <span> OUR PROJECT’S </span>
-          <img src="/assets/line.svg" />
-        </div>
-        <div class="project-show-sec">
-          <div class="project-card-sec">
-            <div *ngFor="let cardData of cardsData">
-              <app-projectcard
-                [projectImage]="cardData.projectImage"
-                [saleTag]="cardData.saleTag"
-                [projectTitle]="cardData.projectTitle"
-                [projectSubtitle]="cardData.projectSubtitle"
-              ></app-projectcard>
-            </div>
-          </div>
-          <button class="explore-button" [routerLink]="['/projectsec']">
-            explore more
-          </button>
+    <span class="hero-subhead">
+      We strive to build homes and happiness with the utmost excellence,
+      unsurpassed quality, and innovation you deserve.
+    </span>
+  </div>
+  <div style="height: 40px; width: 100%"></div>
+</div>
+<div class="project-container">
+  <div class="project-subcontainer">
+    <div class="project-header">
+      <span> OUR PROJECT’S </span>
+      <img src="/assets/line.svg" />
+    </div>
+    <div class="project-show-sec">
+      <div class="project-card-sec">
+        <div *ngFor="let cardData of cardsData">
+          <app-projectcard
+            routerLink="projectsec"
+            [projectImage]="cardData.projectImage"
+            [saleTag]="cardData.saleTag"
+            [projectTitle]="cardData.projectTitle"
+            [projectSubtitle]="cardData.projectSubtitle"
+          ></app-projectcard>
         </div>
       </div>
-    </div>
-    <div class="coming-soon-container">
-      <div class="coming-soon-subcontainer">
-        <div class="coming-soon-header">
-          <span> COMING SOON </span>
-          <img src="/assets/line.svg" />
-        </div>
 
-        <div class="coming-soon-card">
-          <span class="coming-soon-card-img"
-            ><img [src]="cardData.image"
-          /></span>
-          <div class="coming-soon-card-container">
-            <span class="coming-soon-card-container-head">{{
-              cardData.title
+      <a
+        class="explore-button"
+        style="text-decoration: none"
+        routerLink="/projectsec"
+      >
+        Explore more</a
+      >
+    </div>
+  </div>
+</div>
+<div class="coming-soon-container">
+  <div class="coming-soon-subcontainer">
+    <div class="coming-soon-header">
+      <span> COMING SOON </span>
+      <img src="/assets/line.svg" />
+    </div>
+
+    <div class="coming-soon-card">
+      <span class="coming-soon-card-img"><img [src]="cardData.image" /></span>
+      <div class="coming-soon-card-container">
+        <span class="coming-soon-card-container-head">{{
+          cardData.title
+        }}</span>
+        <div class="coming-soon-card-details">
+          <div class="coming-soon-card-detail-sec">
+            <span class="coming-soon-card-head">APPROVAL</span>
+            <span class="coming-soon-card-subhead">{{
+              cardData.approval
             }}</span>
-            <div class="coming-soon-card-details">
-              <div class="coming-soon-card-detail-sec">
-                <span class="coming-soon-card-head">APPROVAL</span>
-                <span class="coming-soon-card-subhead">{{
-                  cardData.approval
-                }}</span>
-              </div>
-              <div class="coming-soon-card-detail-sec">
-                <span class="coming-soon-card-head">FOUNDATION</span>
-                <span class="coming-soon-card-subhead">{{
-                  cardData.foundation
-                }}</span>
-              </div>
-              <div class="coming-soon-card-detail-sec">
-                <span class="coming-soon-card-head">STRUCTURE </span>
-                <span class="coming-soon-card-subhead">{{
-                  cardData.structure
-                }}</span>
-              </div>
-              <div class="coming-soon-card-detail-sec">
-                <span class="coming-soon-card-head">SALABLE AREA</span>
-                <span class="coming-soon-card-subhead">{{
-                  cardData.salableArea
-                }}</span>
-              </div>
-              <div class="coming-soon-card-detail-sec">
-                <span class="coming-soon-card-head">UNIT TYPE</span>
-                <span class="coming-soon-card-subhead">{{
-                  cardData.unitType
-                }}</span>
-              </div>
-              <div class="coming-soon-card-detail-sec">
-                <span class="coming-soon-card-head">TOTAL UNIT</span>
-                <span class="coming-soon-card-subhead">{{
-                  cardData.totalUnit
-                }}</span>
-              </div>
-              <div class="coming-soon-card-detail-sec">
-                <span class="coming-soon-card-head">PROJECT HIGHLIGHT</span>
-                <span class="coming-soon-card-subhead">{{
-                  cardData.projectHighlight
-                }}</span>
-              </div>
-            </div>
+          </div>
+          <div class="coming-soon-card-detail-sec">
+            <span class="coming-soon-card-head">FOUNDATION</span>
+            <span class="coming-soon-card-subhead">{{
+              cardData.foundation
+            }}</span>
+          </div>
+          <div class="coming-soon-card-detail-sec">
+            <span class="coming-soon-card-head">STRUCTURE </span>
+            <span class="coming-soon-card-subhead">{{
+              cardData.structure
+            }}</span>
+          </div>
+          <div class="coming-soon-card-detail-sec">
+            <span class="coming-soon-card-head">SALABLE AREA</span>
+            <span class="coming-soon-card-subhead">{{
+              cardData.salableArea
+            }}</span>
+          </div>
+          <div class="coming-soon-card-detail-sec">
+            <span class="coming-soon-card-head">UNIT TYPE</span>
+            <span class="coming-soon-card-subhead">{{
+              cardData.unitType
+            }}</span>
+          </div>
+          <div class="coming-soon-card-detail-sec">
+            <span class="coming-soon-card-head">TOTAL UNIT</span>
+            <span class="coming-soon-card-subhead">{{
+              cardData.totalUnit
+            }}</span>
+          </div>
+          <div class="coming-soon-card-detail-sec">
+            <span class="coming-soon-card-head">PROJECT HIGHLIGHT</span>
+            <span class="coming-soon-card-subhead">{{
+              cardData.projectHighlight
+            }}</span>
           </div>
         </div>
       </div>
     </div>
-    <div class="about-container">
-      <div class="about-subcontainer">
-        <span class="about-head"> WHO WE ARE? </span>
-        <div class="about-content">
-          <span>
-            Vignesh Homes was established in 2003, with property development as
-            its main focus. The Vignesh Homes Group is a new generation,
-            Chennai-based, real-estate development company transcending
-            conventions in design, quality, construction and customer
-            relationships based on its founding principles of Integrity,
-            Quality, Commitment and Professionalism.
-          </span>
-          <span>
-            Vignesh home’s experience in delivering residential, hospitality and
-            commercial projects is built on these four core values that are
-            embedded in us from blueprint to brick. We believe that the key
-            element of all our projects is always the CUSTOMER – a view shared
-            by one of the most dedicated teams in the industry. <a>Know more</a>
-          </span>
-        </div>
-      </div>
+  </div>
+</div>
+<div class="about-container">
+  <div class="about-subcontainer">
+    <span class="about-head"> WHO WE ARE? </span>
+    <div class="about-content">
+      <span>
+        Vignesh Homes was established in 2003, with property development as its
+        main focus. The Vignesh Homes Group is a new generation, Chennai-based,
+        real-estate development company transcending conventions in design,
+        quality, construction and customer relationships based on its founding
+        principles of Integrity, Quality, Commitment and Professionalism.
+      </span>
+      <span>
+        Vignesh home’s experience in delivering residential, hospitality and
+        commercial projects is built on these four core values that are embedded
+        in us from blueprint to brick. We believe that the key element of all
+        our projects is always the CUSTOMER – a view shared by one of the most
+        dedicated teams in the industry. <a>Know more</a>
+      </span>
     </div>
-    <div class="company-details-container">
-      <div class="company-details-subcontainer">
-        <div class="company-details-content">
-          <div class="company-details-header">
-            <span> VIGNESH HOMES </span>
-            <img src="/assets/line.svg" />
-          </div>
+  </div>
+</div>
+<div class="company-details-container">
+  <div class="company-details-subcontainer">
+    <div class="company-details-content">
+      <div class="company-details-header">
+        <span> VIGNESH HOMES </span>
+        <img src="/assets/line.svg" />
+      </div>
 
-          <div class="company-details-subcontent">
-            <div class="company-details-exp">
-              <span class="company-details-exp-head"> 2+ </span>
-              <span class="company-details-exp-subhead">
-                Years of Excellence
-              </span>
-            </div>
-            <div class="company-details-exp">
-              <span class="company-details-exp-head"> 10+ </span>
-              <span class="company-details-exp-subhead">
-                Projects completed
-              </span>
-            </div>
-            <div class="company-details-exp">
-              <span class="company-details-exp-head"> 100+ </span>
-              <span class="company-details-exp-subhead">
-                Min sq.ft Delivered
-              </span>
-            </div>
-          </div>
+      <div class="company-details-subcontent">
+        <div class="company-details-exp">
+          <span class="company-details-exp-head"> 2+ </span>
+          <span class="company-details-exp-subhead"> Years of Excellence </span>
         </div>
-        <div class="company-details-exp-content">
-          <span>
-            Welcome to Vignesh Homes, where experience meets excellence in
-            construction. With over 2 years of industry expertise, we take pride
-            in delivering high-quality homes and buildings that stand the test
-            of time. Our portfolio boasts a successful track record of
-            completing 10+ projects, each a testament to our commitment to
-            craftsmanship and client satisfaction.
-          </span>
-          <span>
-            At Vignesh Homes, we've made dreams come true for countless families
-            and businesses, with over 100,000 sq. ft. of real estate delivered.
-            Our dedicated team of professionals works tirelessly to bring your
-            vision to life, ensuring your project is a true reflection of your
-            desires.
-          </span>
-          <span>
-            Trust Vignesh Homes for innovation, integrity, and on-time project
-            delivery. From residential to commercial, we create spaces that
-            inspire and endure. Explore our completed works, and envision your
-            future with us. Your dream home or business space is just a click
-            away!
-          </span>
+        <div class="company-details-exp">
+          <span class="company-details-exp-head"> 10+ </span>
+          <span class="company-details-exp-subhead"> Projects completed </span>
+        </div>
+        <div class="company-details-exp">
+          <span class="company-details-exp-head"> 100+ </span>
+          <span class="company-details-exp-subhead"> Min sq.ft Delivered </span>
         </div>
       </div>
     </div>
-    <div class="coming-soon-container">
-      <div class="coming-soon-subcontainer">
-        <div class="coming-soon-header">
-          <span> TESTIMONIALS</span>
-          <img src="/assets/line.svg" />
-        </div>
+    <div class="company-details-exp-content">
+      <span>
+        Welcome to Vignesh Homes, where experience meets excellence in
+        construction. With over 2 years of industry expertise, we take pride in
+        delivering high-quality homes and buildings that stand the test of time.
+        Our portfolio boasts a successful track record of completing 10+
+        projects, each a testament to our commitment to craftsmanship and client
+        satisfaction.
+      </span>
+      <span>
+        At Vignesh Homes, we've made dreams come true for countless families and
+        businesses, with over 100,000 sq. ft. of real estate delivered. Our
+        dedicated team of professionals works tirelessly to bring your vision to
+        life, ensuring your project is a true reflection of your desires.
+      </span>
+      <span>
+        Trust Vignesh Homes for innovation, integrity, and on-time project
+        delivery. From residential to commercial, we create spaces that inspire
+        and endure. Explore our completed works, and envision your future with
+        us. Your dream home or business space is just a click away!
+      </span>
+    </div>
+  </div>
+</div>
+<div class="coming-soon-container">
+  <div class="coming-soon-subcontainer">
+    <div class="coming-soon-header">
+      <span> TESTIMONIALS</span>
+      <img src="/assets/line.svg" />
+    </div>
 
-        <!-- <div class="testimonials-container-box">
+    <!-- <div class="testimonials-container-box">
           <img
             class="arrow-button"
             src="/assets/left-arrow.svg"
@@ -210,7 +196,7 @@
             (click)="moveRight()"
           />
         </div> -->
-        <!-- <div class="testimonials-container-box">
+    <!-- <div class="testimonials-container-box">
           <img
             class="arrow-button"
             src="/assets/left-arrow.svg"
@@ -235,30 +221,28 @@
           />
         </div> -->
 
-        <div class="testimonials-container-box">
-          <!-- <img
+    <div class="testimonials-container-box">
+      <!-- <img
             src="/assets/left-arrow.svg"
             (click)="moveLeft()"
             class="arrow-button left"
           /> -->
 
-          <div class="testimonials-container" #testimonialsContainer>
-            <ng-container *ngFor="let testimonial of testimonials">
-              <app-testimonialcard
-                [content]="testimonial.content"
-                [address]="testimonial.address"
-              ></app-testimonialcard>
-            </ng-container>
-          </div>
+      <div class="testimonials-container" #testimonialsContainer>
+        <ng-container *ngFor="let testimonial of testimonials">
+          <app-testimonialcard
+            [content]="testimonial.content"
+            [address]="testimonial.address"
+          ></app-testimonialcard>
+        </ng-container>
+      </div>
 
-          <!-- <img
+      <!-- <img
             src="/assets/right-arrow.svg"
             (click)="moveRight()"
             class="arrow-button right"
           /> -->
-        </div>
-      </div>
     </div>
-    <app-footer></app-footer>
-  </body>
-</html>
+  </div>
+</div>
+<app-footer></app-footer>

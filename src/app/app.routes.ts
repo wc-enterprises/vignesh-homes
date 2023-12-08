@@ -9,6 +9,10 @@ import { TestimonialcardComponent } from './testimonialcard/testimonialcard.comp
 import { ProjectcardComponent } from './projectcard/projectcard.component';
 import { ProjectoverviewComponent } from './projectoverview/projectoverview.component';
 import { ProjectsecComponent } from './projectsec/projectsec.component';
+import { ComingsoonComponent } from './comingsoon/comingsoon.component';
+import { CompletedComponent } from './completed/completed.component';
+import { ForsaleComponent } from './forsale/forsale.component';
+import { OngoingComponent } from './ongoing/ongoing.component';
 export const routes: Routes = [
   { path: 'navbar', component: NavbarComponent },
   { path: 'footer', component: FooterComponent },
@@ -16,9 +20,14 @@ export const routes: Routes = [
   { path: 'jointventure', component: JointventureComponent },
   { path: 'contact', component: ContactComponent },
   { path: '', component: HomeComponent },
+
   { path: 'overview', component: ProjectoverviewComponent },
   { path: 'projectsec', component: ProjectsecComponent },
 
   { path: 'projectcard', component: ProjectcardComponent },
   { path: 'tmcard', component: TestimonialcardComponent },
+  { path: 'comingsoon', component: ComingsoonComponent },
+  { path: 'forsale', component: ForsaleComponent },
+  { path: 'completed', component: CompletedComponent },
+  { path: 'ongoing', component: OngoingComponent },
 ];

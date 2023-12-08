@@ -1,62 +1,53 @@
-<html>
-  <head>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="heropage">
-      <div style="height: 90px; width: 100%"></div>
-      <app-navbar
-        style="position: fixed; z-index: 1"
-        scrollColorChange
-      ></app-navbar>
-      <span>RESIDENTIAL PROJECTS</span>
+<div id="heropage">
+  <div style="height: 90px; width: 100%"></div>
+  <app-navbar
+    style="position: fixed; z-index: 1"
+    scrollColorChange
+  ></app-navbar>
+  <span>RESIDENTIAL PROJECTS</span>
+</div>
+
+<div class="tabs">
+  <div class="tabs">
+    <button>For sale</button>
+    <button>Ongoing</button>
+    <button>Completed</button>
+    <button>Coming soon</button>
+  </div>
+</div>
+
+<div class="project-show-mainbox">
+  <div class="project-show-subbox">
+    <div class="project-show-maindetails">
+      <span class="project-show-detail-head">RESIDENTIAL PROJECTS</span>
+      <div class="project-show-subdetails">
+        <span
+          >Vignesh Homes is pleased to offer a selection of meticulously crafted
+          properties for sale. These are not just buildings; they're future
+          homes and investments. Explore our range of residential and commercial
+          properties, each designed with a focus on quality and aesthetics.
+          Secure your place in a Vignesh Homes creation, where dreams become
+          addresses. Take the first step in owning a piece of architectural
+          excellence.</span
+        >
+        <a style="text-decoration: none" [routerLink]="['/contact']"
+          >GET IN TOUCH</a
+        >
+      </div>
+      <div></div>
     </div>
 
-    <div class="tabs">
-      <div class="tabs">
-        <button (click)="filterProjects('forsale')">For sale</button>
-        <button (click)="filterProjects('ongoing')">Ongoing</button>
-        <button (click)="filterProjects('complete')">Completed</button>
-
-        <button (click)="filterProjects('Coming soon')">Coming soon</button>
+    <div class="project-card-sec">
+      <div *ngFor="let cardData of cardsData">
+        <app-projectcard
+          [projectImage]="cardData.projectImage"
+          [saleTag]="cardData.saleTag"
+          [projectTitle]="cardData.projectTitle"
+          [projectSubtitle]="cardData.projectSubtitle"
+        ></app-projectcard>
       </div>
     </div>
+  </div>
+</div>
 
-    <div class="project-show-mainbox">
-      <div class="project-show-subbox">
-        <div class="project-show-maindetails">
-          <span class="project-show-detail-head">RESIDENTIAL PROJECTS</span>
-          <div class="project-show-subdetails">
-            <span
-              >Vignesh Homes is pleased to offer a selection of meticulously
-              crafted properties for sale. These are not just buildings; they're
-              future homes and investments. Explore our range of residential and
-              commercial properties, each designed with a focus on quality and
-              aesthetics. Secure your place in a Vignesh Homes creation, where
-              dreams become addresses. Take the first step in owning a piece of
-              architectural excellence.</span
-            >
-            <button>GET IN TOUCH</button>
-          </div>
-          <div></div>
-        </div>
-
-        <div class="project-card-sec">
-          <div *ngFor="let cardData of cardsData">
-            <app-projectcard
-              [projectImage]="cardData.projectImage"
-              [saleTag]="cardData.saleTag"
-              [projectTitle]="cardData.projectTitle"
-              [projectSubtitle]="cardData.projectSubtitle"
-            ></app-projectcard>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <app-footer></app-footer>
-  </body>
-</html>
+<app-footer></app-footer>

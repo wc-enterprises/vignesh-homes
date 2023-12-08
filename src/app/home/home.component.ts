@@ -7,10 +7,12 @@ import { CommonModule } from '@angular/common';
 import { TestimonialcardComponent } from '../testimonialcard/testimonialcard.component';
 import { ProjectcardComponent } from '../projectcard/projectcard.component';
 import { RouterModule } from '@angular/router';
+import { ProjectsecComponent } from '../projectsec/projectsec.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
+
   imports: [
     NavbarComponent,
     FooterComponent,
@@ -18,60 +20,12 @@ import { RouterModule } from '@angular/router';
     TestimonialcardComponent,
     ProjectcardComponent,
     RouterModule,
+    ProjectsecComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
-  animations: [],
 })
 export class HomeComponent {
-  // testimonials: Testimonial[] = [
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. ARUNKUMAR, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. ARUN, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. KUMAR, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. dhanush, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. siva, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. paul, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. tintu, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. mash, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. siv, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  // ];
-
   cardData = {
     image: '/assets/comingsoon-img.svg',
     title: 'Premium 2 & 1 BHK flats for sale in Valasaravakkam, Chennai.',
@@ -129,6 +83,7 @@ export class HomeComponent {
   @ViewChild('testimonialsContainer', { static: false })
   testimonialsContainer!: ElementRef;
   cardWidth = 350; // Adjust this based on your card width
+  router: any;
 
   moveLeft(): void {
     const container = this.testimonialsContainer.nativeElement as HTMLElement;
@@ -185,6 +140,10 @@ export class HomeComponent {
         'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
     },
   ];
+
+  navigateToProjectSec() {
+    this.router.navigate(['/projectsec']);
+  }
 }
 export interface Testimonial {
   content: string;
