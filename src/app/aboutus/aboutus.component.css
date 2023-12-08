@@ -6,7 +6,7 @@
 
 #heropage {
   display: flex;
-  height: 50vh;
+  height: 65vh;
   width: 100%;
   padding-bottom: 40px;
   flex-direction: column;
@@ -20,6 +20,11 @@
 }
 body::-webkit-scrollbar {
   display: none;
+}
+.add-background-color {
+  background-color: #1a5965;
+
+  transition: background-color 1s ease;
 }
 #heropage span {
   color: #fff;
@@ -149,7 +154,6 @@ body::-webkit-scrollbar {
 }
 @media (max-width: 426px) {
   #heropage {
-    height: 50vh;
     padding-bottom: 20px;
     background: url(/assets/about-mobilehroro.svg);
     background-repeat: no-repeat;
@@ -218,7 +222,6 @@ body::-webkit-scrollbar {
 }
 @media (min-width: 426px) and (max-width: 769px) {
   #heropage {
-    height: 50vh;
     padding-bottom: 25px;
   }
 
@@ -282,10 +285,6 @@ body::-webkit-scrollbar {
   }
 }
 @media (min-width: 769px) and (max-width: 1025px) {
-  #heropage {
-    height: 50vh;
-  }
-
   #heropage span {
     font-size: 28px;
   }

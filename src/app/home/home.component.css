@@ -23,7 +23,8 @@ body::-webkit-scrollbar {
   display: none;
 }
 .add-background-color {
-  background-color: #25b425;
+  background-color: #1a5965;
+
   transition: background-color 1s ease;
 }
 .hero-container {
@@ -413,28 +414,7 @@ body::-webkit-scrollbar {
   overflow: hidden;
   position: relative;
 }
-.arrow-button {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  border: none;
-}
 
-.left,
-.right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.left {
-  left: 10px;
-}
-
-.right {
-  right: 10px;
-}
 @media (max-width: 426px) {
   .hero-container {
     padding: 20px 20px;

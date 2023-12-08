@@ -14,7 +14,8 @@ import { ProjectoverviewComponent } from './projectoverview/projectoverview.comp
 import { ProjectsecComponent } from './projectsec/projectsec.component';
 import { TestimonialcardComponent } from './testimonialcard/testimonialcard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ScrollColorChange } from './common-utils/background-color-change-on-scroll.directive';
+import { ScrollChangeColorDirective } from './scroll-change-color.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProjectoverviewComponent,
     ProjectsecComponent,
     TestimonialcardComponent,
+    ScrollColorChange,
+    ScrollChangeColorDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

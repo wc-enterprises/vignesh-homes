@@ -8,7 +8,7 @@ body {
 }
 #heropage {
   display: flex;
-  height: 50vh;
+  height: 65vh;
   width: 100%;
   padding-bottom: 50px;
   flex-direction: column;
@@ -23,7 +23,8 @@ body::-webkit-scrollbar {
   display: none;
 }
 .add-background-color {
-  background-color: #25b425;
+  background-color: #1a5965;
+
   transition: background-color 1s ease;
 }
 #heropage span {
@@ -148,7 +149,6 @@ body::-webkit-scrollbar {
 }
 @media (max-width: 426px) {
   #heropage {
-    height: 50vh;
     padding-bottom: 40px;
   }
   #heropage span {
@@ -198,7 +198,6 @@ body::-webkit-scrollbar {
 }
 @media (min-width: 426px) and (max-width: 769px) {
   #heropage {
-    height: 50vh;
     padding-bottom: 40px;
   }
   #heropage span {
@@ -244,7 +243,6 @@ body::-webkit-scrollbar {
 }
 @media (min-width: 769px) and (max-width: 1025px) {
   #heropage {
-    height: 50vh;
     padding-bottom: 40px;
   }
   #heropage span {
