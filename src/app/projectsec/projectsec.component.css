@@ -132,12 +132,19 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  border: 1px solid #313333;
+  border: 2px solid #313333;
   color: #313333;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   background: none;
+  cursor: pointer;
+}
+.project-show-subdetails button:hover {
+  color: #ffffff;
+  border: 2px solid #313333;
+  background: #313333;
+  transition: 0.5s ease-in;
 }
 .project-card-sec {
   display: flex;
@@ -156,11 +163,11 @@ body::-webkit-scrollbar {
     padding: 0px 20px;
   }
   .tabs {
-    padding: 8px 0px;
-    gap: 7px;
+    padding: 6px 0px;
+    gap: 5px;
   }
   .tabs button {
-    padding: 8px 8px;
+    padding: 6px 6px;
     font-size: 12px;
     gap: 7px;
     line-height: 20px;

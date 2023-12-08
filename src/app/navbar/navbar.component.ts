@@ -10,11 +10,12 @@ import { RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
   sidenavWidth: number = 0;
-  viewportScroller: any;
-  openNav(): void {
-    this.sidenavWidth = 250; // Set the width when opening the side nav
+  openNav() {
+    this.sidenavWidth = 250;
+    console.log('Side nav opened. sidenavWidth:', this.sidenavWidth);
   }
-  closeNav(): void {
-    this.sidenavWidth = 0; // Set the width to 0 when closing the side nav
+
+  closeNav() {
+    this.sidenavWidth = 0;
   }
 }

@@ -303,6 +303,11 @@ body::-webkit-scrollbar {
 .about-content span a {
   text-decoration: underline;
   cursor: pointer;
+  color: #ffffff;
+}
+.about-content span a:hover {
+  color: #cacaca;
+  transition: 0.5s ease-in;
 }
 .company-details-container {
   display: flex;

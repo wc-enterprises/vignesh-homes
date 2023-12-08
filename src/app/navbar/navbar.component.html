@@ -1,5 +1,5 @@
 <div class="nav-container">
-  <div [routerLink]="['/home']" class="logo-container" style="cursor: pointer">
+  <div [routerLink]="['/']" class="logo-container" style="cursor: pointer">
     <img src="/assets/logo.svg" alt="logo" />
     <span>
       <h5>VIGNESH HOMES</h5>
@@ -27,12 +27,14 @@
     <img
       id="menu-icon"
       style="cursor: pointer"
+      (click)="openNav()"
       src="/assets/menu-icon.svg"
       alt="menu-icon"
     />
   </div>
   <!--Side nav for mobile and tab-->
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav" [style.width.px]="sidenavWidth">
+    <a class="closebtn" (click)="closeNav()">&times;</a>
     <a [routerLink]="['/']">Home</a>
     <a [routerLink]="['/projectsec']">Commercial</a>
     <a [routerLink]="['/jointventure']">Joint venture</a>
