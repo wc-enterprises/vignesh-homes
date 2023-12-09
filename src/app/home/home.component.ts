@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import gsap from 'gsap';
 
 @Component({
   selector: 'app-home',
@@ -7,53 +8,37 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   animations: [],
 })
 export class HomeComponent {
-  // testimonials: Testimonial[] = [
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. ARUNKUMAR, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. ARUN, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. KUMAR, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. dhanush, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. siva, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. paul, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. tintu, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. mash, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. siv, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  // ];
+  @ViewChild('heroHeadline', { static: true }) heroHeadline!: ElementRef;
+  @ViewChild('heroSubHeadline', { static: true }) heroSubHeadline!: ElementRef;
+  @ViewChild('heroDescription', { static: true }) heroDescription!: ElementRef;
+
+  animateHeroText() {
+    const tl = gsap.timeline({ defaults: { duration: 0.9 } });
+
+    tl.from(this.heroHeadline.nativeElement, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: 'power3.inOut',
+    });
+    tl.from(this.heroSubHeadline.nativeElement, {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: 'power3.inOut',
+    });
+    tl.from(this.heroDescription.nativeElement, {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: 'power4.out',
+    });
+    return tl;
+  }
+
+  ngOnInit() {
+    this.animateHeroText().play();
+  }
 
   cardData = {
     image: '/assets/comingsoon-img.svg',

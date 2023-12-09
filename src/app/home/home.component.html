@@ -15,10 +15,12 @@
       ></app-navbar>
       <div class="hero-container">
         <div class="hero-head">
-          <span class="hero-cont">VIGNESH HOMES</span>
-          <span class="hero-cont1">Builders & Contractors</span>
+          <span class="hero-cont" #heroHeadline>VIGNESH HOMES</span>
+          <span class="hero-cont1" #heroSubHeadline
+            >Builders & Contractors</span
+          >
         </div>
-        <span class="hero-subhead">
+        <span class="hero-subhead" #heroDescription>
           We strive to build homes and happiness with the utmost excellence,
           unsurpassed quality, and innovation you deserve.
         </span>
@@ -43,11 +45,12 @@
             </div>
           </div>
           <button class="explore-button" [routerLink]="['/projectsec']">
-            explore more
+            Explore more
           </button>
         </div>
       </div>
     </div>
+
     <div class="coming-soon-container">
       <div class="coming-soon-subcontainer">
         <div class="coming-soon-header">
