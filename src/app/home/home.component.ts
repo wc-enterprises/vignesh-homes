@@ -13,24 +13,24 @@ export class HomeComponent {
   @ViewChild('heroDescription', { static: true }) heroDescription!: ElementRef;
 
   animateHeroText() {
-    const tl = gsap.timeline({ defaults: { duration: 0.9 } });
+    const tl = gsap.timeline({ defaults: { duration: 1 } });
 
     tl.from(this.heroHeadline.nativeElement, {
       opacity: 0,
       y: 50,
-      duration: 1,
+      duration: 1.3,
       ease: 'power3.inOut',
     });
     tl.from(this.heroSubHeadline.nativeElement, {
       opacity: 0,
       y: 50,
-      duration: 0.8,
+      duration: 1,
       ease: 'power3.inOut',
     });
     tl.from(this.heroDescription.nativeElement, {
       opacity: 0,
       y: 50,
-      duration: 0.8,
+      duration: 1,
       ease: 'power4.out',
     });
     return tl;
