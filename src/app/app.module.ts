@@ -21,7 +21,7 @@ import { ProjectService } from './common-utils/project-service';
 import { ComingSoonCardComponent } from './coming-soon-card/coming-soon-card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { environment } from './common-utils/environment';
+
 @NgModule({
   declarations: [
     AppComponent,

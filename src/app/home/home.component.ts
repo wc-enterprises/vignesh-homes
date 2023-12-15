@@ -1,4 +1,5 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import gsap from 'gsap';
 
 import { ComingSoonCardComponent } from '../coming-soon-card/coming-soon-card.component';
 
@@ -34,10 +35,39 @@ export class HomeComponent {
   projects: Project[] = projects;
   comingSoonProjects: ComingSoonProject[] = comingSoonProjects;
   constructor() {}
+  @ViewChild('heroHeadline', { static: true }) heroHeadline!: ElementRef;
+  @ViewChild('heroSubHeadline', { static: true }) heroSubHeadline!: ElementRef;
+  @ViewChild('heroDescription', { static: true }) heroDescription!: ElementRef;
+
+  animateHeroText() {
+    const tl = gsap.timeline({ defaults: { duration: 1 } });
+
+    tl.from(this.heroHeadline.nativeElement, {
+      opacity: 0,
+      y: 50,
+      duration: 1.3,
+      ease: 'power3.inOut',
+    });
+    tl.from(this.heroSubHeadline.nativeElement, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: 'power3.inOut',
+    });
+    tl.from(this.heroDescription.nativeElement, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: 'power4.out',
+    });
+    return tl;
+  }
 
   ngOnInit() {
+    this.animateHeroText().play();
     this.projects = projects;
   }
+
   testimonials = [
     {
       content:
