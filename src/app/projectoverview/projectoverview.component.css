@@ -8,7 +8,7 @@ body {
 }
 #heropage {
   display: flex;
-  height: 65%;
+  height: 65vh;
   width: 100%;
   padding-bottom: 50px;
   flex-direction: column;
@@ -38,6 +38,7 @@ body::-webkit-scrollbar {
 
 .residential-breadcrumbs {
   color: #bdced5;
+  cursor: pointer;
 }
 .tabs {
   display: flex;
@@ -145,12 +146,14 @@ body::-webkit-scrollbar {
   align-items: flex-start;
   gap: 25px;
   width: 100%;
+  height: auto;
 }
 .location-container-subbox {
   display: flex;
-  width: 60%;
+  width: 50%;
+  height: 360px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
 }
@@ -178,11 +181,16 @@ body::-webkit-scrollbar {
   font-weight: 400;
   line-height: 27px;
 }
-.location-image {
-  width: 525px;
-  height: 340px;
+#map {
+  width: 50%;
+  height: 360px;
+  z-index: 0;
 }
+/* #map {
+  width: 100%;
+  height: 360px;
 
+} */
 .specification-mainbox {
   display: flex;
   padding: 60px 0px;
@@ -250,6 +258,7 @@ body::-webkit-scrollbar {
   align-self: stretch;
   background: #f7f7f7;
 }
+
 .floorplan-subbox {
   display: flex;
   width: 80%;
@@ -287,7 +296,6 @@ body::-webkit-scrollbar {
 }
 @media (max-width: 426px) {
   #heropage {
-    height: 70%;
     padding-bottom: 40px;
   }
   .breadcrumbs {
@@ -368,12 +376,13 @@ body::-webkit-scrollbar {
   .location-container-box {
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
     width: 100%;
   }
   .location-container-subbox {
     width: 100%;
     gap: 10px;
+    height: auto;
   }
   .location-address {
     font-size: 16px;
@@ -385,6 +394,10 @@ body::-webkit-scrollbar {
   .location-content {
     font-size: 14px;
     line-height: 27px;
+  }
+  #map {
+    width: 100%;
+    height: 250px;
   }
   .location-image {
     width: 100%;
@@ -398,7 +411,6 @@ body::-webkit-scrollbar {
 }
 @media (min-width: 426px) and (max-width: 769px) {
   #heropage {
-    height: 65%;
     padding-bottom: 40px;
   }
   .breadcrumbs {
@@ -443,12 +455,13 @@ body::-webkit-scrollbar {
   .location-container-box {
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 35px;
     width: 100%;
   }
   .location-container-subbox {
     width: 100%;
     gap: 10px;
+    height: auto;
   }
   .location-address {
     font-size: 18px;
@@ -464,6 +477,10 @@ body::-webkit-scrollbar {
   .location-image {
     width: 100%;
     height: 300px;
+  }
+  #map {
+    width: 100%;
+    height: 250px;
   }
   .location-image img {
     width: 100%;
@@ -506,7 +523,6 @@ body::-webkit-scrollbar {
 }
 @media (min-width: 769px) and (max-width: 1025px) {
   #heropage {
-    height: 60%;
     padding-bottom: 40px;
   }
   .breadcrumbs {
@@ -551,12 +567,13 @@ body::-webkit-scrollbar {
   .location-container-box {
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 40px;
     width: 100%;
   }
   .location-container-subbox {
     width: 100%;
     gap: 10px;
+    height: auto;
   }
   .location-address {
     font-size: 20px;
@@ -577,6 +594,10 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  #map {
+    width: 100%;
+    height: 300px;
   }
   .floorplan-mainbox {
     padding: 50px 40px;

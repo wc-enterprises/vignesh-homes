@@ -151,7 +151,8 @@ body::-webkit-scrollbar {
   width: 100%;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  row-gap: 40px;
+  column-gap: 25px;
   flex-wrap: wrap;
 }
 @media (max-width: 426px) {
@@ -200,7 +201,8 @@ body::-webkit-scrollbar {
     line-height: 22px;
   }
   .project-card-sec {
-    gap: 20px;
+    row-gap: 35px;
+    column-gap: 20px;
   }
 }
 @media (min-width: 426px) and (max-width: 769px) {
@@ -245,7 +247,8 @@ body::-webkit-scrollbar {
     line-height: 22px;
   }
   .project-card-sec {
-    gap: 20px;
+    row-gap: 25px;
+    column-gap: 20px;
   }
 }
 @media (min-width: 769px) and (max-width: 1025px) {
@@ -290,6 +293,7 @@ body::-webkit-scrollbar {
     line-height: 24px;
   }
   .project-card-sec {
-    gap: 20px;
+    row-gap: 22px;
+    column-gap: 20px;
   }
 }

@@ -8,92 +8,98 @@
   <body>
     <div id="heropage">
       <div style="height: 90px; width: 100%"></div>
-      <app-navbar style="position: fixed; z-index: 1"></app-navbar>
+      <app-navbar
+        style="position: fixed; z-index: 1"
+        scrollColorChange
+      ></app-navbar>
       <div class="breadcrumbs">
-        <span class="home-breadcrumbs">Home</span>
-        ><span class="residential-breadcrumbs"> Residential </span>
+        <span
+          class="home-breadcrumbs"
+          style="cursor: pointer"
+          [routerLink]="['/']"
+          >Home</span
+        >
+        ><span class="residential-breadcrumbs" [routerLink]="['/projectsec']">
+          Residential
+        </span>
       </div>
     </div>
 
     <div class="tabs">
-      <button>Location</button>
-      <button>Floor plan</button>
-      <button>Specification</button>
+      <button (click)="scrollToLocation()">Location</button>
+      <button (click)="scrollToFloorplan()">Floor plan</button>
+      <button (click)="scrollToSpecification()">Specification</button>
     </div>
-
-    <div class="project-intro-mainbox">
-      <div class="project-intro-subbox">
-        <span class="project-title"> GOTETY RESIDENCY</span>
-        <span class="project-image">
-          <img src="/assets/project-image.svg" />
-        </span>
-        <span class="project-content"
-          >Usually, land owners opt for joint venture property development if
-          they have a vacant plot that they want to develop, if the property is
-          being divided amongst siblings or if the owner is looking to renovate
-          the existing flat/apartment, where the FSI (Floor Space Index) is
-          revised.
-        </span>
-      </div>
-    </div>
-
-    <div class="project-location-mainbox">
-      <div class="project-location-subbox">
-        <span class="location-head"> LOCATION</span>
-        <div class="location-container-box">
-          <div class="location-container-subbox">
-            <span class="location-address"
-              >No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai
-              - 600089.
-            </span>
-            <div class="location-content-box">
-              <span class="location-content"
-                >Usually, land owners opt for joint venture property development
-                if they have a vacant plot that they want to develop, if the
-                property is being divided amongst siblings or if the owner is
-                looking to renovate the existing flat/apartment, where the FSI
-                (Floor Space Index) is revised.
-              </span>
-              <span class="location-content"
-                >Usually, land owners opt for joint venture property development
-                if they have a vacant plot that they want to develop, if the
-                property is being divided amongst siblings or if the owner is
-                looking to renovate the existing flat/apartment, where the FSI
-                (Floor Space Index) is revised.
-              </span>
-            </div>
-          </div>
-          <span class="location-image">
-            <img src="/assets/map.svg" />
+    <div *ngIf="project">
+      <div class="project-intro-mainbox">
+        <div class="project-intro-subbox">
+          <span class="project-title"> {{ project.projectTitle }}</span>
+          <span class="project-image">
+            <img [src]="project.overview[0].introduction.imageSrc" />
+          </span>
+          <span class="project-content"
+            >{{ project.overview[0].introduction.content }}
           </span>
         </div>
       </div>
-    </div>
 
-    <div class="floorplan-mainbox">
-      <div class="floorplan-subbox">
-        <span class="project-title"> FLOOR PLAN</span>
+      <div class="project-location-mainbox" #locationSection>
+        <div class="project-location-subbox">
+          <span class="location-head"> LOCATION</span>
+          <div class="location-container-box">
+            <div class="location-container-subbox">
+              <span class="location-address"
+                >{{ project.overview[0].location.address }}
+              </span>
+              <div class="location-content-box">
+                <span
+                  class="location-content"
+                  *ngFor="
+                    let content of project.overview[0].location.locationContent
+                  "
+                  >{{ content }}
+                </span>
+                <!-- <span class="location-content"
+                >Usually, land owners opt for joint venture property development
+                if they have a vacant plot that they want to develop, if the
+                property is being divided amongst siblings or if the owner is
+                looking to renovate the existing flat/apartment, where the FSI
+                (Floor Space Index) is revised.
+              </span> -->
+              </div>
+            </div>
 
-        <div class="floorplan-container-box">
-          <div class="floorplan-container" #floorplanContainer>
-            <span class="floorplan-img" *ngFor="let plan of floorPlans">
-              <img [src]="plan.imgSrc" />
-            </span>
+            <div id="map" #map></div>
+            <!-- <img [src]="project.overview[0].location.mapImageSrc" /> -->
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="specification-mainbox">
-      <div class="specification-subbox">
-        <span class="specification-head"> SPECIFICATION</span>
-        <div class="grid-sec">
-          <div
-            class="specification-grid-box"
-            *ngFor="let spec of specifications"
-          >
-            <span class="specification-title">{{ spec.title }}</span>
-            <span class="specification-content">{{ spec.content }}</span>
+      <div class="floorplan-mainbox" #floorplanSection>
+        <div class="floorplan-subbox">
+          <span class="project-title"> FLOOR PLAN</span>
+
+          <div class="floorplan-container-box">
+            <div class="floorplan-container" #floorplanContainer>
+              <span class="floorplan-img" *ngFor="let plan of floorPlans">
+                <img [src]="plan.imgSrc" />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="specification-mainbox" #specificationSection>
+        <div class="specification-subbox">
+          <span class="specification-head"> SPECIFICATION</span>
+          <div class="grid-sec">
+            <div
+              class="specification-grid-box"
+              *ngFor="let spec of specifications"
+            >
+              <span class="specification-title">{{ spec.title }}</span>
+              <span class="specification-content">{{ spec.content }}</span>
+            </div>
           </div>
         </div>
       </div>

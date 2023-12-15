@@ -17,6 +17,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollColorChange } from './common-utils/background-color-change-on-scroll.directive';
 import { ScrollChangeColorDirective } from './scroll-change-color.directive';
 import { RouterModule } from '@angular/router';
+import { ProjectService } from './common-utils/project-service';
+import { ComingSoonCardComponent } from './coming-soon-card/coming-soon-card.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,8 +37,12 @@ import { RouterModule } from '@angular/router';
     TestimonialcardComponent,
     ScrollColorChange,
     ScrollChangeColorDirective,
+    ComingSoonCardComponent,
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -45,7 +54,8 @@ import { RouterModule } from '@angular/router';
       anchorScrolling: 'enabled',
     }),
   ],
-  providers: [],
+
+  providers: [ProjectService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

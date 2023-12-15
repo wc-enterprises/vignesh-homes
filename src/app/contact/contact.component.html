@@ -36,8 +36,8 @@
                 Chennai - 600089.</span
               >
             </div>
-            <div class="map">
-              <img src="/assets/map.svg" />
+            <div id="map">
+              <!-- <img src="/assets/map.svg" /> -->
             </div>
             <div class="contact-contents">
               <span class="contact-head">Call us</span>
@@ -53,21 +53,26 @@
           </div>
           <div class="contact-form">
             <span>GET IN TOUCH</span>
-            <form>
-              <div class="form-group">
+            <form (ngSubmit)="submitForm()" #quoteForm="ngForm">
+              <!-- <div class="form-group">
+
                 <input
                   type="text"
                   id="name"
                   name="name"
                   required
+                  required
                   placeholder="Your Name*"
+                  [(ngModel)]="formData.name"
                 />
                 <input
                   type="email"
                   id="email"
                   name="email"
                   required
+                  required
                   placeholder="Your Email*"
+                  [(ngModel)]="formData.email"
                 />
 
                 <input
@@ -75,15 +80,67 @@
                   id="phone"
                   name="phone"
                   required
+                  required
                   placeholder="Your Phone Number*"
+                  [(ngModel)]="formData.phone"
                 />
 
                 <textarea
                   id="message"
                   name="message"
                   required
+                  required
                   placeholder="Your Message*"
+                  [(ngModel)]="formData.message"
                 ></textarea>
+              </div> -->
+
+              <div class="form-group">
+                <div class="form-field">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Your Name*"
+                    [(ngModel)]="formData.name"
+                  />
+                  <span *ngIf="isFieldInvalid('name')">{{ alert.name }}</span>
+                </div>
+                <div class="form-field">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="Your Email*"
+                    [(ngModel)]="formData.email"
+                  />
+                  <span *ngIf="isFieldInvalid('email')">{{ alert.email }}</span>
+                </div>
+                <div class="form-field">
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    placeholder="Your Phone Number*"
+                    [(ngModel)]="formData.phone"
+                  />
+                  <span *ngIf="isFieldInvalid('phone')">{{ alert.phone }}</span>
+                </div>
+                <div class="form-field">
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    placeholder="Your Message*"
+                    [(ngModel)]="formData.message"
+                  ></textarea>
+                  <span *ngIf="isFieldInvalid('message')">{{
+                    alert.message
+                  }}</span>
+                </div>
               </div>
               <button type="submit">Get a free quote</button>
             </form>

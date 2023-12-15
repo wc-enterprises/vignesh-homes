@@ -134,9 +134,10 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
 }
-.map {
+#map {
   width: 100%;
   height: 360px;
+  z-index: 0;
 }
 .map img {
   width: 100%;
@@ -211,7 +212,24 @@ form {
 .form-group textarea {
   min-height: 150px; /* Adjust the height based on your design */
 }
-
+.form-field {
+  width: 100%;
+  height: auto;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.form-group span {
+  color: #d32c1ad4;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  height: auto;
+  line-height: normal;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 button[type="submit"] {
   cursor: pointer;
   color: #fff;
@@ -285,8 +303,9 @@ button[type="submit"]:hover {
     font-size: 14px;
     line-height: 24px;
   }
-  .map {
+  #map {
     height: 250px;
+    z-index: 0;
   }
   .contact-form {
     gap: 25px;
@@ -299,6 +318,12 @@ button[type="submit"]:hover {
   }
   form {
     gap: 25px;
+  }
+  .form-field {
+    gap: 8px;
+  }
+  .form-group span {
+    font-size: 13px;
   }
   .form-group {
     gap: 15px;
@@ -363,8 +388,9 @@ button[type="submit"]:hover {
     font-size: 14px;
     line-height: 24px;
   }
-  .map {
+  #map {
     height: 250px;
+    z-index: 0;
   }
   .contact-form {
     gap: 25px;
@@ -374,6 +400,12 @@ button[type="submit"]:hover {
   .contact-form span {
     font-size: 20px;
     justify-content: left;
+  }
+  .form-field {
+    gap: 8px;
+  }
+  .form-group span {
+    font-size: 13px;
   }
   form {
     gap: 25px;
@@ -436,8 +468,9 @@ button[type="submit"]:hover {
     font-size: 15px;
     line-height: 28px;
   }
-  .map {
+  #map {
     height: 300px;
+    z-index: 0;
   }
   .contact-form {
     gap: 25px;
@@ -448,6 +481,12 @@ button[type="submit"]:hover {
   }
   form {
     gap: 25px;
+  }
+  .form-field {
+    gap: 10px;
+  }
+  .form-group span {
+    font-size: 13px;
   }
   .form-group {
     gap: 15px;
