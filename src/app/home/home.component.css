@@ -160,6 +160,7 @@ body::-webkit-scrollbar {
   align-self: stretch;
   background: #d6e2ea;
 }
+
 .coming-soon-subcontainer {
   display: flex;
   width: 90%;

@@ -33,14 +33,14 @@
         </div>
         <div class="project-show-sec">
           <div class="project-card-sec">
-            <div *ngFor="let cardData of cardsData">
-              <app-projectcard
-                [projectImage]="cardData.projectImage"
-                [saleTag]="cardData.saleTag"
-                [projectTitle]="cardData.projectTitle"
-                [projectSubtitle]="cardData.projectSubtitle"
-              ></app-projectcard>
-            </div>
+            <app-projectcard
+              [project]="project"
+              *ngFor="let project of projects"
+              [projectImage]="project.projectImage"
+              [saleTag]="project.saleTag"
+              [projectTitle]="project.projectTitle"
+              [projectSubtitle]="project.projectSubtitle"
+            ></app-projectcard>
           </div>
           <button class="explore-button" [routerLink]="['/projectsec']">
             explore more
@@ -55,60 +55,19 @@
           <img src="/assets/line.svg" />
         </div>
 
-        <div class="coming-soon-card">
-          <span class="coming-soon-card-img"
-            ><img [src]="cardData.image"
-          /></span>
-          <div class="coming-soon-card-container">
-            <span class="coming-soon-card-container-head">{{
-              cardData.title
-            }}</span>
-            <div class="coming-soon-card-details">
-              <div class="coming-soon-card-detail-sec">
-                <span class="coming-soon-card-head">APPROVAL</span>
-                <span class="coming-soon-card-subhead">{{
-                  cardData.approval
-                }}</span>
-              </div>
-              <div class="coming-soon-card-detail-sec">
-                <span class="coming-soon-card-head">FOUNDATION</span>
-                <span class="coming-soon-card-subhead">{{
-                  cardData.foundation
-                }}</span>
-              </div>
-              <div class="coming-soon-card-detail-sec">
-                <span class="coming-soon-card-head">STRUCTURE </span>
-                <span class="coming-soon-card-subhead">{{
-                  cardData.structure
-                }}</span>
-              </div>
-              <div class="coming-soon-card-detail-sec">
-                <span class="coming-soon-card-head">SALABLE AREA</span>
-                <span class="coming-soon-card-subhead">{{
-                  cardData.salableArea
-                }}</span>
-              </div>
-              <div class="coming-soon-card-detail-sec">
-                <span class="coming-soon-card-head">UNIT TYPE</span>
-                <span class="coming-soon-card-subhead">{{
-                  cardData.unitType
-                }}</span>
-              </div>
-              <div class="coming-soon-card-detail-sec">
-                <span class="coming-soon-card-head">TOTAL UNIT</span>
-                <span class="coming-soon-card-subhead">{{
-                  cardData.totalUnit
-                }}</span>
-              </div>
-              <div class="coming-soon-card-detail-sec">
-                <span class="coming-soon-card-head">PROJECT HIGHLIGHT</span>
-                <span class="coming-soon-card-subhead">{{
-                  cardData.projectHighlight
-                }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <app-coming-soon-card
+          *ngFor="let comingSoonProject of comingSoonProjects"
+          [projectImage]="comingSoonProject.projectImage"
+          [saleTag]="comingSoonProject.saleTag"
+          [title]="comingSoonProject.title"
+          [approval]="comingSoonProject.approval"
+          [foundation]="comingSoonProject.foundation"
+          [structure]="comingSoonProject.structure"
+          [salableArea]="comingSoonProject.salableArea"
+          [unitType]="comingSoonProject.unitType"
+          [totalUnit]="comingSoonProject.totalUnit"
+          [projectHighlight]="comingSoonProject.projectHighlight"
+        ></app-coming-soon-card>
       </div>
     </div>
     <div class="about-container">

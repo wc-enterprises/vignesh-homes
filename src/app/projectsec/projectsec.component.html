@@ -17,34 +17,45 @@
 
     <div class="tabs">
       <div class="tabs">
-        <button (click)="filterProjects('forsale')">For sale</button>
-        <button (click)="filterProjects('ongoing')">Ongoing</button>
-        <button (click)="filterProjects('complete')">Completed</button>
-
-        <button (click)="filterProjects('Coming soon')">Coming soon</button>
+        <button
+          (click)="updateTab('forsale')"
+          [ngClass]="{ 'selected-tab': defaultTab === 'forsale' }"
+        >
+          For sale
+        </button>
+        <button
+          (click)="updateTab('ongoing')"
+          [ngClass]="{ 'selected-tab': defaultTab === 'ongoing' }"
+        >
+          Ongoing
+        </button>
+        <button
+          (click)="updateTab('complete')"
+          [ngClass]="{ 'selected-tab': defaultTab === 'complete' }"
+        >
+          Completed
+        </button>
+        <button
+          (click)="updateTab('comingsoon')"
+          [ngClass]="{ 'selected-tab': defaultTab === 'Coming soon' }"
+        >
+          Coming soon
+        </button>
       </div>
     </div>
 
     <div class="project-show-mainbox">
       <div class="project-show-subbox">
         <div class="project-show-maindetails">
-          <span class="project-show-detail-head">RESIDENTIAL PROJECTS</span>
+          <span class="project-show-detail-head">{{ sectionTitle }}</span>
           <div class="project-show-subdetails">
-            <span
-              >Vignesh Homes is pleased to offer a selection of meticulously
-              crafted properties for sale. These are not just buildings; they're
-              future homes and investments. Explore our range of residential and
-              commercial properties, each designed with a focus on quality and
-              aesthetics. Secure your place in a Vignesh Homes creation, where
-              dreams become addresses. Take the first step in owning a piece of
-              architectural excellence.</span
-            >
+            <span>{{ sectionDescription }}</span>
             <button [routerLink]="['/contact']">GET IN TOUCH</button>
           </div>
           <div></div>
         </div>
 
-        <div class="project-card-sec">
+        <!-- <div class="project-card-sec" *ngIf="selectedTab !== 'Coming soon'">
           <div *ngFor="let cardData of cardsData">
             <app-projectcard
               [projectImage]="cardData.projectImage"
@@ -53,6 +64,33 @@
               [projectSubtitle]="cardData.projectSubtitle"
             ></app-projectcard>
           </div>
+        </div> -->
+
+        <div class="project-card-sec">
+          <!-- Display standard projects -->
+          <app-projectcard
+            [project]="project"
+            *ngFor="let project of standardProjects"
+            [projectImage]="project.projectImage"
+            [saleTag]="project.saleTag"
+            [projectTitle]="project.projectTitle"
+            [projectSubtitle]="project.projectSubtitle"
+          ></app-projectcard>
+
+          <!-- Display coming soon projects -->
+          <app-coming-soon-card
+            *ngFor="let comingSoonProject of comingSoonProjects"
+            [projectImage]="comingSoonProject.projectImage"
+            [saleTag]="comingSoonProject.saleTag"
+            [title]="comingSoonProject.title"
+            [approval]="comingSoonProject.approval"
+            [foundation]="comingSoonProject.foundation"
+            [structure]="comingSoonProject.structure"
+            [salableArea]="comingSoonProject.salableArea"
+            [unitType]="comingSoonProject.unitType"
+            [totalUnit]="comingSoonProject.totalUnit"
+            [projectHighlight]="comingSoonProject.projectHighlight"
+          ></app-coming-soon-card>
         </div>
       </div>
     </div>

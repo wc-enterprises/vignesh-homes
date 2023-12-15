@@ -10,15 +10,17 @@ import { ProjectcardComponent } from './projectcard/projectcard.component';
 import { ProjectoverviewComponent } from './projectoverview/projectoverview.component';
 import { ProjectsecComponent } from './projectsec/projectsec.component';
 import { TestimonialcardComponent } from './testimonialcard/testimonialcard.component';
-
+import { ComingSoonCardComponent } from './coming-soon-card/coming-soon-card.component';
 export const routes: Routes = [
   { path: 'navbar', component: NavbarComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'aboutus', component: AboutusComponent },
   { path: 'jointventure', component: JointventureComponent },
   { path: 'contact', component: ContactComponent },
+
   { path: '', component: HomeComponent },
-  { path: 'overview', component: ProjectoverviewComponent },
+  { path: 'comingsooncard', component: ComingSoonCardComponent },
+  { path: 'overview/:id', component: ProjectoverviewComponent },
   { path: 'projectsec', component: ProjectsecComponent },
 
   { path: 'projectcard', component: ProjectcardComponent },

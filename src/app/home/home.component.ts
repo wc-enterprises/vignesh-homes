@@ -1,5 +1,13 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 
+import { ComingSoonCardComponent } from '../coming-soon-card/coming-soon-card.component';
+
+import {
+  Project,
+  ProjectService,
+  comingSoonProjects,
+  projects,
+} from '../common-utils/project-service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,66 +15,29 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   animations: [],
 })
 export class HomeComponent {
-  // testimonials: Testimonial[] = [
+  // comingSoonProjects: ComingSoonProject[] = [
   //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. ARUNKUMAR, Flat No - 201, Saiakshi Gardens.',
+  //     id: '001',
+  //     projectImage: '/assets/comingsoon-img.svg',
+  //     saleTag: '/assets/comingsoon.svg',
+  //     title: 'Premium 2 & 1 BHK flats for sale in Valasaravakkam, Chennai.',
+  //     approval: 'CMDA Approved',
+  //     foundation: 'Pile Foundation',
+  //     structure: 'Stilt + 3 Floor',
+  //     salableArea: '-',
+  //     unitType: '2 & 1 BHK',
+  //     totalUnit: '6',
+  //     projectHighlight: 'Lift, Video Door, CCTV & EV Charging Point.',
   //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. ARUN, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. KUMAR, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. dhanush, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. siva, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. paul, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. tintu, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. mash, Flat No - 201, Saiakshi Gardens.',
-  //   },
-  //   {
-  //     content:
-  //       "It's been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building one's home, the most joyful and happy experience.",
-  //     address: 'Mr. siv, Flat No - 201, Saiakshi Gardens.',
-  //   },
+  //   // Add more projects as needed
   // ];
+  projects: Project[] = projects;
+  comingSoonProjects: ComingSoonProject[] = comingSoonProjects;
+  constructor() {}
 
-  cardData = {
-    image: '/assets/comingsoon-img.svg',
-    title: 'Premium 2 & 1 BHK flats for sale in Valasaravakkam, Chennai.',
-    approval: 'CMDA Approved',
-    foundation: 'Pile Foundation',
-    structure: 'Stilt + 3 Floor',
-    salableArea: '-',
-    unitType: '2 & 1 BHK',
-    totalUnit: '6',
-    projectHighlight: 'Lift, Video Door, CCTV & EV Charging Point.',
-  };
-
+  ngOnInit() {
+    this.projects = projects;
+  }
   testimonials = [
     {
       content:
@@ -109,67 +80,90 @@ export class HomeComponent {
       address: 'Mr. Harish, Flat No - 201,Saiakshi Gardens.',
     },
   ];
-  @ViewChild('testimonialsContainer', { static: false })
-  testimonialsContainer!: ElementRef;
-  cardWidth = 350; // Adjust this based on your card width
 
-  moveLeft(): void {
-    const container = this.testimonialsContainer.nativeElement as HTMLElement;
-    const scrollAmount = this.cardWidth;
-    container.scrollLeft -= scrollAmount;
-  }
+  // projects: Project[] = [
+  //   {
+  //     id: '1',
+  //     projectImage: '/assets/project1.svg',
+  //     saleTag: '/assets/forsale.svg',
+  //     projectTitle: 'GOTETY RESIDENCY',
+  //     projectSubtitle:
+  //       'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
+  //   },
+  //   {
+  //     id: '2',
+  //     projectImage: '/assets/project1.svg',
+  //     saleTag: '/assets/forsale.svg',
+  //     projectTitle: 'GOTETY RESIDENCY',
+  //     projectSubtitle:
+  //       'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
+  //   },
+  //   {
+  //     id: '3',
+  //     projectImage: '/assets/project1.svg',
+  //     saleTag: '/assets/ongoing.svg',
+  //     projectTitle: 'GOTETY RESIDENCY',
+  //     projectSubtitle:
+  //       'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
+  //   },
+  //   {
+  //     id: '4',
+  //     projectImage: '/assets/project1.svg',
+  //     saleTag: '/assets/complete.svg',
+  //     projectTitle: 'GOTETY RESIDENCY',
+  //     projectSubtitle:
+  //       'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
+  //   },
+  //   {
+  //     id: '5',
+  //     projectImage: '/assets/project1.svg',
+  //     saleTag: '/assets/complete.svg',
+  //     projectTitle: 'GOTETY RESIDENCY',
+  //     projectSubtitle:
+  //       'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
+  //   },
+  //   {
+  //     id: '6',
+  //     projectImage: '/assets/project1.svg',
+  //     saleTag: '/assets/complete.svg',
+  //     projectTitle: 'GOTETY RESIDENCY',
+  //     projectSubtitle:
+  //       'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
+  //   },
+  //   {
+  //     id: '7',
+  //     projectImage: '/assets/project1.svg',
+  //     saleTag: '/assets/complete.svg',
+  //     projectTitle: 'GOTETY RESIDENCY',
+  //     projectSubtitle:
+  //       'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
+  //   },
+  //   {
+  //     id: '8',
+  //     projectImage: '/assets/project1.svg',
+  //     saleTag: '/assets/complete.svg',
+  //     projectTitle: 'GOTETY RESIDENCY',
+  //     projectSubtitle:
+  //       'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
+  //   },
 
-  moveRight(): void {
-    const container = this.testimonialsContainer.nativeElement as HTMLElement;
-    const scrollAmount = this.cardWidth;
-    container.scrollLeft += scrollAmount;
-  }
-  cardsData = [
-    {
-      projectImage: '/assets/project1.svg',
-      saleTag: '/assets/forsale.svg',
-      projectTitle: 'GOTETY RESIDENCY',
-      projectSubtitle:
-        'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
-    },
-    {
-      projectImage: '/assets/project2.svg',
-      saleTag: '/assets/ongoing.svg',
-      projectTitle: 'GOTETY RESIDENCY',
-      projectSubtitle:
-        'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
-    },
-    {
-      projectImage: '/assets/project3.svg',
-      saleTag: '/assets/complete.svg',
-      projectTitle: 'GOTETY RESIDENCY',
-      projectSubtitle:
-        'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
-    },
-    {
-      projectImage: '/assets/project1.svg',
-      saleTag: '/assets/forsale.svg',
-      projectTitle: 'GOTETY RESIDENCY',
-      projectSubtitle:
-        'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
-    },
-    {
-      projectImage: '/assets/project2.svg',
-      saleTag: '/assets/ongoing.svg',
-      projectTitle: 'GOTETY RESIDENCY',
-      projectSubtitle:
-        'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
-    },
-    {
-      projectImage: '/assets/project3.svg',
-      saleTag: '/assets/complete.svg',
-      projectTitle: 'GOTETY RESIDENCY',
-      projectSubtitle:
-        'Introducing 2 and 3 BHK flats, ranging from 969 to 1080 sqft, for your ideal living space.',
-    },
-  ];
+  //   // Add other projects
+  // ];
 }
 export interface Testimonial {
   content: string;
   address: string;
+}
+export interface ComingSoonProject {
+  id: string;
+  projectImage: string;
+  saleTag: string;
+  title: string;
+  approval: string;
+  foundation: string;
+  structure: string;
+  salableArea: string;
+  unitType: string;
+  totalUnit: string;
+  projectHighlight: string;
 }
