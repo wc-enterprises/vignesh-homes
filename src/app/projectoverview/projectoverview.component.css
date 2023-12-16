@@ -64,6 +64,10 @@ body::-webkit-scrollbar {
   line-height: 24px;
   cursor: pointer;
 }
+.tabs button.active {
+  background-color: #fff; /* Set your desired background color */
+  /* Additional styles for the active button */
+}
 .tabs button:hover {
   background: #fff;
   transition: 0.5s ease-in-out;

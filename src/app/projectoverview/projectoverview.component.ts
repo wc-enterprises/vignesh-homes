@@ -160,11 +160,12 @@ export class ProjectoverviewComponent implements OnInit, AfterViewInit {
   @ViewChild('specificationSection') specificationSection:
     | ElementRef
     | undefined;
-
+  selectedTab: string = '';
   scrollToLocation() {
     if (this.locationSection) {
       this.locationSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
     }
+    this.selectedTab = 'location';
   }
 
   scrollToFloorplan() {
@@ -173,6 +174,7 @@ export class ProjectoverviewComponent implements OnInit, AfterViewInit {
         behavior: 'smooth',
       });
     }
+    this.selectedTab = 'floorplan';
   }
 
   scrollToSpecification() {
@@ -181,6 +183,7 @@ export class ProjectoverviewComponent implements OnInit, AfterViewInit {
         behavior: 'smooth',
       });
     }
+    this.selectedTab = 'specification';
   }
 }
 interface FloorPlan {

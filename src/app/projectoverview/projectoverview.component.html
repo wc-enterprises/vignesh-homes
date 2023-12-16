@@ -24,11 +24,25 @@
         </span>
       </div>
     </div>
-
     <div class="tabs">
-      <button (click)="scrollToLocation()">Location</button>
-      <button (click)="scrollToFloorplan()">Floor plan</button>
-      <button (click)="scrollToSpecification()">Specification</button>
+      <button
+        (click)="scrollToLocation()"
+        [class.active]="selectedTab === 'location'"
+      >
+        Location
+      </button>
+      <button
+        (click)="scrollToFloorplan()"
+        [class.active]="selectedTab === 'floorplan'"
+      >
+        Floor plan
+      </button>
+      <button
+        (click)="scrollToSpecification()"
+        [class.active]="selectedTab === 'specification'"
+      >
+        Specification
+      </button>
     </div>
     <div *ngIf="project">
       <div class="project-intro-mainbox">
