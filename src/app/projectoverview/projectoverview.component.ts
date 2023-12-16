@@ -6,17 +6,13 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { NavbarComponent } from '../navbar/navbar.component';
-import { FooterComponent } from '../footer/footer.component';
-import { CommonModule } from '@angular/common';
+
 import { Project, projects } from '../common-utils/project-service';
 import { ActivatedRoute } from '@angular/router';
 import { ProjectService } from '../common-utils/project-service';
 import { ProjectLocation } from '../common-utils/project-service';
 import * as L from 'leaflet';
-interface FloorPlan {
-  imgSrc: string;
-}
+
 @Component({
   selector: 'app-projectoverview',
   templateUrl: './projectoverview.component.html',
@@ -165,8 +161,6 @@ export class ProjectoverviewComponent implements OnInit, AfterViewInit {
     | ElementRef
     | undefined;
 
-  // ... rest of your component code ...
-
   scrollToLocation() {
     if (this.locationSection) {
       this.locationSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
@@ -188,5 +182,7 @@ export class ProjectoverviewComponent implements OnInit, AfterViewInit {
       });
     }
   }
-  // projectId: string = '';
+}
+interface FloorPlan {
+  imgSrc: string;
 }
