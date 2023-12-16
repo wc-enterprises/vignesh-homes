@@ -15,7 +15,7 @@ export class ProjectsecComponent {
   sectionDescription = '';
   standardProjects: Project[] = [];
   comingSoonProjects: ComingSoonProject[] = [];
-  defaultTab: string = 'forsale';
+  defaultTab: string = '';
 
   constructor(private ProjectService: ProjectService) {}
 
@@ -28,6 +28,7 @@ export class ProjectsecComponent {
 
   updateTab(tab: string) {
     this.ProjectService.updateSelectedTab(tab);
+    this.defaultTab = tab;
   }
 
   filterProjects(saleTag: string) {

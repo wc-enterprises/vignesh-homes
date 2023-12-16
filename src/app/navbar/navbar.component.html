@@ -8,19 +8,23 @@
   </div>
   <!--Laptop screen nav content-->
   <div id="sidemenu">
-    <span class="sidemenucont">
+    <span
+      class="sidemenucont"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
       <a [routerLink]="['/']">Home</a>
     </span>
-    <span class="sidemenucont">
+    <span class="sidemenucont" routerLinkActive="active">
       <a [routerLink]="['/projectsec']">Projects</a>
     </span>
-    <span class="sidemenucont">
+    <span class="sidemenucont" routerLinkActive="active">
       <a [routerLink]="['/jointventure']">Joint venture</a>
     </span>
-    <span class="sidemenucont"
-      ><a [routerLink]="['/aboutus']">About us</a></span
-    >
-    <span class="sidemenucont">
+    <span class="sidemenucont" routerLinkActive="active">
+      <a [routerLink]="['/aboutus']">About us</a>
+    </span>
+    <span class="sidemenucont" routerLinkActive="active">
       <a [routerLink]="['/contact']">Contact</a>
     </span>
 
