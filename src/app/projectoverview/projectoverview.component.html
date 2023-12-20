@@ -111,6 +111,11 @@
               class="specification-grid-box"
               *ngFor="let spec of specifications"
             >
+              <img
+                class="specification-img"
+                [src]="spec.imageSrc"
+                alt="{{ spec.title }}"
+              />
               <span class="specification-title">{{ spec.title }}</span>
               <span class="specification-content">{{ spec.content }}</span>
             </div>
