@@ -1,0 +1,31 @@
+<div class="completed-card">
+  <span
+    class="completed-card-img"
+    [style.background-image]="'url(' + projectImage + ')'"
+    ><img [src]="saleTag" class="completed-tag"
+  /></span>
+  <div class="completed-card-container">
+    <span class="completed-card-container-head">
+      {{ title }}
+    </span>
+    <div class="completed-card-details">
+      <div class="completed-card-detail-sec">
+        <span class="completed-card-head">APPROVAL</span>
+        <span class="completed-card-subhead">{{ approval }}</span>
+      </div>
+      <div class="completed-card-detail-sec">
+        <span class="completed-card-head">UNIT TYPE</span>
+        <span class="completed-card-subhead">{{ unitType }}</span>
+      </div>
+      <div class="completed-card-detail-sec">
+        <span class="completed-card-head">TOTAL UNIT</span>
+        <span class="completed-card-subhead">{{ totalUnit }}</span>
+      </div>
+      <div class="completed-card-detail-sec">
+        <span class="completed-card-head">PROJECT HIGHLIGHT</span>
+        <span class="completed-card-subhead">{{ projectHighlight }}</span>
+      </div>
+      <button class="view-location">View location</button>
+    </div>
+  </div>
+</div>

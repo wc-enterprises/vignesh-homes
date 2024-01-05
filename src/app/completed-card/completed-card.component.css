@@ -1,0 +1,132 @@
+.completed-card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: auto;
+  gap: 15px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.completed-card-container {
+  display: flex;
+  width: 100%;
+  height: 325px;
+
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+
+  box-sizing: border-box;
+}
+.completed-card-img {
+  width: 100%;
+  height: 275px;
+  background-image: url(/assets/comingsoon-img.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 15px;
+  object-fit: cover;
+  align-items: flex-start;
+  display: block;
+}
+/* .coming-soon-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
+.completed-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.completed-card-container-head {
+  align-self: stretch;
+  color: #363636;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 31px;
+  text-transform: uppercase;
+}
+.completed-card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  align-self: stretch;
+}
+.completed-card-detail-sec {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  align-self: stretch;
+}
+.completed-card-head {
+  width: 30%;
+  color: #363636;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 27px;
+}
+.completed-card-subhead {
+  width: 70%;
+  color: #363636;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.view-location {
+  width: 100%;
+  height: 50px;
+  padding: 0px;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 15px;
+  background-color: #313333;
+  font-weight: 400;
+  line-height: 27px;
+  border: none;
+  border-radius: 5px;
+}
+@media (max-width: 1025px) {
+  .completed-card {
+    width: 300px;
+    gap: 15px;
+  }
+  .completed-card-container {
+    height: auto;
+    gap: 15px;
+  }
+  .completed-card-img {
+    height: 230px;
+    border-radius: 12px;
+  }
+
+  .completed-card-container-head {
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .completed-card-details {
+    gap: 15px;
+  }
+  .completed-card-detail-sec {
+    gap: 15px;
+  }
+  .completed-card-head {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .completed-card-subhead {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .view-location {
+    height: 45px;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 5px;
+  }
+}
