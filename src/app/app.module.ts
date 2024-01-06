@@ -21,6 +21,7 @@ import { ProjectService } from './common-utils/project-service';
 import { ComingSoonCardComponent } from './coming-soon-card/coming-soon-card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CompletedCardComponent } from './completed-card/completed-card.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     ScrollColorChange,
     ScrollChangeColorDirective,
     ComingSoonCardComponent,
+    CompletedCardComponent,
   ],
   imports: [
     FormsModule,

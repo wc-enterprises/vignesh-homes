@@ -11,6 +11,7 @@ import { ProjectoverviewComponent } from './projectoverview/projectoverview.comp
 import { ProjectsecComponent } from './projectsec/projectsec.component';
 import { TestimonialcardComponent } from './testimonialcard/testimonialcard.component';
 import { ComingSoonCardComponent } from './coming-soon-card/coming-soon-card.component';
+import { CompletedCardComponent } from './completed-card/completed-card.component';
 export const routes: Routes = [
   { path: 'navbar', component: NavbarComponent },
   { path: 'footer', component: FooterComponent },
@@ -22,7 +23,7 @@ export const routes: Routes = [
   { path: 'comingsooncard', component: ComingSoonCardComponent },
   { path: 'overview/:id', component: ProjectoverviewComponent },
   { path: 'projectsec', component: ProjectsecComponent },
-
+  { path: 'completedcard', component: CompletedCardComponent },
   { path: 'projectcard', component: ProjectcardComponent },
   { path: 'tmcard', component: TestimonialcardComponent },
 ];

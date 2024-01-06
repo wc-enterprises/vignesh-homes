@@ -23,12 +23,12 @@
         >
           For sale
         </button>
-        <button
+        <!-- <button
           (click)="updateTab('ongoing')"
           [ngClass]="{ 'selected-tab': defaultTab === 'ongoing' }"
         >
           Ongoing
-        </button>
+        </button> -->
         <button
           (click)="updateTab('complete')"
           [ngClass]="{ 'selected-tab': defaultTab === 'complete' }"
@@ -67,7 +67,6 @@
         </div> -->
 
         <div class="project-card-sec">
-          <!-- Display standard projects -->
           <app-projectcard
             [project]="project"
             *ngFor="let project of standardProjects"
@@ -76,8 +75,18 @@
             [projectTitle]="project.projectTitle"
             [projectSubtitle]="project.projectSubtitle"
           ></app-projectcard>
+          <div *ngFor="let completedProject of completedProjects">
+            <app-completed-card
+              [projectImage]="completedProject.projectImage"
+              [saleTag]="completedProject.saleTag"
+              [title]="completedProject.title"
+              [approval]="completedProject.approval"
+              [unitType]="completedProject.unitType"
+              [totalUnit]="completedProject.totalUnit"
+              [projectHighlight]="completedProject.projectHighlight"
+            ></app-completed-card>
+          </div>
 
-          <!-- Display coming soon projects -->
           <app-coming-soon-card
             *ngFor="let comingSoonProject of comingSoonProjects"
             [projectImage]="comingSoonProject.projectImage"

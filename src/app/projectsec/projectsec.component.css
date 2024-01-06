@@ -48,7 +48,7 @@ body::-webkit-scrollbar {
   padding: 12px 0px;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 40px;
   align-self: stretch;
   background: #d6e2ea;
 }
@@ -169,7 +169,7 @@ body::-webkit-scrollbar {
   }
   .tabs {
     padding: 6px 0px;
-    gap: 5px;
+    gap: 20px;
   }
   .tabs button {
     padding: 6px 6px;
@@ -218,6 +218,7 @@ body::-webkit-scrollbar {
   }
   .tabs {
     padding: 8px 0px;
+    gap: 40px;
   }
   .tabs button {
     padding: 8px 10px;
@@ -264,6 +265,7 @@ body::-webkit-scrollbar {
   }
   .tabs {
     padding: 10px 0px;
+    gap: 40px;
   }
   .tabs button {
     padding: 10px 20px;
