@@ -90,7 +90,7 @@ export const projects: Project[] = [
       {
         introduction: {
           title: 'GOTETY RESIDENCY',
-          imageSrc: '/assets/project-image.jpg',
+          imageSrc: '/assets/comingsoon-img.jpg',
           content:
             'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
         },

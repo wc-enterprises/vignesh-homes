@@ -99,13 +99,15 @@ body::-webkit-scrollbar {
   line-height: normal;
 }
 .project-image {
-  width: 980px;
-  height: 500px;
+  width: 950px;
+  height: 540px;
 }
 .project-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .project-content {
   display: flex;
@@ -331,7 +333,7 @@ body::-webkit-scrollbar {
   }
   .project-image {
     width: 100%;
-    height: 165px;
+    height: 170px;
   }
   .project-content {
     font-size: 14px;
@@ -423,7 +425,7 @@ body::-webkit-scrollbar {
     object-fit: cover;
   }
 }
-@media (min-width: 321px) and (max-width: 426px) {
+@media (min-width: 321px) and (max-width: 376px) {
   #heropage {
     padding-bottom: 40px;
   }
@@ -442,7 +444,7 @@ body::-webkit-scrollbar {
     line-height: 20px;
   }
   .project-intro-mainbox {
-    padding: 40px 20px;
+    padding: 40px 15px;
   }
   .project-intro-subbox {
     width: 100%;
@@ -453,14 +455,14 @@ body::-webkit-scrollbar {
   }
   .project-image {
     width: 100%;
-    height: 200px;
+    height: 192px;
   }
   .project-content {
     font-size: 14px;
     line-height: 24px;
   }
   .floorplan-mainbox {
-    padding: 40px 20px;
+    padding: 40px 15px;
   }
   .floorplan-subbox {
     width: 100%;
@@ -483,7 +485,7 @@ body::-webkit-scrollbar {
     height: 230px;
   }
   .specification-mainbox {
-    padding: 40px 20px;
+    padding: 40px 15px;
   }
   .specification-title {
     font-size: 15px;
@@ -500,7 +502,129 @@ body::-webkit-scrollbar {
     font-size: 20px;
   }
   .project-location-mainbox {
-    padding: 40px 20px;
+    padding: 40px 15px;
+  }
+  .project-location-subbox {
+    width: 100%;
+    gap: 25px;
+  }
+  .location-head {
+    font-size: 20px;
+  }
+  .location-container-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+  .location-container-subbox {
+    width: 100%;
+    gap: 10px;
+    height: auto;
+  }
+  .location-address {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .location-content-box {
+    gap: 10px;
+  }
+  .location-content {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  #map {
+    width: 100%;
+    height: 250px;
+  }
+  .location-image {
+    width: 100%;
+    height: 250px;
+  }
+  .location-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (min-width: 376px) and (max-width: 426px) {
+  #heropage {
+    padding-bottom: 40px;
+  }
+  .breadcrumbs {
+    gap: 13px;
+    font-size: 18px;
+    padding: 0px 15px;
+  }
+  .tabs {
+    padding: 8px 0px;
+  }
+  .tabs button {
+    padding: 8px 8px;
+    font-size: 12px;
+    gap: 7px;
+    line-height: 20px;
+  }
+  .project-intro-mainbox {
+    padding: 40px 15px;
+  }
+  .project-intro-subbox {
+    width: 100%;
+    gap: 23px;
+  }
+  .project-title {
+    font-size: 20px;
+  }
+  .project-image {
+    width: 100%;
+    height: 218px;
+  }
+  .project-content {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .floorplan-mainbox {
+    padding: 40px 15px;
+  }
+  .floorplan-subbox {
+    width: 100%;
+    gap: 25px;
+  }
+  .floorplan-container-box {
+    gap: 26px;
+  }
+
+  .floorplan-container {
+    gap: 20px;
+    height: auto;
+  }
+  .floorplan-img {
+    width: 300px;
+    height: 230px;
+  }
+  .floorplan-img img {
+    width: 300px;
+    height: 230px;
+  }
+  .specification-mainbox {
+    padding: 40px 15px;
+  }
+  .specification-title {
+    font-size: 15px;
+  }
+  .specification-img {
+    width: 40px;
+    height: 40px;
+  }
+  .specification-subbox {
+    width: 100%;
+    gap: 25px;
+  }
+  .specification-head {
+    font-size: 20px;
+  }
+  .project-location-mainbox {
+    padding: 40px 15px;
   }
   .project-location-subbox {
     width: 100%;
@@ -572,7 +696,7 @@ body::-webkit-scrollbar {
   }
   .project-image {
     width: 100%;
-    height: 330px;
+    height: 400px;
   }
   .project-content {
     font-size: 14px;
@@ -683,8 +807,8 @@ body::-webkit-scrollbar {
     font-size: 28px;
   }
   .project-image {
-    width: 750px;
-    height: 380px;
+    width: 700px;
+    height: 400px;
   }
   .project-content {
     font-size: 16px;
