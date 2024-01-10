@@ -301,7 +301,129 @@ body::-webkit-scrollbar {
   height: 295px;
   object-fit: cover;
 }
-@media (max-width: 426px) {
+@media (max-width: 321px) {
+  #heropage {
+    padding-bottom: 40px;
+  }
+  .breadcrumbs {
+    gap: 13px;
+    font-size: 18px;
+    padding: 0px 15px;
+  }
+  .tabs {
+    padding: 8px 0px;
+  }
+  .tabs button {
+    padding: 8px 8px;
+    font-size: 12px;
+    gap: 7px;
+    line-height: 20px;
+  }
+  .project-intro-mainbox {
+    padding: 35px 15px;
+  }
+  .project-intro-subbox {
+    width: 100%;
+    gap: 20px;
+  }
+  .project-title {
+    font-size: 18px;
+  }
+  .project-image {
+    width: 100%;
+    height: 165px;
+  }
+  .project-content {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .floorplan-mainbox {
+    padding: 35px 15px;
+  }
+  .floorplan-subbox {
+    width: 100%;
+    gap: 22px;
+  }
+  .floorplan-container-box {
+    gap: 26px;
+  }
+
+  .floorplan-container {
+    gap: 18px;
+    height: auto;
+  }
+  .floorplan-img {
+    width: 300px;
+    height: 230px;
+  }
+  .floorplan-img img {
+    width: 300px;
+    height: 230px;
+  }
+  .specification-mainbox {
+    padding: 35px 15px;
+  }
+  .specification-title {
+    font-size: 15px;
+  }
+  .specification-img {
+    width: 40px;
+    height: 40px;
+  }
+  .specification-subbox {
+    width: 100%;
+    gap: 22px;
+  }
+  .specification-head {
+    font-size: 18px;
+  }
+  .project-location-mainbox {
+    padding: 35px 15px;
+  }
+  .project-location-subbox {
+    width: 100%;
+    gap: 22px;
+  }
+  .location-head {
+    font-size: 18px;
+  }
+  .location-container-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+  .location-container-subbox {
+    width: 100%;
+    gap: 10px;
+    height: auto;
+  }
+  .location-address {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .location-content-box {
+    gap: 10px;
+  }
+  .location-content {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  #map {
+    width: 100%;
+    height: 250px;
+  }
+  .location-image {
+    width: 100%;
+    height: 250px;
+  }
+  .location-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (min-width: 321px) and (max-width: 426px) {
   #heropage {
     padding-bottom: 40px;
   }
@@ -324,14 +446,14 @@ body::-webkit-scrollbar {
   }
   .project-intro-subbox {
     width: 100%;
-    gap: 20px;
+    gap: 23px;
   }
   .project-title {
-    font-size: 22px;
+    font-size: 20px;
   }
   .project-image {
     width: 100%;
-    height: 250px;
+    height: 200px;
   }
   .project-content {
     font-size: 14px;
@@ -342,7 +464,7 @@ body::-webkit-scrollbar {
   }
   .floorplan-subbox {
     width: 100%;
-    gap: 30px;
+    gap: 25px;
   }
   .floorplan-container-box {
     gap: 26px;
@@ -363,26 +485,29 @@ body::-webkit-scrollbar {
   .specification-mainbox {
     padding: 40px 20px;
   }
+  .specification-title {
+    font-size: 15px;
+  }
   .specification-img {
     width: 40px;
     height: 40px;
   }
   .specification-subbox {
     width: 100%;
-    gap: 30px;
+    gap: 25px;
   }
   .specification-head {
-    font-size: 24px;
+    font-size: 20px;
   }
   .project-location-mainbox {
     padding: 40px 20px;
   }
   .project-location-subbox {
     width: 100%;
-    gap: 30px;
+    gap: 25px;
   }
   .location-head {
-    font-size: 22px;
+    font-size: 20px;
   }
   .location-container-box {
     flex-direction: column;
@@ -396,15 +521,15 @@ body::-webkit-scrollbar {
     height: auto;
   }
   .location-address {
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 15px;
+    line-height: 26px;
   }
   .location-content-box {
     gap: 10px;
   }
   .location-content {
     font-size: 14px;
-    line-height: 27px;
+    line-height: 25px;
   }
   #map {
     width: 100%;
@@ -447,7 +572,7 @@ body::-webkit-scrollbar {
   }
   .project-image {
     width: 100%;
-    height: 350px;
+    height: 330px;
   }
   .project-content {
     font-size: 14px;
@@ -558,8 +683,8 @@ body::-webkit-scrollbar {
     font-size: 28px;
   }
   .project-image {
-    width: 700px;
-    height: 425px;
+    width: 750px;
+    height: 380px;
   }
   .project-content {
     font-size: 16px;

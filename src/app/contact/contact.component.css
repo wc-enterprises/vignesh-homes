@@ -261,11 +261,11 @@ button[type="submit"]:hover {
   }
 
   #heropage span {
-    font-size: 24px;
+    font-size: 20px;
     padding: 0px 15px;
   }
   .main-container {
-    padding: 40px 20px;
+    padding: 40px 15px;
   }
   .sub-container {
     gap: 32px;
@@ -275,7 +275,7 @@ button[type="submit"]:hover {
     width: 100%;
   }
   .header {
-    font-size: 20px;
+    font-size: 18px;
   }
   .header-cont {
     gap: 12px;
@@ -297,7 +297,7 @@ button[type="submit"]:hover {
     gap: 8px;
   }
   .contact-head {
-    font-size: 17px;
+    font-size: 16px;
   }
   .cont {
     font-size: 14px;
@@ -313,11 +313,11 @@ button[type="submit"]:hover {
   }
 
   .contact-form span {
-    font-size: 20px;
+    font-size: 18px;
     justify-content: left;
   }
   form {
-    gap: 25px;
+    gap: 22px;
   }
   .form-field {
     gap: 8px;
