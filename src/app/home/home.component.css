@@ -407,7 +407,7 @@ body::-webkit-scrollbar {
   width: 100%;
   justify-content: flex-start;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
   transition: transform 0.3s ease;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -432,10 +432,10 @@ body::-webkit-scrollbar {
   }
   .hero-head {
     width: 95%;
-    gap: 7px;
+    gap: 10px;
   }
   .hero-cont {
-    font-size: 32px;
+    font-size: 30px;
     text-align: right;
   }
   .hero-cont1 {
@@ -445,13 +445,19 @@ body::-webkit-scrollbar {
   .hero-subhead {
     width: 95%;
     font-size: 17px;
-    line-height: 28px;
+    line-height: 26px;
   }
   .coming-soon-card {
     flex-direction: column;
   }
+  .project-header img {
+    width: 65px;
+  }
+  .company-details-header img {
+    width: 65px;
+  }
   .coming-soon-container {
-    padding: 40px 20px;
+    padding: 40px 15px;
     gap: 35px;
   }
   .coming-soon-subcontainer {
@@ -462,10 +468,10 @@ body::-webkit-scrollbar {
     gap: 10px;
   }
   .coming-soon-header span {
-    font-size: 22px;
+    font-size: 20px;
   }
   .coming-soon-header img {
-    width: 70px;
+    width: 65px;
     height: 1px;
   }
   .coming-soon-card-container {
@@ -480,6 +486,7 @@ body::-webkit-scrollbar {
   }
   .coming-soon-card-container-head {
     font-size: 15px;
+    line-height: 24px;
   }
   .coming-soon-card-details {
     gap: 7px;
@@ -494,7 +501,7 @@ body::-webkit-scrollbar {
     font-size: 12px;
   }
   .about-container {
-    padding: 40px 20px;
+    padding: 40px 15px;
     gap: 20px;
   }
   .about-subcontainer {
@@ -507,14 +514,15 @@ body::-webkit-scrollbar {
   }
   .about-head {
     width: 40%;
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 30px;
   }
   .about-content span {
     font-size: 14px;
     line-height: 22px;
   }
   .company-details-container {
-    padding: 40px 20px;
+    padding: 40px 15px;
     gap: 25px;
   }
   .company-details-subcontainer {
@@ -529,7 +537,7 @@ body::-webkit-scrollbar {
     gap: 10px;
   }
   .company-details-header span {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .company-details-subcontent {
@@ -554,21 +562,21 @@ body::-webkit-scrollbar {
     line-height: 25px;
   }
   .project-container {
-    padding: 40px 20px;
+    padding: 40px 15px;
   }
   .project-show-sec {
-    gap: 24px;
+    gap: 22px;
   }
   .project-header {
     gap: 8px;
   }
   .project-header span {
-    font-size: 22px;
+    font-size: 20px;
   }
   .project-subcontainer {
     width: 100%;
     align-items: flex-start;
-    gap: 30px;
+    gap: 25px;
   }
   .project-card-sec {
     gap: 17px;
@@ -660,6 +668,7 @@ body::-webkit-scrollbar {
   }
   .about-head {
     font-size: 24px;
+    line-height: 35px;
   }
   .about-content span {
     font-size: 15px;
@@ -816,6 +825,7 @@ body::-webkit-scrollbar {
   }
   .about-head {
     font-size: 28px;
+    line-height: 38px;
   }
   .about-content span {
     font-size: 17px;

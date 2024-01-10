@@ -162,21 +162,21 @@ body::-webkit-scrollbar {
   }
 
   #heropage span {
-    font-size: 24px;
+    font-size: 20px;
     padding: 0px 15px;
   }
   .main-container {
-    padding: 40px 20px;
+    padding: 40px 15px;
   }
   .sub-container {
     gap: 32px;
   }
   .about-header {
     gap: 15px;
-    width: 95%;
+    width: 100%;
   }
   .header {
-    font-size: 20px;
+    font-size: 18px;
   }
   .header-cont {
     gap: 12px;
@@ -186,7 +186,7 @@ body::-webkit-scrollbar {
     line-height: 23px;
   }
   .about-content {
-    gap: 14px;
+    gap: 16px;
     width: 100%;
     height: fit-content;
   }
