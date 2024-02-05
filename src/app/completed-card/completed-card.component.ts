@@ -17,6 +17,7 @@ export interface CompletedProject {
 })
 export class CompletedCardComponent {
   hoverText: string = ''; // Add this line
+  @Input() overview: any;
   @Input() projectImage: string = '';
   @Input() saleTag: string = '';
   @Input() title: string = '';

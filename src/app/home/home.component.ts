@@ -5,6 +5,7 @@ import { ComingSoonCardComponent } from '../coming-soon-card/coming-soon-card.co
 
 import {
   Project,
+  ProjectOverview,
   ProjectService,
   comingSoonProjects,
   completedProjects,
@@ -19,7 +20,7 @@ import {
 export class HomeComponent {
   projects: Project[] = projects;
   comingSoonProjects: ComingSoonProject[] = comingSoonProjects;
-
+  completedProjects: CompletedProject[] = completedProjects.filter(project => project.saleTag === '/assets/forsale.svg');
   constructor() {}
   @ViewChild('heroHeadline', { static: true }) heroHeadline!: ElementRef;
   @ViewChild('heroSubHeadline', { static: true }) heroSubHeadline!: ElementRef;
@@ -54,47 +55,47 @@ export class HomeComponent {
     this.projects = projects;
   }
 
-  testimonials = [
-    {
-      content:
-        'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
-      address: 'Mr. ARUNKUMAR, Flat No - 201,Saiakshi Gardens.',
-    },
-    {
-      content:
-        'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
-      address: 'Mr. Abin, Flat No - 201,Saiakshi Gardens.',
-    },
-    {
-      content:
-        'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
-      address: 'Mr. Siva, Flat No - 201,Saiakshi Gardens.',
-    },
-    {
-      content:
-        'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
-      address: 'Mr. Mash, Flat No - 201,Saiakshi Gardens.',
-    },
-    {
-      content:
-        'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
-      address: 'Mr. Tintu, Flat No - 201,Saiakshi Gardens.',
-    },
-    {
-      content:
-        'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
-      address: 'Mr. Madhan, Flat No - 201,Saiakshi Gardens.',
-    },
-    {
-      content:
-        'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
-      address: 'Mr. Romi, Flat No - 201,Saiakshi Gardens.',
-    },
-    {
-      content:
-        'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
-      address: 'Mr. Harish, Flat No - 201,Saiakshi Gardens.',
-    },
+  testimonials: any = [
+    // {
+    //   content:
+    //     'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
+    //   address: 'Mr. ARUNKUMAR, Flat No - 201,Saiakshi Gardens.',
+    // },
+    // {
+    //   content:
+    //     'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
+    //   address: 'Mr. Abin, Flat No - 201,Saiakshi Gardens.',
+    // },
+    // {
+    //   content:
+    //     'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
+    //   address: 'Mr. Siva, Flat No - 201,Saiakshi Gardens.',
+    // },
+    // {
+    //   content:
+    //     'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
+    //   address: 'Mr. Mash, Flat No - 201,Saiakshi Gardens.',
+    // },
+    // {
+    //   content:
+    //     'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
+    //   address: 'Mr. Tintu, Flat No - 201,Saiakshi Gardens.',
+    // },
+    // {
+    //   content:
+    //     'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
+    //   address: 'Mr. Madhan, Flat No - 201,Saiakshi Gardens.',
+    // },
+    // {
+    //   content:
+    //     'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
+    //   address: 'Mr. Romi, Flat No - 201,Saiakshi Gardens.',
+    // },
+    // {
+    //   content:
+    //     'Its been such a lovely journey to be associated with the Vignesh homes. They make it so easy to help you build your dream home The kind of personal comfort and relationship they share with their customers makes the most tedious journey of building ones home, the most joyful and happy experience.',
+    //   address: 'Mr. Harish, Flat No - 201,Saiakshi Gardens.',
+    // },
   ];
 }
 export interface Testimonial {
@@ -122,5 +123,6 @@ export interface CompletedProject {
   approval: string;
   unitType: string;
   totalUnit: string;
-  projectHighlight: string;
+  Location: string;
+  overview: ProjectOverview[];
 }

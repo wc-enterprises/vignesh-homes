@@ -104,7 +104,7 @@ body::-webkit-scrollbar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
   width: 100%;
 }
 .project-subcontainer {
@@ -279,7 +279,7 @@ body::-webkit-scrollbar {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.28);
 }
 .about-content {
   display: flex;
@@ -336,7 +336,7 @@ body::-webkit-scrollbar {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  gap: 38px;
+  gap: 35px;
 }
 .company-details-header {
   display: flex;
@@ -374,16 +374,16 @@ body::-webkit-scrollbar {
   color: #313333;
   text-align: center;
   font-family: Montserrat;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
-  line-height: 42px;
+  line-height: 38px;
 }
 .company-details-exp-subhead {
   color: #313333;
   text-align: center;
   font-family: Montserrat;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: normal;
 }
 .company-details-exp-content {
@@ -571,11 +571,11 @@ body::-webkit-scrollbar {
     gap: 10px;
   }
   .company-details-exp {
-    gap: 10px;
+    gap: 7px;
   }
   .company-details-exp-head {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 26px;
   }
   .company-details-exp-subhead {
     font-size: 14px;
@@ -599,7 +599,7 @@ body::-webkit-scrollbar {
     padding: 40px 15px;
   }
   .project-show-sec {
-    gap: 22px;
+    gap: 30px;
   }
   .project-header {
     gap: 8px;
@@ -722,7 +722,7 @@ body::-webkit-scrollbar {
   }
   .company-details-content {
     width: 100%;
-    gap: 30px;
+    gap: 25px;
   }
   .company-details-header {
     gap: 10px;
@@ -741,8 +741,8 @@ body::-webkit-scrollbar {
     gap: 10px;
   }
   .company-details-exp-head {
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 22px;
+    line-height: 30px;
   }
   .company-details-exp-subhead {
     font-size: 15px;
@@ -766,7 +766,7 @@ body::-webkit-scrollbar {
     gap: 30px;
   }
   .project-show-sec {
-    gap: 30px;
+    gap: 35px;
   }
   .project-header {
     gap: 8px;
@@ -890,7 +890,7 @@ body::-webkit-scrollbar {
   }
   .company-details-content {
     width: 100%;
-    gap: 30px;
+    gap: 28px;
   }
   .company-details-header {
     gap: 10px;
@@ -909,8 +909,8 @@ body::-webkit-scrollbar {
     gap: 10px;
   }
   .company-details-exp-head {
-    font-size: 32px;
-    line-height: 35px;
+    font-size: 25px;
+    line-height: 32px;
   }
   .company-details-exp-subhead {
     font-size: 15px;
@@ -935,7 +935,7 @@ body::-webkit-scrollbar {
     gap: 30px;
   }
   .project-show-sec {
-    gap: 35px;
+    gap: 40px;
   }
   .project-header {
     gap: 10px;
