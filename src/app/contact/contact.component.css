@@ -91,7 +91,7 @@ body::-webkit-scrollbar {
   color: #333;
   font-family: Montserrat;
   font-size: 16px;
-  line-height: 27px;
+  line-height: 31px;
 }
 .contact-container {
   display: flex;
@@ -282,7 +282,7 @@ button[type="submit"]:hover {
   }
   .header-cont span {
     font-size: 13px;
-    line-height: 23px;
+    line-height: 25px;
   }
   .contact-container {
     gap: 50px;
@@ -368,7 +368,7 @@ button[type="submit"]:hover {
   }
   .header-cont span {
     font-size: 14px;
-    line-height: 25px;
+    line-height: 27px;
   }
   .contact-container {
     gap: 50px;
@@ -448,7 +448,7 @@ button[type="submit"]:hover {
   }
   .header-cont span {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 27px;
   }
 
   .contact-container {

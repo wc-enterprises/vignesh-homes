@@ -16,6 +16,7 @@ export interface CompletedProject {
   styleUrls: ['./completed-card.component.css'],
 })
 export class CompletedCardComponent {
+  hoverText: string = ''; // Add this line
   @Input() projectImage: string = '';
   @Input() saleTag: string = '';
   @Input() title: string = '';
@@ -23,4 +24,15 @@ export class CompletedCardComponent {
   @Input() unitType: string = '';
   @Input() totalUnit: string = '';
   @Input() projectHighlight: string = '';
+  @Input() projectData!: CompletedProject;
+  @Input()
+  completedProjects!: CompletedProject; // Add Input decorator to receive project data
+  constructor(private router: Router) {}
+
+  navigateToProjectOverview() {
+    if (this.completedProjects) {
+      // Navigate to the projectoverview route with the project ID as a parameter
+      this.router.navigate(['/overview', this.completedProjects.id]);
+    }
+  }
 }

@@ -64,7 +64,8 @@ export interface CompletedProject {
   approval: string;
   unitType: string;
   totalUnit: string;
-  projectHighlight: string;
+  Location: string;
+  overview: ProjectOverview[];
 }
 @Injectable({
   providedIn: 'root',
@@ -1054,83 +1055,1618 @@ export const projects: Project[] = [
 export const comingSoonProjects: ComingSoonProject[] = [
   {
     id: '01',
-    projectImage: '/assets/comingsoon-img.jpg',
+    projectImage: '/assets/Ashiyana.jpg',
     saleTag: '/assets/comingsoon.svg',
-    title: 'Premium 2 & 1 BHK flats for sale in Valasaravakkam, Chennai.',
+    title: 'Ashiyana',
     approval: 'CMDA Approved',
     foundation: 'Pile Foundation',
     structure: 'Stilt + 3 Floor',
-    salableArea: '-',
-    unitType: '2 & 1 BHK',
+    salableArea: '841-1234 sqft',
+    unitType: '2 & 3 BHK',
     totalUnit: '6',
-    projectHighlight: 'Lift, Video Door, CCTV & EV Charging Point.',
+    projectHighlight:
+      'Gentset, CCTV, Access control system, Covered car parking, Lift.',
+  },
+  {
+    id: '02',
+    projectImage: '/assets/Gotety.jpg',
+    saleTag: '/assets/comingsoon.svg',
+    title: 'GOTETY Residency',
+    approval: 'CMDA Approved',
+    foundation: 'Pile Foundation',
+    structure: 'Stilt + 3 Floor',
+    salableArea: '903-969-1108 sqft',
+    unitType: '2 & 3 BHK',
+    totalUnit: '8',
+    projectHighlight: 'CCTV, Covered car parking, Bore, Well, lift',
   },
 ];
+
 export const completedProjects: CompletedProject[] = [
   {
     id: '0001',
-    projectImage: '/assets/comingsoon-img.jpg',
+    projectImage: '/assets/Emerald_Park.jpg',
     saleTag: '/assets/complete.svg',
-    title: 'GOTETY RESIDENCY',
+    title: 'Emerald Park',
     approval: 'CMDA Approved',
 
-    unitType: '2 & 1 BHK',
-    totalUnit: '6',
-    projectHighlight: 'Lift, Video Door, CCTV & EV Charging Point.',
+    unitType: '2 & 3 BHK',
+    totalUnit: '1',
+    Location: 'Kamakshi Nagar, Valasaravakkam',
+
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
   },
   {
     id: '0002',
-    projectImage: '/assets/comingsoon-img.jpg',
+    projectImage: '/assets/Guru_Nivas.jpg',
     saleTag: '/assets/complete.svg',
-    title: 'GOTETY RESIDENCY',
+    title: 'Guru Nivas',
     approval: 'CMDA Approved',
 
-    unitType: '2 & 1 BHK',
-    totalUnit: '6',
-    projectHighlight: 'Lift, Video Door, CCTV & EV Charging Point.',
+    unitType: '2 & 3 BHK',
+    totalUnit: '1',
+    Location: 'Chinna Porur, porur',
+
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
   },
   {
     id: '0003',
-    projectImage: '/assets/comingsoon-img.jpg',
+    projectImage: '/assets/Karthick_Flats.jpg',
     saleTag: '/assets/complete.svg',
-    title: 'GOTETY RESIDENCY',
+    title: 'Karthick Flats',
     approval: 'CMDA Approved',
 
-    unitType: '2 & 1 BHK',
-    totalUnit: '6',
-    projectHighlight: 'Lift, Video Door, CCTV & EV Charging Point.',
+    unitType: '2 & 3 BHK',
+    totalUnit: '1',
+    Location: 'Appar Street, Valasaravakkam',
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
   },
   {
     id: '0004',
-    projectImage: '/assets/comingsoon-img.jpg',
+    projectImage: '/assets/Sai_Akshi_Gardens.jpg',
     saleTag: '/assets/complete.svg',
-    title: 'GOTETY RESIDENCY',
+    title: 'Sai Akshi Gardens',
     approval: 'CMDA Approved',
 
-    unitType: '2 & 1 BHK',
-    totalUnit: '6',
-    projectHighlight: 'Lift, Video Door, CCTV & EV Charging Point.',
+    unitType: '2 & 3 BHK',
+    totalUnit: '1',
+    Location: 'Jagathguru street, Valasaravakkam',
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
   },
   {
     id: '0005',
-    projectImage: '/assets/comingsoon-img.jpg',
+    projectImage: '/assets/SK-Villa.jpg',
     saleTag: '/assets/complete.svg',
-    title: 'GOTETY RESIDENCY',
+    title: 'Sk Villa',
     approval: 'CMDA Approved',
 
-    unitType: '2 & 1 BHK',
-    totalUnit: '6',
-    projectHighlight: 'Lift, Video Door, CCTV & EV Charging Point.',
+    unitType: '2 & 3 BHK',
+    totalUnit: '1',
+    Location: 'Virugambakkam, Chennai',
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
   },
   {
     id: '0006',
-    projectImage: '/assets/comingsoon-img.jpg',
+    projectImage: '/assets/SK_Amber-A-Block.jpg',
     saleTag: '/assets/complete.svg',
-    title: 'GOTETY RESIDENCY',
+    title: 'SK Amber(A Block)',
     approval: 'CMDA Approved',
 
-    unitType: '2 & 1 BHK',
-    totalUnit: '6',
-    projectHighlight: 'Lift, Video Door, CCTV & EV Charging Point.',
+    unitType: 'Individual Villa',
+    totalUnit: '1',
+    Location: 'Chowdry Nagar, Valasaravakkam',
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: '0007',
+    projectImage: '/assets/SK_Amber-B-Block.jpg',
+    saleTag: '/assets/complete.svg',
+    title: 'SK Amber(B Block)',
+    approval: 'CMDA Approved',
+
+    unitType: 'Individual Villa',
+    totalUnit: '1',
+    Location: 'Chowdry nagar, valasaravakkam',
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: '0008',
+    projectImage: '/assets/SK_Amber-C-Block.jpg',
+    saleTag: '/assets/complete.svg',
+    title: 'SK Amber(C Block)',
+    approval: 'CMDA Approved',
+
+    unitType: '3 BHK',
+    totalUnit: '1',
+    Location: 'Chowdry Nagar, Valasaravakkam',
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: '0009',
+    projectImage: '/assets/Sk_Anna_Nagar_House.jpg',
+    saleTag: '/assets/complete.svg',
+    title: 'Sk Anna Nagar House',
+    approval: 'CMDA Approved',
+
+    unitType: '2 & 3 BHK',
+    totalUnit: '1',
+    Location: 'Anna Nagar, ChennaI',
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: '0010',
+    projectImage: '/assets/SK_Brindhavan.jpg',
+    saleTag: '/assets/complete.svg',
+    title: 'SK Brindhavan',
+    approval: 'CMDA Approved',
+
+    unitType: '3 BHK',
+    totalUnit: '1',
+    Location: 'Sundar Street, Valasaravakkam',
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: '0011',
+    projectImage: '/assets/Sk_Garden.jpg',
+    saleTag: '/assets/complete.svg',
+    title: 'Sk Garden',
+    approval: 'CMDA Approved',
+
+    unitType: '2 & 3 BHK',
+    totalUnit: '1',
+    Location: 'Astalakshmi Nagar, valasaravakkam',
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: '0012',
+    projectImage: '/assets/Sk_Parkland.jpg',
+    saleTag: '/assets/complete.svg',
+    title: 'Sk Park land',
+    approval: 'CMDA Approved',
+
+    unitType: '2 & 3 BHK',
+    totalUnit: '1',
+    Location: 'Astalakshmi Nagar, valasaravakkam',
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: '0013',
+    projectImage: '/assets/SK_Villa-2.jpg',
+    saleTag: '/assets/complete.svg',
+    title: 'SK Villa',
+    approval: 'CMDA Approved',
+
+    unitType: '2 BHK',
+    totalUnit: '1',
+    Location: 'Thiruvarur',
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: '0014',
+    projectImage: '/assets/Sk_Villa.jpg',
+    saleTag: '/assets/complete.svg',
+    title: 'SK Villa',
+    approval: 'CMDA Approved',
+
+    unitType: '2 BHK',
+    totalUnit: '1',
+    Location: 'Thiruvarur',
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: '0015',
+    projectImage: '/assets/Srinivas.jpg',
+    saleTag: '/assets/complete.svg',
+    title: 'Srinivas',
+    approval: 'CMDA Approved',
+
+    unitType: '2 & 3 BHK',
+    totalUnit: '1',
+    Location: 'Astalakshmi Nagar, valasaravakkam',
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: '0016',
+    projectImage: '/assets/West_mambalam_House.jpg',
+    saleTag: '/assets/complete.svg',
+    title: 'West mambalam House',
+    approval: 'CMDA Approved',
+
+    unitType: '2 & 3 BHK',
+    totalUnit: '1',
+    Location: 'T.Nagar, West mambalam',
+    overview: [
+      {
+        introduction: {
+          title: 'GOTETY RESIDENCY',
+          imageSrc: '/assets/comingsoon-img.jpg',
+          content:
+            'Usually, land owners opt for joint venture property development if they have a vacant plot that they want to develop, if the property is being divided amongst siblings or if the owner is looking to renovate the existing flat/apartment, where the FSI (Floor Space Index) is revised.',
+        },
+        location: {
+          head: 'LOCATION',
+          address:
+            'No. 3/7, OHM Eswarar Street, Thirumalai Nagar, Ramapuram, Chennai - 600089.',
+          locationContent: [
+            'Imagine a popular residential site, yearning patiently for decades, profoundly evolve into something grander and attain higher ranking honours. Thats precisely what has materialised with the pioneering intervention of Brand Baashyaam.',
+            'This sizeable, noteworthy property right on Thirumalai nagar, Ramapuram is an integral part of an exemplar neighbourhood. It now finally gets the long overdue attention and fitting tribute that it richly deserves.',
+          ],
+          mapCoordinates: { latitude: 13.035396, longitude: 80.1815671 },
+        },
+        floorPlan: {
+          title: 'FLOOR PLAN',
+          plans: [
+            { imgSrc: '/assets/floorplan.svg' },
+            { imgSrc: '/assets/floorplan1.svg' },
+          ],
+        },
+        specification: {
+          head: 'SPECIFICATION',
+          grid: [
+            {
+              title: 'STRUCTURE',
+              content:
+                'Seismic zone III compliant RCC framed structure. Walls will be of AAC blocks',
+            },
+            {
+              title: 'JOINERIES DOORS',
+              content:
+                'Doors, Frames Are Made Of 1st Quality Teak Wood With ornamental borders & Shutters Are Wooden Door Pu Varnish Finish With Croft Architectural Anti Brass Fittings',
+            },
+            {
+              title: 'JOINERIES WINDOWS',
+              content:
+                'Upvc Framed Windows Catchment Type Saint Gobain Glass And Grill Provision As Per The Architect Design.',
+            },
+            {
+              title: 'ELEVATOR',
+              content:
+                'Fully Automatic V3f Lift - Six Passenger With SS Finish, Elegant Fall Ceiling and Energy Efficient Light Fixtures.    ',
+            },
+            {
+              title: 'PAINTING',
+              content:
+                'Interior Walls – Two Coats Of JK Wall Care Putty (Or) Asian Wall Putty With Primer One Coats With Two Coats Of Asian Paints Premium Emulsion For Inner Walls.    ',
+            },
+            {
+              title: 'FLOORING',
+              content:
+                'Living & Dinning Carpet Area Should Be In 24” x 24” Vitrified Tiles Of Somany/ Kajaria/ RAK Or Equal Brands, Bathroom floor Tiles Anti – skid & Wall tiles will be roof height of Somany/ Kajaria/ RAK Or Equal Brands, Entrance Lobby & Staircase with Granite',
+            },
+            { title: 'PLUMBING', content: 'CPVC concealed water line' },
+            {
+              title: 'WATER SUPPLY',
+              content:
+                'One Borewell Of Adequate Depth & Rcc Sump Of 10000 L Capacity for Metro Water & OHT with Booster Pump.',
+            },
+            {
+              title: 'SECURITY',
+              content:
+                '24/7 Cctv Surveillance Cameras Control System Provision For The Apartments.',
+            },
+            {
+              title: 'TERRACE',
+              content:
+                'Provision With A Proper Weathering Course Provided With Cooling Tile. Seating Provision As Per Design.    ',
+            },
+            {
+              title: 'ELECTRICAL',
+              content:
+                'EB Main 3 Phase Supply With Insulated Copper Conductors Concealed Wiring And Modular Switches Of ELLEYS Brands.',
+            },
+            {
+              title: 'FLOOR FINISHES',
+              content:
+                'Living & Dining - Vitrified tiles, Bedrooms - Vitrified tiles, Kitchen - Anti-skid tiles, Lobby - Indian granite, Stairs - Kota stone',
+            },
+          ],
+        },
+      },
+    ],
   },
 ];
