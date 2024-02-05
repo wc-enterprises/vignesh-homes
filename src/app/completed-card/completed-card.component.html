@@ -22,10 +22,17 @@
         <span class="completed-card-subhead">{{ totalUnit }}</span>
       </div>
       <div class="completed-card-detail-sec">
-        <span class="completed-card-head">PROJECT HIGHLIGHT</span>
-        <span class="completed-card-subhead">{{ projectHighlight }}</span>
+        <span class="completed-card-head1">LOCATION</span>
+        <span class="completed-card-subhead1">{{ projectHighlight }}</span>
       </div>
-      <button class="view-location">View location</button>
+      <button
+        class="view-location"
+        (mouseenter)="hoverText = 'Coming Soon'"
+        (mouseleave)="hoverText = 'Know more'"
+        (click)="navigateToProjectOverview()"
+      >
+        {{ hoverText || "Know more" }}
+      </button>
     </div>
   </div>
 </div>

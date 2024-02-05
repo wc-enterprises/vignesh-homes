@@ -90,7 +90,7 @@ body::-webkit-scrollbar {
   color: #333;
   font-family: Montserrat;
   font-size: 16px;
-  line-height: 27px;
+  line-height: 32px;
 }
 .about-content {
   display: flex;
@@ -152,7 +152,7 @@ body::-webkit-scrollbar {
 }
 .about-content-title span li {
   margin-bottom: 7px;
-  line-height: 25px;
+  line-height: 30px;
 }
 .about-images-sec {
   display: none;
@@ -197,7 +197,7 @@ body::-webkit-scrollbar {
   }
   .header-cont span {
     font-size: 13px;
-    line-height: 23px;
+    line-height: 25px;
   }
   .about-content {
     gap: 14px;
@@ -220,6 +220,9 @@ body::-webkit-scrollbar {
     gap: 12px;
     font-size: 14px;
     line-height: 24px;
+  }
+  .about-content-title span li {
+    line-height: 26px;
   }
   .about-content-title span {
     font-size: 13px;
@@ -266,7 +269,7 @@ body::-webkit-scrollbar {
   }
   .header-cont span {
     font-size: 14px;
-    line-height: 25px;
+    line-height: 27px;
   }
   .about-content {
     gap: 14px;
@@ -330,7 +333,7 @@ body::-webkit-scrollbar {
   }
   .header-cont span {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 27px;
   }
   .about-content {
     gap: 12px;
