@@ -27,11 +27,11 @@
       </div>
       <button
         class="view-location"
-        (mouseenter)="hoverText = 'Coming Soon'"
-        (mouseleave)="hoverText = 'Know more'"
         (click)="navigateToProjectOverview()"
+        [class.disabled]="overview.length === 0"
+        [disabled]="overview.length === 0"
       >
-        {{ hoverText || "Know more" }}
+        Know more
       </button>
     </div>
   </div>

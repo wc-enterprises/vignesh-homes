@@ -17,12 +17,12 @@
 
     <div class="tabs">
       <div class="tabs">
-        <!-- <button
+        <button
           (click)="updateTab('forsale')"
           [ngClass]="{ 'selected-tab': defaultTab === 'forsale' }"
         >
           For sale
-        </button> -->
+        </button>
         <!-- <button
           (click)="updateTab('ongoing')"
           [ngClass]="{ 'selected-tab': defaultTab === 'ongoing' }"
@@ -84,6 +84,7 @@
               [unitType]="completedProject.unitType"
               [totalUnit]="completedProject.totalUnit"
               [projectHighlight]="completedProject.Location"
+              [overview]="completedProject.overview"
             ></app-completed-card>
           </div>
 

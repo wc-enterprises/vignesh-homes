@@ -10,7 +10,7 @@
     <div id="heropage">
       <div style="height: 90px; width: 100%"></div>
       <app-navbar
-        style="position: fixed; z-index: 1"
+        style="position: fixed; z-index: 2"
         scrollColorChange
       ></app-navbar>
       <div class="hero-container">
@@ -31,7 +31,7 @@
       </div>
       <div style="height: 40px; width: 100%"></div>
     </div>
-    <!-- <div class="project-container">
+    <div class="project-container">
       <div class="project-subcontainer">
         <div class="project-header">
           <span> OUR PROJECTS </span>
@@ -39,21 +39,37 @@
         </div>
         <div class="project-show-sec">
           <div class="project-card-sec">
-            <app-projectcard
+            <!-- <app-projectcard
               [project]="project"
               *ngFor="let project of projects"
               [projectImage]="project.projectImage"
               [saleTag]="project.saleTag"
               [projectTitle]="project.projectTitle"
               [projectSubtitle]="project.projectSubtitle"
-            ></app-projectcard>
+            ></app-projectcard> -->
+            <div *ngFor="let completedProject of completedProjects">
+              <ng-container
+                *ngIf="completedProject.saleTag === '/assets/forsale.svg'"
+              >
+                <app-completed-card
+                  [projectImage]="completedProject.projectImage"
+                  [saleTag]="completedProject.saleTag"
+                  [title]="completedProject.title"
+                  [approval]="completedProject.approval"
+                  [unitType]="completedProject.unitType"
+                  [totalUnit]="completedProject.totalUnit"
+                  [projectHighlight]="completedProject.Location"
+                  [overview]="completedProject.overview"
+                ></app-completed-card>
+              </ng-container>
+            </div>
           </div>
           <button class="explore-button" [routerLink]="['/projectsec']">
             Explore more
           </button>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <div class="coming-soon-container">
       <div class="coming-soon-subcontainer">
@@ -177,60 +193,14 @@
         </div>
       </div>
     </div>
-    <div class="coming-soon-container">
+    <div class="coming-soon-container" *ngIf="testimonials.length > 0">
       <div class="testimonials-subcontainer">
         <div class="coming-soon-header">
           <span> TESTIMONIALS</span>
           <img src="/assets/line.svg" />
         </div>
 
-        <!-- <div class="testimonials-container-box">
-          <img
-            class="arrow-button"
-            src="/assets/left-arrow.svg"
-            (click)="moveLeft()"
-          />
-          <div class="testimonials-container" [@slide]="slideDirection">
-            <app-testimonialcard></app-testimonialcard>
-          </div>
-          <img
-            class="arrow-button"
-            src="/assets/right-arrow.svg"
-            (click)="moveRight()"
-          />
-        </div> -->
-        <!-- <div class="testimonials-container-box">
-          <img
-            class="arrow-button"
-            src="/assets/left-arrow.svg"
-            (click)="moveLeft()"
-          />
-          <div
-            class="testimonials-container"
-            *ngFor="let testimonial of testimonials"
-            #testimonialsContainer
-          >
-         
-
-            <app-testimonialcard
-              [content]="testimonial.content"
-              [address]="testimonial.address"
-            ></app-testimonialcard>
-          </div>
-          <img
-            class="arrow-button"
-            src="/assets/right-arrow.svg"
-            (click)="moveRight()"
-          />
-        </div> -->
-
         <div class="testimonials-container-box">
-          <!-- <img
-            src="/assets/left-arrow.svg"
-            (click)="moveLeft()"
-            class="arrow-button left"
-          /> -->
-
           <div class="testimonials-container" #testimonialsContainer>
             <ng-container *ngFor="let testimonial of testimonials">
               <app-testimonialcard
@@ -239,12 +209,6 @@
               ></app-testimonialcard>
             </ng-container>
           </div>
-
-          <!-- <img
-            src="/assets/right-arrow.svg"
-            (click)="moveRight()"
-            class="arrow-button right"
-          /> -->
         </div>
       </div>
     </div>

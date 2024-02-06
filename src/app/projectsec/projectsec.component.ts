@@ -127,6 +127,16 @@ export class ProjectsecComponent {
       //   this.comingSoonProjects = [];
       //   this.completedProjects = [];
       //   break;
+      case 'forsale':
+        this.sectionTitle = 'FOR SALE PROJECTS';
+        this.sectionDescription =
+          "Vignesh Homes is pleased to offer a selection of meticulously crafted properties for sale. These are not just buildings; they're future homes and investments. Explore our range of residential and commercial properties, each designed with a focus on quality and aesthetics. Secure your place in a Vignesh Homes creation, where dreams become addresses. Take the first step in owning a piece of architectural excellence.";
+        this.completedProjects = completedProjects.filter(
+          (project) => project.saleTag === '/assets/forsale.svg'
+        );
+        this.comingSoonProjects = [];
+    
+        break;
 
       case 'complete':
         this.sectionTitle = 'COMPLETED PROJECTS';
