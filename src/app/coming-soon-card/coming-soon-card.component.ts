@@ -11,7 +11,9 @@ export interface ComingSoonProject {
   unitType: string;
   totalUnit: string;
   projectHighlight: string;
+  address:string;
 }
+
 @Component({
   selector: 'app-coming-soon-card',
   templateUrl: './coming-soon-card.component.html',
@@ -28,4 +30,5 @@ export class ComingSoonCardComponent {
   @Input() unitType: string = '';
   @Input() totalUnit: string = '';
   @Input() projectHighlight: string = '';
+  @Input() address:string = '';
 }

@@ -12,7 +12,7 @@
   padding: 25px 40px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 25px;
+  gap: 20px;
 
   background: #eef3f8;
   box-sizing: border-box;
@@ -62,7 +62,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 15px;
+  gap: 14px;
   align-self: stretch;
 }
 .coming-soon-card-detail-sec {
@@ -75,7 +75,7 @@
   width: 30%;
   color: #363636;
   font-family: Montserrat;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 27px;
 }
@@ -83,7 +83,7 @@
   width: 70%;
   color: #363636;
   font-family: Montserrat;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 27px;
 }

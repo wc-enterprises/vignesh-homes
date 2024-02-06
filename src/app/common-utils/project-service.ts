@@ -55,6 +55,7 @@ export interface ComingSoonProject {
   unitType: string;
   totalUnit: string;
   projectHighlight: string;
+  address:string;
 }
 export interface CompletedProject {
   id: string;
@@ -1055,31 +1056,32 @@ export const projects: Project[] = [
 export const comingSoonProjects: ComingSoonProject[] = [
   {
     id: '01',
-    projectImage: '/assets/Ashiyana.jpg',
+    projectImage: '/assets/coming-soon-img.jpg',
     saleTag: '/assets/comingsoon.svg',
-    title: 'Ashiyana',
+    title: 'New project',
     approval: 'CMDA Approved',
-    foundation: 'Pile Foundation',
+    foundation: 'Shallow foundation',
     structure: 'Stilt + 3 Floor',
-    salableArea: '841-1234 sqft',
+    salableArea: '873-1265 sqft',
     unitType: '2 & 3 BHK',
     totalUnit: '6',
     projectHighlight:
-      'Gentset, CCTV, Access control system, Covered car parking, Lift.',
+      'CCTV, Covered car parking, Lift.',
+      address:'Plot No.25, Thirumalai Nagar, Valasaravakkam, Chennai -600087',
   },
-  {
-    id: '02',
-    projectImage: '/assets/Gotety.jpg',
-    saleTag: '/assets/comingsoon.svg',
-    title: 'GOTETY Residency',
-    approval: 'CMDA Approved',
-    foundation: 'Pile Foundation',
-    structure: 'Stilt + 3 Floor',
-    salableArea: '903-969-1108 sqft',
-    unitType: '2 & 3 BHK',
-    totalUnit: '8',
-    projectHighlight: 'CCTV, Covered car parking, Bore, Well, lift',
-  },
+  // {
+  //   id: '02',
+  //   projectImage: '/assets/Gotety.jpg',
+  //   saleTag: '/assets/comingsoon.svg',
+  //   title: 'GOTETY Residency',
+  //   approval: 'CMDA Approved',
+  //   foundation: 'Pile Foundation',
+  //   structure: 'Stilt + 3 Floor',
+  //   salableArea: '903-969-1108 sqft',
+  //   unitType: '2 & 3 BHK',
+  //   totalUnit: '8',
+  //   projectHighlight: 'CCTV, Covered car parking, Bore, Well, lift',
+  // },
 ];
 
 export const completedProjects: CompletedProject[] = [

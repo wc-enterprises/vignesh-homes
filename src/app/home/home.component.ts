@@ -20,12 +20,14 @@ import {
 export class HomeComponent {
   projects: Project[] = projects;
   comingSoonProjects: ComingSoonProject[] = comingSoonProjects;
-  completedProjects: CompletedProject[] = completedProjects.filter(project => project.saleTag === '/assets/forsale.svg');
-  constructor() {}
+  completedProjects: CompletedProject[] = completedProjects.filter(
+    (project) => project.saleTag === '/assets/forsale.svg'
+  );
+
   @ViewChild('heroHeadline', { static: true }) heroHeadline!: ElementRef;
   @ViewChild('heroSubHeadline', { static: true }) heroSubHeadline!: ElementRef;
-  @ViewChild('heroDescription', { static: true }) heroDescription!: ElementRef;
 
+  constructor() {}
   animateHeroText() {
     const tl = gsap.timeline({ defaults: { duration: 1 } });
 
@@ -41,12 +43,7 @@ export class HomeComponent {
       duration: 1,
       ease: 'power3.inOut',
     });
-    tl.from(this.heroDescription.nativeElement, {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: 'power4.out',
-    });
+
     return tl;
   }
 
@@ -114,6 +111,7 @@ export interface ComingSoonProject {
   unitType: string;
   totalUnit: string;
   projectHighlight: string;
+  address: string;
 }
 export interface CompletedProject {
   id: string;
