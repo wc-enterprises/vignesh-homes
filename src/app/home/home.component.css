@@ -104,7 +104,6 @@ body::-webkit-scrollbar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
   width: 100%;
 }
 .project-subcontainer {
@@ -117,7 +116,7 @@ body::-webkit-scrollbar {
 }
 .project-card-sec {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   gap: 20px;
   width: 100%;

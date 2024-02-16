@@ -31,6 +31,8 @@
       </div>
       <div style="height: 40px; width: 100%"></div>
     </div>
+
+    <!-- For sale section -->
     <div class="project-container">
       <div class="project-subcontainer">
         <div class="project-header">
@@ -39,14 +41,6 @@
         </div>
         <div class="project-show-sec">
           <div class="project-card-sec">
-            <!-- <app-projectcard
-              [project]="project"
-              *ngFor="let project of projects"
-              [projectImage]="project.projectImage"
-              [saleTag]="project.saleTag"
-              [projectTitle]="project.projectTitle"
-              [projectSubtitle]="project.projectSubtitle"
-            ></app-projectcard> -->
             <div *ngFor="let completedProject of completedProjects">
               <ng-container
                 *ngIf="completedProject.saleTag === '/assets/forsale.svg'"
@@ -64,7 +58,7 @@
               </ng-container>
             </div>
           </div>
-          <button class="explore-button" [routerLink]="['/projectsec']">
+          <button class="explore-button" [routerLink]="['/projects']">
             Explore more
           </button>
         </div>
@@ -90,6 +84,7 @@
           [unitType]="comingSoonProject.unitType"
           [totalUnit]="comingSoonProject.totalUnit"
           [projectHighlight]="comingSoonProject.projectHighlight"
+          [location]="comingSoonProject.location"
         ></app-coming-soon-card>
       </div>
     </div>
@@ -118,7 +113,10 @@
         </div>
       </div>
     </div>
-    <div class="company-details-container">
+    <!-- 
+  The client doesn't want this section until they confirm the real numbers.
+ -->
+    <!-- <div class="company-details-container">
       <div class="company-details-subcontainer">
         <div class="company-details-content">
           <div class="company-details-header">
@@ -192,7 +190,8 @@
           </span>
         </div>
       </div>
-    </div>
+    </div> -->
+
     <div class="coming-soon-container" *ngIf="testimonials.length > 0">
       <div class="testimonials-subcontainer">
         <div class="coming-soon-header">

@@ -28,4 +28,5 @@ export class ComingSoonCardComponent {
   @Input() unitType: string = '';
   @Input() totalUnit: string = '';
   @Input() projectHighlight: string = '';
+  @Input() location: string = '';
 }

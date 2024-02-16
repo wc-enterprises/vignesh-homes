@@ -23,6 +23,8 @@ export const routes: Routes = [
   { path: 'comingsooncard', component: ComingSoonCardComponent },
   { path: 'overview/:id', component: ProjectoverviewComponent },
   { path: 'projectsec', component: ProjectsecComponent },
+  // Added the projects route below to replace the above projectsec route
+  { path: 'projects', component: ProjectsecComponent },
   { path: 'completedcard', component: CompletedCardComponent },
   { path: 'projectcard', component: ProjectcardComponent },
   { path: 'tmcard', component: TestimonialcardComponent },

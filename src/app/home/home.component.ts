@@ -20,7 +20,9 @@ import {
 export class HomeComponent {
   projects: Project[] = projects;
   comingSoonProjects: ComingSoonProject[] = comingSoonProjects;
-  completedProjects: CompletedProject[] = completedProjects.filter(project => project.saleTag === '/assets/forsale.svg');
+  completedProjects: CompletedProject[] = completedProjects.filter(
+    (project) => project.saleTag === '/assets/forsale.svg'
+  );
   constructor() {}
   @ViewChild('heroHeadline', { static: true }) heroHeadline!: ElementRef;
   @ViewChild('heroSubHeadline', { static: true }) heroSubHeadline!: ElementRef;
@@ -114,6 +116,7 @@ export interface ComingSoonProject {
   unitType: string;
   totalUnit: string;
   projectHighlight: string;
+  location: string;
 }
 export interface CompletedProject {
   id: string;
