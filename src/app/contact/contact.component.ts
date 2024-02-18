@@ -92,6 +92,55 @@ export class ContactComponent {
     // If validation passes, you can send the data to the server or perform any other actions
     console.log('Form submitted:', this.formData);
 
+    // fetch(
+    //   'https://script.google.com/macros/s/AKfycbxsREI3CBUkv-qDiCSieNtLTTDjFU6hGXilUPxr2DJoIwLpUG2SAiWqqLn5A-HhhLcz/exec',
+    //   {
+    //     method: 'POST',
+    //     body: {
+    //       date: new Date(),
+    //       ...this.formData,
+    //     } as any,
+    //     headers: {
+    //       'Content-Type': 'application/x-www-form-urlencoded',
+    //     },
+
+    //   }
+    // )
+    const date = new Date();
+
+    // Convert the date to a more readable format
+    const formattedDate = date.toLocaleString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true,
+    });
+
+    const formData: any = this.formData;
+
+    // Construct the URL with parameters
+    const url = new URL(
+      'https://script.google.com/macros/s/AKfycbxsREI3CBUkv-qDiCSieNtLTTDjFU6hGXilUPxr2DJoIwLpUG2SAiWqqLn5A-HhhLcz/exec'
+    );
+    url.searchParams.append('date', formattedDate);
+
+    // Append other formData parameters to the URL
+    for (const key in formData) {
+      if (formData.hasOwnProperty(key)) {
+        url.searchParams.append(key, formData[key]);
+      }
+    }
+
+    // Make the POST request
+    fetch(url, {
+      method: 'POST',
+    })
+      .then((res) => res.text())
+      .then((data) => console.log('Google sheet api success response', data))
+      .catch((err) => console.log('Google sheet api error response', err));
+
     // Clear the form fields after successful submission
     this.formData = {
       name: '',
@@ -107,25 +156,36 @@ export class ContactComponent {
   validateForm(): boolean {
     let isValid = true;
 
-    // Validation for name (only alphabets)
-    if (!/^[a-zA-Z]+$/.test(this.formData.name)) {
+    // Validation for name (only alphabets and non-empty)
+    if (
+      !/^[a-zA-Z\s]+$/.test(this.formData.name) ||
+      this.formData.name.trim().length === 0
+    ) {
       this.alert.name = 'Enter a valid username (only alphabets).';
       isValid = false;
     }
 
-    // Validation for email (alphabets, numbers, @, and ends with gmail.com)
-    if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(this.formData.email)) {
-      this.alert.email = 'Enter a valid Gmail account email address.';
+    // Validation for email (overall format)
+    if (
+      !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
+        this.formData.email
+      ) ||
+      this.formData.email.trim().length === 0
+    ) {
+      this.alert.email = 'Enter a valid email address.';
       isValid = false;
     }
 
-    // Validation for phone (only numbers)
-    if (!/^\d+$/.test(this.formData.phone)) {
-      this.alert.phone = 'Enter a valid phone number (only numbers).';
+    // Validation for phone (valid format and non-empty)
+    if (
+      !/^\d{10}$/.test(this.formData.phone) ||
+      this.formData.phone.trim().length === 0
+    ) {
+      this.alert.phone = 'Enter a valid 10-digit phone number.';
       isValid = false;
     }
 
-    // Validation for message (minimum one line)
+    // Validation for message (minimum one line and non-empty)
     if (this.formData.message.trim().length < 1) {
       this.alert.message = 'Enter a message.';
       isValid = false;
