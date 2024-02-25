@@ -46,6 +46,7 @@
                 *ngIf="completedProject.saleTag === '/assets/forsale.svg'"
               >
                 <app-completed-card
+                  [id]="completedProject.id"
                   [projectImage]="completedProject.projectImage"
                   [saleTag]="completedProject.saleTag"
                   [title]="completedProject.title"

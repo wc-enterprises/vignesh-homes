@@ -92,20 +92,6 @@ export class ContactComponent {
     // If validation passes, you can send the data to the server or perform any other actions
     console.log('Form submitted:', this.formData);
 
-    // fetch(
-    //   'https://script.google.com/macros/s/AKfycbxsREI3CBUkv-qDiCSieNtLTTDjFU6hGXilUPxr2DJoIwLpUG2SAiWqqLn5A-HhhLcz/exec',
-    //   {
-    //     method: 'POST',
-    //     body: {
-    //       date: new Date(),
-    //       ...this.formData,
-    //     } as any,
-    //     headers: {
-    //       'Content-Type': 'application/x-www-form-urlencoded',
-    //     },
-
-    //   }
-    // )
     const date = new Date();
 
     // Convert the date to a more readable format

@@ -7,10 +7,12 @@ import {
   ViewChild,
 } from '@angular/core';
 
-import { Project, projects } from '../common-utils/project-service';
+import {
+  CompletedProject,
+  Project,
+  completedProjects,
+} from '../common-utils/project-service';
 import { ActivatedRoute } from '@angular/router';
-import { ProjectService } from '../common-utils/project-service';
-import { ProjectLocation } from '../common-utils/project-service';
 import * as L from 'leaflet';
 
 @Component({
@@ -19,8 +21,8 @@ import * as L from 'leaflet';
   styleUrls: ['./projectoverview.component.css'],
 })
 export class ProjectoverviewComponent implements OnInit, AfterViewInit {
-  projects: Project[] = projects;
-  project: Project | undefined;
+  projects: CompletedProject[] = completedProjects;
+  project!: CompletedProject;
 
   constructor(private route: ActivatedRoute) {}
 
@@ -29,7 +31,10 @@ export class ProjectoverviewComponent implements OnInit, AfterViewInit {
     const projectId = this.route.snapshot.paramMap.get('id');
 
     // Find the project with the matching ID from your projects array
-    this.project = projects.find((project) => project.id === projectId);
+    this.project = this.projects.find(
+      (project: CompletedProject) => project.id == projectId
+    ) as unknown as CompletedProject;
+    console.log(projectId, this.project);
   }
 
   @ViewChild('map') mapContainer!: ElementRef;

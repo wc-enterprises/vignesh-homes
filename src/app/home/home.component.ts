@@ -6,10 +6,8 @@ import { ComingSoonCardComponent } from '../coming-soon-card/coming-soon-card.co
 import {
   Project,
   ProjectOverview,
-  ProjectService,
   comingSoonProjects,
   completedProjects,
-  projects,
 } from '../common-utils/project-service';
 @Component({
   selector: 'app-home',
@@ -18,7 +16,7 @@ import {
   animations: [],
 })
 export class HomeComponent {
-  projects: Project[] = projects;
+  projects: CompletedProject[] = completedProjects;
   comingSoonProjects: ComingSoonProject[] = comingSoonProjects;
   completedProjects: CompletedProject[] = completedProjects.filter(
     (project) => project.saleTag === '/assets/forsale.svg'
@@ -54,7 +52,7 @@ export class HomeComponent {
 
   ngOnInit() {
     this.animateHeroText().play();
-    this.projects = projects;
+    this.projects = completedProjects;
   }
 
   testimonials: any = [

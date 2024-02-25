@@ -22,6 +22,7 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'comingsooncard', component: ComingSoonCardComponent },
   { path: 'overview/:id', component: ProjectoverviewComponent },
+  { path: 'projects/overview/:id', component: ProjectoverviewComponent },
   { path: 'projectsec', component: ProjectsecComponent },
   // Added the projects route below to replace the above projectsec route
   { path: 'projects', component: ProjectsecComponent },

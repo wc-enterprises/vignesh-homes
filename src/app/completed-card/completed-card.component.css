@@ -23,7 +23,7 @@
 }
 .completed-card-img {
   width: 100%;
-  height: 275px;
+  height: 410px;
   background-image: url(/assets/comingsoon-img.jpg);
   background-size: cover;
   background-position: center;
@@ -114,10 +114,6 @@
   cursor: pointer;
 }
 
-.view-location.disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
 @media (max-width: 426px) {
   .completed-card {
     width: 300px;
