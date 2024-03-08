@@ -23,12 +23,7 @@
         >
           For sale
         </button>
-        <!-- <button
-          (click)="updateTab('ongoing')"
-          [ngClass]="{ 'selected-tab': defaultTab === 'ongoing' }"
-        >
-          Ongoing
-        </button> -->
+
         <button
           (click)="updateTab('complete')"
           [ngClass]="{ 'selected-tab': defaultTab === 'complete' }"
@@ -55,26 +50,22 @@
           <div></div>
         </div>
 
-        <!-- <div class="project-card-sec" *ngIf="selectedTab !== 'Coming soon'">
-          <div *ngFor="let cardData of cardsData">
-            <app-projectcard
-              [projectImage]="cardData.projectImage"
-              [saleTag]="cardData.saleTag"
-              [projectTitle]="cardData.projectTitle"
-              [projectSubtitle]="cardData.projectSubtitle"
-            ></app-projectcard>
-          </div>
-        </div> -->
-
         <div class="project-card-sec">
-          <!-- <app-projectcard
-            [project]="project"
-            *ngFor="let project of standardProjects"
-            [projectImage]="project.projectImage"
-            [saleTag]="project.saleTag"
-            [projectTitle]="project.projectTitle"
-            [projectSubtitle]="project.projectSubtitle"
-          ></app-projectcard> -->
+          <potrait-card
+            *ngFor="let completedProject of forSaleProjects"
+            [projectImage]="completedProject.projectImage"
+            [saleTag]="completedProject.saleTag"
+            [title]="completedProject.title"
+            [approval]="completedProject.approval"
+            [foundation]="completedProject.foundation ?? ''"
+            [structure]="completedProject.structure ?? ''"
+            [salableArea]="completedProject.salableArea ?? ''"
+            [unitType]="completedProject.unitType"
+            [totalUnit]="completedProject.totalUnit"
+            [projectHighlight]="completedProject.projectHighlight ?? ''"
+            [location]="completedProject.location ?? ''"
+          ></potrait-card>
+
           <div *ngFor="let completedProject of completedProjects">
             <app-completed-card
               [id]="completedProject.id"
