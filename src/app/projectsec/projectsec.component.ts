@@ -27,6 +27,7 @@ export class ProjectsecComponent {
     this.ProjectService.selectedTab$.subscribe((tab) => {
       this.filterProjects(tab);
     });
+    this.ProjectService.updateSelectedTab('forsale');
   }
 
   updateTab(tab: string) {
