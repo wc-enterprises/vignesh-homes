@@ -1,0 +1,45 @@
+<div class="coming-soon-card">
+  <span
+    class="coming-soon-card-img"
+    [style.background-image]="'url(' + projectImage + ')'"
+    ><img [src]="saleTag" class="coming-soon-tag"
+  /></span>
+
+  <div class="coming-soon-card-container">
+    <span class="coming-soon-card-container-head">
+      {{ title }}
+    </span>
+    <div class="coming-soon-card-details">
+      <div class="coming-soon-card-detail-sec">
+        <span class="coming-soon-card-head">APPROVAL</span>
+        <span class="coming-soon-card-subhead">{{ approval }}</span>
+      </div>
+      <div class="coming-soon-card-detail-sec">
+        <span class="coming-soon-card-head">FOUNDATION</span>
+        <span class="coming-soon-card-subhead">{{ foundation }}</span>
+      </div>
+      <div class="coming-soon-card-detail-sec">
+        <span class="coming-soon-card-head">STRUCTURE </span>
+        <span class="coming-soon-card-subhead">{{ structure }}</span>
+      </div>
+      <div class="coming-soon-card-detail-sec">
+        <span class="coming-soon-card-head">SALABLE AREA</span>
+        <span class="coming-soon-card-subhead">{{ salableArea }}</span>
+      </div>
+      <div class="coming-soon-card-detail-sec">
+        <span class="coming-soon-card-head">UNIT</span>
+        <span class="coming-soon-card-subhead"
+          >{{ unitType }}, {{ totalUnit }} units</span
+        >
+      </div>
+      <div class="coming-soon-card-detail-sec">
+        <span class="coming-soon-card-head">AMENITIES</span>
+        <span class="coming-soon-card-subhead">{{ projectHighlight }}</span>
+      </div>
+      <div class="coming-soon-card-detail-sec">
+        <span class="coming-soon-card-head">LOCATION</span>
+        <span class="coming-soon-card-subhead">{{ location }}</span>
+      </div>
+    </div>
+  </div>
+</div>

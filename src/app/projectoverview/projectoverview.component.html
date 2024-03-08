@@ -95,7 +95,10 @@
 
           <div class="floorplan-container-box">
             <div class="floorplan-container" #floorplanContainer>
-              <span class="floorplan-img" *ngFor="let plan of floorPlans">
+              <span
+                class="floorplan-img"
+                *ngFor="let plan of project.overview[0].floorPlan.plans"
+              >
                 <img [src]="plan.imgSrc" />
               </span>
             </div>
@@ -109,7 +112,7 @@
           <div class="grid-sec">
             <div
               class="specification-grid-box"
-              *ngFor="let spec of specifications"
+              *ngFor="let spec of project.overview[0].specification"
             >
               <img
                 class="specification-img"

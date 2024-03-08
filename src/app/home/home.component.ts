@@ -126,4 +126,13 @@ export interface CompletedProject {
   totalUnit: string;
   Location: string;
   overview: ProjectOverview[];
+
+  /**
+   * New optional params
+   */
+  foundation?: string;
+  structure?: string;
+  salableArea?: string;
+  projectHighlight?: string;
+  location?: string;
 }

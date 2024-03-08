@@ -5,23 +5,24 @@
   justify-content: center;
   align-items: flex-start;
 }
+
+.coming-soon-card-img {
+  width: 495px;
+  height: 550px;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+}
 .coming-soon-card-container {
   display: flex;
-  width: 550px;
-  height: 470px;
-  padding: 25px 40px;
+  width: 500px;
+  height: 550px;
+  padding: 0px 40px;
   flex-direction: column;
   align-items: flex-start;
   gap: 25px;
 
-  background: #eef3f8;
   box-sizing: border-box;
-}
-.coming-soon-card-img {
-  width: 835px;
-  height: 470px;
-  background-size: contain;
-  position: relative;
 }
 
 .coming-soon-tag {
@@ -77,12 +78,12 @@
   .coming-soon-card-container {
     width: 280px;
     height: auto;
-    padding: 20px 15px;
+    padding: 20px 0px;
     gap: 10px;
   }
   .coming-soon-card-img {
     width: 280px;
-    height: 160px;
+    height: 390px;
   }
   .coming-soon-card-container-head {
     font-size: 13px;
@@ -109,12 +110,12 @@
   .coming-soon-card-container {
     width: 350px;
     height: auto;
-    padding: 20px 15px;
+    padding: 20px 0px;
     gap: 10px;
   }
   .coming-soon-card-img {
     width: 350px;
-    height: 194px;
+    height: 390px;
   }
   .coming-soon-card-container-head {
     font-size: 15px;
@@ -138,14 +139,14 @@
   }
 
   .coming-soon-card-img {
-    width: 400px;
-    height: 222px;
+    width: 405px;
+    height: 450px;
   }
 
   .coming-soon-card-container {
     width: 400px;
     height: auto;
-    padding: 25px 30px;
+    padding: 25px 0px;
     gap: 15px;
   }
 
@@ -174,12 +175,12 @@
   .coming-soon-card-container {
     width: 750px;
     height: auto;
-    padding: 25px 40px;
+    padding: 25px 0px;
     gap: 20px;
   }
   .coming-soon-card-img {
-    width: 750px;
-    height: 417px;
+    width: 717px;
+    height: 900px;
   }
 
   .coming-soon-card-container-head {

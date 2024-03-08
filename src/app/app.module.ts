@@ -22,6 +22,7 @@ import { ComingSoonCardComponent } from './coming-soon-card/coming-soon-card.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CompletedCardComponent } from './completed-card/completed-card.component';
+import { PotraitCardComponent } from './new-potrait-card/potrait.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { CompletedCardComponent } from './completed-card/completed-card.componen
     ScrollChangeColorDirective,
     ComingSoonCardComponent,
     CompletedCardComponent,
+    PotraitCardComponent,
   ],
   imports: [
     FormsModule,

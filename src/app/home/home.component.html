@@ -40,25 +40,20 @@
           <img src="/assets/line.svg" />
         </div>
         <div class="project-show-sec">
-          <div class="project-card-sec">
-            <div *ngFor="let completedProject of completedProjects">
-              <ng-container
-                *ngIf="completedProject.saleTag === '/assets/forsale.svg'"
-              >
-                <app-completed-card
-                  [id]="completedProject.id"
-                  [projectImage]="completedProject.projectImage"
-                  [saleTag]="completedProject.saleTag"
-                  [title]="completedProject.title"
-                  [approval]="completedProject.approval"
-                  [unitType]="completedProject.unitType"
-                  [totalUnit]="completedProject.totalUnit"
-                  [projectHighlight]="completedProject.Location"
-                  [overview]="completedProject.overview"
-                ></app-completed-card>
-              </ng-container>
-            </div>
-          </div>
+          <potrait-card
+            *ngFor="let completedProject of completedProjects"
+            [projectImage]="completedProject.projectImage"
+            [saleTag]="completedProject.saleTag"
+            [title]="completedProject.title"
+            [approval]="completedProject.approval"
+            [foundation]="completedProject.foundation ?? ''"
+            [structure]="completedProject.structure ?? ''"
+            [salableArea]="completedProject.salableArea ?? ''"
+            [unitType]="completedProject.unitType"
+            [totalUnit]="completedProject.totalUnit"
+            [projectHighlight]="completedProject.projectHighlight ?? ''"
+            [location]="completedProject.location ?? ''"
+          ></potrait-card>
           <button class="explore-button" [routerLink]="['/projects']">
             Explore more
           </button>
