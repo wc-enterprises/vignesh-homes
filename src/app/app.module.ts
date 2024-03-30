@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { JointventureComponent } from './jointventure/jointventure.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProjectcardComponent } from './projectcard/projectcard.component';
-import { ProjectoverviewComponent } from './projectoverview/projectoverview.component';
+import { ProjectoverviewComponent } from './projectoverview-ashiyana/projectoverview.component';
 import { ProjectsecComponent } from './projectsec/projectsec.component';
 import { TestimonialcardComponent } from './testimonialcard/testimonialcard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CompletedCardComponent } from './completed-card/completed-card.component';
 import { PotraitCardComponent } from './new-potrait-card/potrait.component';
+import { GotetyDetailsComponent } from './projectoverview-gotety/projectoverview.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { PotraitCardComponent } from './new-potrait-card/potrait.component';
     ComingSoonCardComponent,
     CompletedCardComponent,
     PotraitCardComponent,
+    GotetyDetailsComponent,
   ],
   imports: [
     FormsModule,

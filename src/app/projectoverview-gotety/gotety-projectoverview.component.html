@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="heropage">
+      <div style="height: 90px; width: 100%"></div>
+      <app-navbar
+        style="position: fixed; z-index: 1"
+        scrollColorChange
+      ></app-navbar>
+      <div class="breadcrumbs">
+        <span
+          class="home-breadcrumbs"
+          style="cursor: pointer"
+          [routerLink]="['/']"
+          >Home</span
+        >
+        ><span class="residential-breadcrumbs" [routerLink]="['/projects']">
+          Projects
+        </span>
+      </div>
+    </div>
+    <div class="tabs">
+      <button
+        (click)="scrollToLocation()"
+        [class.active]="selectedTab === 'location'"
+      >
+        Location
+      </button>
+      <button
+        (click)="scrollToFloorplan()"
+        [class.active]="selectedTab === 'floorplan'"
+      >
+        Floor plan
+      </button>
+      <button
+        (click)="scrollToSpecification()"
+        [class.active]="selectedTab === 'specification'"
+      >
+        Specification
+      </button>
+    </div>
+    <div *ngIf="project">
+      <div class="project-intro-mainbox">
+        <span class="project-title"> {{ project.title }}</span>
+        <span class="project-image">
+          <img [src]="project.overview[0].introduction.imageSrc" />
+        </span>
+      </div>
+
+      <div class="project-location-mainbox" #locationSection>
+        <div class="project-location-subbox">
+          <span class="location-head"> LOCATION</span>
+          <div class="location-container-box">
+            <div class="location-container-subbox">
+              <span class="location-address"
+                >{{ project.overview[0].location.address }}
+              </span>
+              <div class="location-content-box">
+                <span
+                  class="location-content"
+                  *ngFor="
+                    let content of project.overview[0].location.locationContent
+                  "
+                  >{{ content }}
+                </span>
+                <!-- <span class="location-content"
+                >Usually, land owners opt for joint venture property development
+                if they have a vacant plot that they want to develop, if the
+                property is being divided amongst siblings or if the owner is
+                looking to renovate the existing flat/apartment, where the FSI
+                (Floor Space Index) is revised.
+              </span> -->
+              </div>
+            </div>
+
+            <div id="map" #map></div>
+            <!-- <img [src]="project.overview[0].location.mapImageSrc" /> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="floorplan-mainbox" #floorplanSection>
+        <span class="project-title"> FLOOR PLAN</span>
+
+        <div class="floorplan-container-box">
+          <div class="floorplan-container" #floorplanContainer>
+            <span
+              class="floorplan-img"
+              *ngFor="let plan of project.overview[0].floorPlan.plans"
+            >
+              <img [src]="plan.imgSrc" />
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="specification-mainbox" #specificationSection>
+        <div class="specification-subbox">
+          <span class="specification-head"> SPECIFICATION</span>
+          <div class="grid-sec">
+            <div
+              class="specification-grid-box"
+              *ngFor="let spec of project.overview[0].specification"
+            >
+              <img
+                class="specification-img"
+                [src]="spec.imageSrc"
+                alt="{{ spec.title }}"
+              />
+              <span class="specification-title">{{ spec.title }}</span>
+              <span class="specification-content">{{ spec.content }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </body>
+</html>

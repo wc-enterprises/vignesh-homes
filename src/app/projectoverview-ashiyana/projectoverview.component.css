@@ -1,0 +1,913 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  box-sizing: border-box;
+}
+#heropage {
+  display: flex;
+  height: 65vh;
+  width: 100%;
+  padding-bottom: 50px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: url(/assets/overview-hero.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.breadcrumbs {
+  display: flex;
+  width: 100%;
+  padding: 0px 40px;
+  align-items: center;
+  gap: 13px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.residential-breadcrumbs {
+  color: #bdced5;
+  cursor: pointer;
+}
+.tabs {
+  display: flex;
+  padding: 12px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  align-self: stretch;
+  background: #f7f7f7;
+}
+.tabs button {
+  display: flex;
+  padding: 13px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  color: #313333;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+}
+.tabs button.active {
+  background: #d6e2ea; /* Set your desired background color */
+  /* Additional styles for the active button */
+}
+.tabs button:hover {
+  background: #d6e2ea;
+  transition: 0.5s ease-in-out;
+}
+.project-intro-mainbox {
+  width: 100%;
+  height: 1200px;
+  display: flex;
+  padding: 50px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  align-self: stretch;
+  background: #d6e2ea;
+  box-sizing: border-box;
+}
+
+.project-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: normal;
+}
+.project-image {
+  width: 950px;
+  height: 950px;
+}
+.project-image img {
+  width: 950px;
+  height: 950px;
+  object-fit: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  align-self: stretch;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.project-location-mainbox {
+  display: flex;
+  padding: 60px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  align-self: stretch;
+  background: #f7f7f7;
+}
+.project-location-subbox {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  color: #333;
+  font-family: Montserrat;
+}
+.location-head {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: normal;
+}
+.location-container-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  width: 100%;
+  height: auto;
+}
+.location-container-subbox {
+  display: flex;
+  width: 50%;
+  height: 360px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.location-address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 36px;
+  color: #494c4d;
+}
+.location-content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+.location-content {
+  align-self: stretch;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 27px;
+}
+#map {
+  width: 50%;
+  height: 360px;
+  z-index: 0;
+}
+/* #map {
+  width: 100%;
+  height: 360px;
+
+} */
+.specification-mainbox {
+  display: flex;
+  padding: 60px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  align-self: stretch;
+  background: #d6e2ea;
+}
+.specification-subbox {
+  display: flex;
+  width: 85%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  color: #333;
+  font-family: Montserrat;
+}
+.specification-head {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: normal;
+}
+.grid-sec {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  gap: 15px;
+}
+.specification-img {
+  width: 48px;
+  height: 48px;
+}
+.specification-grid-box {
+  height: 325px;
+  display: flex;
+  padding: 10px;
+  padding: 25px 15px 15px 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  flex: 1 0 0;
+  background: #f1f5f9;
+}
+
+.specification-title {
+  color: #363636;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+}
+.specification-content {
+  color: #363636;
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 23px;
+}
+.floorplan-mainbox {
+  display: flex;
+  padding: 60px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  align-self: stretch;
+  background: #d6e2ea;
+}
+
+.floorplan-container-box {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 26px;
+}
+
+.floorplan-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  gap: 26px;
+  transition: transform 0.3s ease;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.floorplan-container::-webkit-scrollbar {
+  display: none;
+}
+
+.floorplan-img img {
+  width: 615px;
+  height: 750px;
+  object-fit: cover;
+}
+@media (max-width: 321px) {
+  #heropage {
+    padding-bottom: 40px;
+  }
+  .breadcrumbs {
+    gap: 13px;
+    font-size: 18px;
+    padding: 0px 15px;
+  }
+  .tabs {
+    padding: 8px 0px;
+  }
+  .tabs button {
+    padding: 8px 8px;
+    font-size: 12px;
+    gap: 7px;
+    line-height: 20px;
+  }
+  .project-intro-mainbox {
+    padding: 35px 15px;
+    height: 500px;
+  }
+  .project-intro-subbox {
+    width: 100%;
+    gap: 20px;
+  }
+  .project-title {
+    font-size: 18px;
+  }
+  .project-image {
+    width: 280px;
+    height: 341px;
+  }
+  .project-image img {
+    width: 280px;
+    height: 341px;
+    object-fit: cover;
+  }
+  .project-content {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .floorplan-mainbox {
+    padding: 35px 15px;
+  }
+  .floorplan-subbox {
+    width: 100%;
+    gap: 22px;
+  }
+  .floorplan-container-box {
+    gap: 26px;
+  }
+
+  .floorplan-container {
+    gap: 18px;
+    height: auto;
+  }
+  .floorplan-img {
+    width: 280px;
+    height: 341px;
+  }
+  .floorplan-img img {
+    width: 280px;
+    height: 341px;
+    object-fit: cover;
+  }
+  .specification-mainbox {
+    padding: 35px 15px;
+  }
+  .specification-title {
+    font-size: 15px;
+  }
+  .specification-img {
+    width: 40px;
+    height: 40px;
+  }
+  .specification-subbox {
+    width: 100%;
+    gap: 22px;
+  }
+  .specification-head {
+    font-size: 18px;
+  }
+  .project-location-mainbox {
+    padding: 35px 15px;
+  }
+  .project-location-subbox {
+    width: 100%;
+    gap: 22px;
+  }
+  .location-head {
+    font-size: 18px;
+  }
+  .location-container-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+  .location-container-subbox {
+    width: 100%;
+    gap: 10px;
+    height: auto;
+  }
+  .location-address {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .location-content-box {
+    gap: 10px;
+  }
+  .location-content {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  #map {
+    width: 100%;
+    height: 250px;
+  }
+  .location-image {
+    width: 100%;
+    height: 250px;
+  }
+  .location-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (min-width: 321px) and (max-width: 376px) {
+  #heropage {
+    padding-bottom: 40px;
+  }
+  .breadcrumbs {
+    gap: 13px;
+    font-size: 18px;
+    padding: 0px 15px;
+  }
+  .tabs {
+    padding: 8px 0px;
+  }
+  .tabs button {
+    padding: 8px 8px;
+    font-size: 12px;
+    gap: 7px;
+    line-height: 20px;
+  }
+  .project-intro-mainbox {
+    padding: 40px 15px;
+    height: 520px;
+  }
+  .project-intro-subbox {
+    width: 100%;
+    gap: 23px;
+  }
+  .project-title {
+    font-size: 20px;
+  }
+  .project-image {
+    width: 300px;
+    height: 366px;
+  }
+
+  .project-image img {
+    width: 300px;
+    height: 366px;
+    object-fit: cover;
+  }
+  .project-content {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .floorplan-mainbox {
+    padding: 40px 15px;
+  }
+  .floorplan-subbox {
+    width: 100%;
+    gap: 25px;
+  }
+  .floorplan-container-box {
+    gap: 26px;
+  }
+
+  .floorplan-container {
+    gap: 20px;
+    height: auto;
+  }
+  .floorplan-img {
+    width: 300px;
+    height: 366px;
+  }
+  .floorplan-img img {
+    width: 300px;
+    height: 366px;
+    object-fit: cover;
+  }
+  .specification-mainbox {
+    padding: 40px 15px;
+  }
+  .specification-title {
+    font-size: 15px;
+  }
+  .specification-img {
+    width: 40px;
+    height: 40px;
+  }
+  .specification-subbox {
+    width: 100%;
+    gap: 25px;
+  }
+  .specification-head {
+    font-size: 20px;
+  }
+  .project-location-mainbox {
+    padding: 40px 15px;
+  }
+  .project-location-subbox {
+    width: 100%;
+    gap: 25px;
+  }
+  .location-head {
+    font-size: 20px;
+  }
+  .location-container-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+  .location-container-subbox {
+    width: 100%;
+    gap: 10px;
+    height: auto;
+  }
+  .location-address {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .location-content-box {
+    gap: 10px;
+  }
+  .location-content {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  #map {
+    width: 100%;
+    height: 250px;
+  }
+  .location-image {
+    width: 100%;
+    height: 250px;
+  }
+  .location-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (min-width: 376px) and (max-width: 426px) {
+  #heropage {
+    padding-bottom: 40px;
+  }
+  .breadcrumbs {
+    gap: 13px;
+    font-size: 18px;
+    padding: 0px 15px;
+  }
+  .tabs {
+    padding: 8px 0px;
+  }
+  .tabs button {
+    padding: 8px 8px;
+    font-size: 12px;
+    gap: 7px;
+    line-height: 20px;
+  }
+  .project-intro-mainbox {
+    padding: 40px 15px;
+    height: 600px;
+  }
+  .project-intro-subbox {
+    width: 100%;
+    gap: 23px;
+  }
+  .project-title {
+    font-size: 20px;
+  }
+  .project-image {
+    width: 350px;
+    height: 427px;
+  }
+
+  .project-image img {
+    width: 350px;
+    height: 427px;
+    object-fit: cover;
+  }
+  .project-content {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .floorplan-mainbox {
+    padding: 40px 15px;
+  }
+  .floorplan-subbox {
+    width: 100%;
+    gap: 25px;
+  }
+  .floorplan-container-box {
+    gap: 26px;
+  }
+
+  .floorplan-container {
+    gap: 20px;
+    height: auto;
+  }
+  .floorplan-img {
+    width: 350px;
+    height: 427px;
+  }
+  .floorplan-img img {
+    width: 350px;
+    height: 427px;
+    object-fit: cover;
+  }
+  .specification-mainbox {
+    padding: 40px 15px;
+  }
+  .specification-title {
+    font-size: 15px;
+  }
+  .specification-img {
+    width: 40px;
+    height: 40px;
+  }
+  .specification-subbox {
+    width: 100%;
+    gap: 25px;
+  }
+  .specification-head {
+    font-size: 20px;
+  }
+  .project-location-mainbox {
+    padding: 40px 15px;
+  }
+  .project-location-subbox {
+    width: 100%;
+    gap: 25px;
+  }
+  .location-head {
+    font-size: 20px;
+  }
+  .location-container-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+  .location-container-subbox {
+    width: 100%;
+    gap: 10px;
+    height: auto;
+  }
+  .location-address {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .location-content-box {
+    gap: 10px;
+  }
+  .location-content {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  #map {
+    width: 100%;
+    height: 250px;
+  }
+  .location-image {
+    width: 100%;
+    height: 250px;
+  }
+  .location-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (min-width: 426px) and (max-width: 769px) {
+  #heropage {
+    padding-bottom: 40px;
+  }
+  .breadcrumbs {
+    gap: 13px;
+    font-size: 22px;
+  }
+  .tabs {
+    padding: 8px 0px;
+  }
+  .tabs button {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+  .project-intro-mainbox {
+    padding: 40px 40px;
+    height: 680px;
+  }
+  .project-intro-subbox {
+    width: 100%;
+    gap: 25px;
+  }
+  .project-title {
+    font-size: 24px;
+  }
+  .project-image {
+    width: 400px;
+    height: 488px;
+  }
+
+  .project-image img {
+    width: 400px;
+    height: 488px;
+    object-fit: cover;
+  }
+  .project-content {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .project-location-mainbox {
+    padding: 40px 40px;
+  }
+  .project-location-subbox {
+    width: 75%;
+    gap: 35px;
+  }
+  .location-head {
+    font-size: 24px;
+  }
+  .location-container-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    width: 100%;
+  }
+  .location-container-subbox {
+    width: 100%;
+    gap: 10px;
+    height: auto;
+  }
+  .location-address {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .location-content-box {
+    gap: 10px;
+  }
+  .location-content {
+    font-size: 14px;
+    line-height: 27px;
+  }
+  .location-image {
+    width: 100%;
+    height: 300px;
+  }
+  #map {
+    width: 100%;
+    height: 250px;
+  }
+  .location-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .floorplan-mainbox {
+    padding: 40px 40px;
+  }
+  .floorplan-subbox {
+    width: 100%;
+    gap: 35px;
+  }
+  .floorplan-container-box {
+    gap: 26px;
+  }
+
+  .floorplan-container {
+    gap: 20px;
+    height: auto;
+  }
+  .floorplan-img {
+    width: 400px;
+    height: 488px;
+  }
+  .floorplan-img img {
+    width: 400px;
+    height: 488px;
+    object-fit: cover;
+  }
+
+  .specification-mainbox {
+    padding: 40px 40px;
+  }
+  .specification-subbox {
+    width: 100%;
+    gap: 40px;
+  }
+  .specification-head {
+    font-size: 24px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1025px) {
+  #heropage {
+    padding-bottom: 40px;
+  }
+  .breadcrumbs {
+    gap: 13px;
+    font-size: 22px;
+  }
+  .tabs {
+    padding: 10px 0px;
+  }
+  .tabs button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .project-intro-mainbox {
+    width: 100%;
+    padding: 50px 40px;
+    height: 850px;
+    justify-content: center;
+  }
+
+  .project-title {
+    font-size: 28px;
+  }
+  .project-image {
+    width: 500px;
+    height: 610px;
+  }
+
+  .project-image img {
+    width: 500px;
+    height: 610px;
+    object-fit: cover;
+  }
+  .project-content {
+    font-size: 16px;
+    line-height: 27px;
+  }
+  .project-location-mainbox {
+    padding: 50px 40px;
+  }
+  .project-location-subbox {
+    width: 65%;
+    gap: 40px;
+  }
+  .location-head {
+    font-size: 28px;
+  }
+  .location-container-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+  }
+  .location-container-subbox {
+    width: 100%;
+    gap: 10px;
+    height: auto;
+  }
+  .location-address {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .location-content-box {
+    gap: 10px;
+  }
+  .location-content {
+    font-size: 14px;
+    line-height: 27px;
+  }
+  .location-image {
+    width: 100%;
+    height: 350px;
+  }
+  .location-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #map {
+    width: 100%;
+    height: 300px;
+  }
+  .floorplan-mainbox {
+    padding: 50px 40px;
+  }
+
+  .floorplan-container-box {
+    gap: 26px;
+  }
+
+  .floorplan-container {
+    gap: 20px;
+    height: auto;
+  }
+  .floorplan-img {
+    width: 615px;
+    height: 750px;
+  }
+  .floorplan-img img {
+    width: 615px;
+    height: 750px;
+  }
+  .specification-mainbox {
+    padding: 50px 40px;
+  }
+  .specification-subbox {
+    width: 100%;
+    gap: 40px;
+  }
+  .specification-head {
+    font-size: 28px;
+  }
+}

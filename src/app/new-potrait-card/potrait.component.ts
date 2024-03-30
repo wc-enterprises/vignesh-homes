@@ -35,6 +35,11 @@ export class PotraitCardComponent {
   constructor(private router: Router) {}
 
   takeToProjectDetailsPage() {
+    if (this.projectId === '821c152f7b4238060f') {
+      this.router.navigate([`/projects/overview/gotety`]);
+      return;
+    }
+
     this.router.navigate([`/projects/overview/${this.projectId}`]);
   }
 }

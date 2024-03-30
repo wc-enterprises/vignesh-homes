@@ -74,7 +74,7 @@ body::-webkit-scrollbar {
 }
 .project-intro-mainbox {
   width: 100%;
-  height: 1200px;
+  height: 900px;
   display: flex;
   padding: 50px 0px;
   flex-direction: column;
@@ -92,15 +92,13 @@ body::-webkit-scrollbar {
   line-height: normal;
 }
 .project-image {
-  width: 950px;
-  height: 540px;
+  width: 819px;
+  height: 650px;
 }
 .project-image img {
-  width: 950px;
-  height: 950px;
+  width: 819px;
+  height: 650px;
   object-fit: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 .project-content {
   display: flex;
@@ -282,8 +280,8 @@ body::-webkit-scrollbar {
 }
 
 .floorplan-img img {
-  width: 615px;
-  height: 750px;
+  width: 819px;
+  height: 650px;
   object-fit: cover;
 }
 @media (max-width: 321px) {
@@ -306,7 +304,8 @@ body::-webkit-scrollbar {
   }
   .project-intro-mainbox {
     padding: 35px 15px;
-    height: 500px;
+    height: 350px;
+    gap: 20px;
   }
   .project-intro-subbox {
     width: 100%;
@@ -315,15 +314,17 @@ body::-webkit-scrollbar {
   .project-title {
     font-size: 18px;
   }
+
   .project-image {
-    width: 280px;
-    height: 341px;
+    width: 290px;
+    height: 230px;
   }
   .project-image img {
-    width: 280px;
-    height: 341px;
+    width: 290px;
+    height: 230px;
     object-fit: cover;
   }
+
   .project-content {
     font-size: 14px;
     line-height: 24px;
@@ -344,12 +345,12 @@ body::-webkit-scrollbar {
     height: auto;
   }
   .floorplan-img {
-    width: 280px;
-    height: 341px;
+    width: 290px;
+    height: 230px;
   }
   .floorplan-img img {
-    width: 280px;
-    height: 341px;
+    width: 290px;
+    height: 230px;
     object-fit: cover;
   }
   .specification-mainbox {
@@ -435,7 +436,8 @@ body::-webkit-scrollbar {
   }
   .project-intro-mainbox {
     padding: 40px 15px;
-    height: 520px;
+    height: 370px;
+    gap: 23px;
   }
   .project-intro-subbox {
     width: 100%;
@@ -445,13 +447,13 @@ body::-webkit-scrollbar {
     font-size: 20px;
   }
   .project-image {
-    width: 300px;
-    height: 366px;
+    width: 290px;
+    height: 230px;
   }
 
   .project-image img {
-    width: 300px;
-    height: 366px;
+    width: 290px;
+    height: 230px;
     object-fit: cover;
   }
   .project-content {
@@ -474,12 +476,12 @@ body::-webkit-scrollbar {
     height: auto;
   }
   .floorplan-img {
-    width: 300px;
-    height: 366px;
+    width: 290px;
+    height: 230px;
   }
   .floorplan-img img {
-    width: 300px;
-    height: 366px;
+    width: 290px;
+    height: 230px;
     object-fit: cover;
   }
   .specification-mainbox {
@@ -565,7 +567,8 @@ body::-webkit-scrollbar {
   }
   .project-intro-mainbox {
     padding: 40px 15px;
-    height: 600px;
+    height: 380px;
+    gap: 20px;
   }
   .project-intro-subbox {
     width: 100%;
@@ -575,13 +578,13 @@ body::-webkit-scrollbar {
     font-size: 20px;
   }
   .project-image {
-    width: 350px;
-    height: 427px;
+    width: 315px;
+    height: 250px;
   }
 
   .project-image img {
-    width: 350px;
-    height: 427px;
+    width: 315px;
+    height: 250px;
     object-fit: cover;
   }
   .project-content {
@@ -604,12 +607,12 @@ body::-webkit-scrollbar {
     height: auto;
   }
   .floorplan-img {
-    width: 350px;
-    height: 427px;
+    width: 315px;
+    height: 250px;
   }
   .floorplan-img img {
-    width: 350px;
-    height: 427px;
+    width: 315px;
+    height: 250px;
     object-fit: cover;
   }
   .specification-mainbox {
@@ -692,7 +695,7 @@ body::-webkit-scrollbar {
   }
   .project-intro-mainbox {
     padding: 40px 40px;
-    height: 680px;
+    height: 500px;
   }
   .project-intro-subbox {
     width: 100%;
@@ -703,12 +706,12 @@ body::-webkit-scrollbar {
   }
   .project-image {
     width: 400px;
-    height: 488px;
+    height: 317px;
   }
 
   .project-image img {
     width: 400px;
-    height: 488px;
+    height: 317px;
     object-fit: cover;
   }
   .project-content {
@@ -776,12 +779,12 @@ body::-webkit-scrollbar {
     height: auto;
   }
   .floorplan-img {
-    width: 400px;
-    height: 488px;
+    width: 370px;
+    height: 293px;
   }
   .floorplan-img img {
-    width: 400px;
-    height: 488px;
+    width: 370px;
+    height: 293px;
     object-fit: cover;
   }
 
@@ -814,7 +817,7 @@ body::-webkit-scrollbar {
   .project-intro-mainbox {
     width: 100%;
     padding: 50px 40px;
-    height: 850px;
+    height: 800px;
     justify-content: center;
   }
 
@@ -822,13 +825,13 @@ body::-webkit-scrollbar {
     font-size: 28px;
   }
   .project-image {
-    width: 500px;
-    height: 610px;
+    width: 700px;
+    height: 555px;
   }
 
   .project-image img {
-    width: 500px;
-    height: 610px;
+    width: 700px;
+    height: 555px;
     object-fit: cover;
   }
   .project-content {
@@ -893,12 +896,12 @@ body::-webkit-scrollbar {
     height: auto;
   }
   .floorplan-img {
-    width: 615px;
-    height: 750px;
+    width: 700px;
+    height: 555px;
   }
   .floorplan-img img {
-    width: 615px;
-    height: 750px;
+    width: 700px;
+    height: 555px;
   }
   .specification-mainbox {
     padding: 50px 40px;

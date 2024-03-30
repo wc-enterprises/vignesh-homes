@@ -7,11 +7,12 @@ import { HomeComponent } from './home/home.component';
 import { JointventureComponent } from './jointventure/jointventure.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProjectcardComponent } from './projectcard/projectcard.component';
-import { ProjectoverviewComponent } from './projectoverview/projectoverview.component';
+import { ProjectoverviewComponent } from './projectoverview-ashiyana/projectoverview.component';
 import { ProjectsecComponent } from './projectsec/projectsec.component';
 import { TestimonialcardComponent } from './testimonialcard/testimonialcard.component';
 import { ComingSoonCardComponent } from './coming-soon-card/coming-soon-card.component';
 import { CompletedCardComponent } from './completed-card/completed-card.component';
+import { GotetyDetailsComponent } from './projectoverview-gotety/projectoverview.component';
 export const routes: Routes = [
   { path: 'navbar', component: NavbarComponent },
   { path: 'footer', component: FooterComponent },
@@ -22,6 +23,7 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'comingsooncard', component: ComingSoonCardComponent },
   { path: 'overview/:id', component: ProjectoverviewComponent },
+  { path: 'projects/overview/gotety', component: GotetyDetailsComponent },
   { path: 'projects/overview/:id', component: ProjectoverviewComponent },
   { path: 'projectsec', component: ProjectsecComponent },
   // Added the projects route below to replace the above projectsec route
