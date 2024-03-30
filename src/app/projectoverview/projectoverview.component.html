@@ -46,15 +46,10 @@
     </div>
     <div *ngIf="project">
       <div class="project-intro-mainbox">
-        <div class="project-intro-subbox">
-          <span class="project-title"> {{ project.title }}</span>
-          <span class="project-image">
-            <img [src]="project.overview[0].introduction.imageSrc" />
-          </span>
-          <span class="project-content"
-            >{{ project.overview[0].introduction.content }}
-          </span>
-        </div>
+        <span class="project-title"> {{ project.title }}</span>
+        <span class="project-image">
+          <img [src]="project.overview[0].introduction.imageSrc" />
+        </span>
       </div>
 
       <div class="project-location-mainbox" #locationSection>
@@ -90,18 +85,16 @@
       </div>
 
       <div class="floorplan-mainbox" #floorplanSection>
-        <div class="floorplan-subbox">
-          <span class="project-title"> FLOOR PLAN</span>
+        <span class="project-title"> FLOOR PLAN</span>
 
-          <div class="floorplan-container-box">
-            <div class="floorplan-container" #floorplanContainer>
-              <span
-                class="floorplan-img"
-                *ngFor="let plan of project.overview[0].floorPlan.plans"
-              >
-                <img [src]="plan.imgSrc" />
-              </span>
-            </div>
+        <div class="floorplan-container-box">
+          <div class="floorplan-container" #floorplanContainer>
+            <span
+              class="floorplan-img"
+              *ngFor="let plan of project.overview[0].floorPlan.plans"
+            >
+              <img [src]="plan.imgSrc" />
+            </span>
           </div>
         </div>
       </div>

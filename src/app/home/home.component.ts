@@ -24,7 +24,6 @@ export class HomeComponent {
   constructor() {}
   @ViewChild('heroHeadline', { static: true }) heroHeadline!: ElementRef;
   @ViewChild('heroSubHeadline', { static: true }) heroSubHeadline!: ElementRef;
-  @ViewChild('heroDescription', { static: true }) heroDescription!: ElementRef;
 
   animateHeroText() {
     const tl = gsap.timeline({ defaults: { duration: 1 } });
@@ -40,12 +39,6 @@ export class HomeComponent {
       y: 50,
       duration: 1,
       ease: 'power3.inOut',
-    });
-    tl.from(this.heroDescription.nativeElement, {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: 'power4.out',
     });
     return tl;
   }

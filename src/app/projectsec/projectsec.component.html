@@ -53,6 +53,7 @@
         <div class="project-card-sec">
           <potrait-card
             *ngFor="let completedProject of forSaleProjects"
+            [projectId]="completedProject.id"
             [projectImage]="completedProject.projectImage"
             [saleTag]="completedProject.saleTag"
             [title]="completedProject.title"

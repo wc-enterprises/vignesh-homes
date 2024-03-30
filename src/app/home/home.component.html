@@ -14,12 +14,6 @@
         scrollColorChange
       ></app-navbar>
       <div class="hero-container">
-        <!-- <div class="hero-head">
-          <span class="hero-cont" #heroHeadline>VIGNESH HOMES</span>
-          <span class="hero-cont1" #heroSubHeadline
-            >Builders & Contractors</span
-          >
-        </div> -->
         <div class="hero-head">
           <span class="hero-cont" #heroHeadline> HOMES THAT FEEL HOME </span>
           <span class="hero-subhead" #heroSubHeadline>
@@ -42,6 +36,7 @@
         <div class="project-show-sec">
           <potrait-card
             *ngFor="let completedProject of completedProjects"
+            [projectId]="completedProject.id"
             [projectImage]="completedProject.projectImage"
             [saleTag]="completedProject.saleTag"
             [title]="completedProject.title"

@@ -109,7 +109,7 @@ export const comingSoonProjects: ComingSoonProject[] = [
 
 export const completedProjects: CompletedProject[] = [
   {
-    id: '00001',
+    id: '8181e1fb0c7708080f',
     projectImage: '/assets/ashiyana/ashiyana-flat-image.jpg',
     saleTag: '/assets/forsale.svg',
     title: 'Ashiyana',
@@ -144,9 +144,12 @@ export const completedProjects: CompletedProject[] = [
         floorPlan: {
           title: 'FLOOR PLAN',
           plans: [
-            { imgSrc: '/assets/ashiyana/floor-plan1.png' },
-            { imgSrc: '/assets/ashiyana/ground-floor-plan.png' },
-            { imgSrc: '/assets/ashiyana/first-floor-plan.png' },
+            { imgSrc: '/assets/ashiyana/ground-floor-plan.jpg' },
+            { imgSrc: '/assets/ashiyana/first-second-floor-plan.jpg' },
+            { imgSrc: '/assets/ashiyana/third-floor-plan.jpg' },
+            { imgSrc: '/assets/ashiyana/first-floor-plan.jpg' },
+            { imgSrc: '/assets/ashiyana/second-floor-plan.jpg' },
+            { imgSrc: '/assets/ashiyana/third-floor-separate.jpg' },
           ],
         },
         specification: [
@@ -225,7 +228,7 @@ export const completedProjects: CompletedProject[] = [
     ],
   },
   {
-    id: '00002',
+    id: '821c152f7b4238060f',
     projectImage: '/assets/gotety/project-image.jpg',
     saleTag: '/assets/forsale.svg',
     title: 'GOTETY Residency',
@@ -261,15 +264,9 @@ export const completedProjects: CompletedProject[] = [
         floorPlan: {
           title: 'FLOOR PLAN',
           plans: [
-            { imgSrc: '/assets/floor-plan.svg' },
-            { imgSrc: '/assets/floor-plan1.svg' },
-            { imgSrc: '/assets/floor-plan.svg' },
-            { imgSrc: '/assets/floor-plan1.svg' },
-            { imgSrc: '/assets/floor-plan.svg' },
-            { imgSrc: '/assets/floor-plan1.svg' },
-            { imgSrc: '/assets/floor-plan.svg' },
-            { imgSrc: '/assets/floor-plan1.svg' },
-            { imgSrc: '/assets/floor-plan.svg' },
+            { imgSrc: '/assets/gotety/ground-floor-plan.jpg' },
+            { imgSrc: '/assets/gotety/first-floor-plan.jpg' },
+            { imgSrc: '/assets/gotety/second-third-floor-plan.jpg' },
           ],
         },
         specification: [

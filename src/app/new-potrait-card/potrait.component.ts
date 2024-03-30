@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 export interface ComingSoonProject {
   id: string;
   projectImage: string;
@@ -18,6 +19,7 @@ export interface ComingSoonProject {
   styleUrls: ['./potrait.component.css'],
 })
 export class PotraitCardComponent {
+  @Input() projectId: string = '';
   @Input() projectImage: string = '';
   @Input() saleTag: string = '';
   @Input() title: string = '';
@@ -29,4 +31,10 @@ export class PotraitCardComponent {
   @Input() totalUnit: string = '';
   @Input() projectHighlight: string = '';
   @Input() location: string = '';
+
+  constructor(private router: Router) {}
+
+  takeToProjectDetailsPage() {
+    this.router.navigate([`/projects/overview/${this.projectId}`]);
+  }
 }

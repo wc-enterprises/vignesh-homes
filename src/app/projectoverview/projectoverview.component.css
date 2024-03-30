@@ -47,7 +47,7 @@ body::-webkit-scrollbar {
   align-items: center;
   gap: 25px;
   align-self: stretch;
-  background: #d6e2ea;
+  background: #f7f7f7;
 }
 .tabs button {
   display: flex;
@@ -65,33 +65,26 @@ body::-webkit-scrollbar {
   cursor: pointer;
 }
 .tabs button.active {
-  background-color: #fff; /* Set your desired background color */
+  background: #d6e2ea; /* Set your desired background color */
   /* Additional styles for the active button */
 }
 .tabs button:hover {
-  background: #fff;
+  background: #d6e2ea;
   transition: 0.5s ease-in-out;
 }
 .project-intro-mainbox {
+  width: 100%;
+  height: 1200px;
   display: flex;
   padding: 50px 0px;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 70px;
   align-self: stretch;
-  background: #f7f7f7;
+  background: #d6e2ea;
+  box-sizing: border-box;
 }
-.project-intro-subbox {
-  display: flex;
-  width: 80%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  color: #333;
-  font-family: Montserrat;
-}
+
 .project-title {
   text-align: center;
   font-size: 36px;
@@ -128,7 +121,7 @@ body::-webkit-scrollbar {
   align-items: center;
   gap: 50px;
   align-self: stretch;
-  background: #d6e2ea;
+  background: #f7f7f7;
 }
 .project-location-subbox {
   display: flex;
@@ -265,25 +258,14 @@ body::-webkit-scrollbar {
   align-items: center;
   gap: 70px;
   align-self: stretch;
-  background: #f7f7f7;
+  background: #d6e2ea;
 }
 
-.floorplan-subbox {
-  display: flex;
-  width: 80%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  color: #333;
-  font-family: Montserrat;
-}
 .floorplan-container-box {
   display: flex;
   width: 100%;
   align-items: flex-start;
   gap: 26px;
-  position: relative;
 }
 
 .floorplan-container {
@@ -298,9 +280,10 @@ body::-webkit-scrollbar {
 .floorplan-container::-webkit-scrollbar {
   display: none;
 }
+
 .floorplan-img img {
-  width: 370px;
-  height: 295px;
+  width: 615px;
+  height: 750px;
   object-fit: cover;
 }
 @media (max-width: 321px) {
@@ -323,6 +306,7 @@ body::-webkit-scrollbar {
   }
   .project-intro-mainbox {
     padding: 35px 15px;
+    height: 500px;
   }
   .project-intro-subbox {
     width: 100%;
@@ -332,8 +316,13 @@ body::-webkit-scrollbar {
     font-size: 18px;
   }
   .project-image {
-    width: 100%;
-    height: 170px;
+    width: 280px;
+    height: 341px;
+  }
+  .project-image img {
+    width: 280px;
+    height: 341px;
+    object-fit: cover;
   }
   .project-content {
     font-size: 14px;
@@ -355,12 +344,13 @@ body::-webkit-scrollbar {
     height: auto;
   }
   .floorplan-img {
-    width: 300px;
-    height: 230px;
+    width: 280px;
+    height: 341px;
   }
   .floorplan-img img {
-    width: 300px;
-    height: 230px;
+    width: 280px;
+    height: 341px;
+    object-fit: cover;
   }
   .specification-mainbox {
     padding: 35px 15px;
@@ -445,6 +435,7 @@ body::-webkit-scrollbar {
   }
   .project-intro-mainbox {
     padding: 40px 15px;
+    height: 520px;
   }
   .project-intro-subbox {
     width: 100%;
@@ -454,8 +445,14 @@ body::-webkit-scrollbar {
     font-size: 20px;
   }
   .project-image {
-    width: 100%;
-    height: 192px;
+    width: 300px;
+    height: 366px;
+  }
+
+  .project-image img {
+    width: 300px;
+    height: 366px;
+    object-fit: cover;
   }
   .project-content {
     font-size: 14px;
@@ -478,11 +475,12 @@ body::-webkit-scrollbar {
   }
   .floorplan-img {
     width: 300px;
-    height: 230px;
+    height: 366px;
   }
   .floorplan-img img {
     width: 300px;
-    height: 230px;
+    height: 366px;
+    object-fit: cover;
   }
   .specification-mainbox {
     padding: 40px 15px;
@@ -567,6 +565,7 @@ body::-webkit-scrollbar {
   }
   .project-intro-mainbox {
     padding: 40px 15px;
+    height: 600px;
   }
   .project-intro-subbox {
     width: 100%;
@@ -576,8 +575,14 @@ body::-webkit-scrollbar {
     font-size: 20px;
   }
   .project-image {
-    width: 100%;
-    height: 218px;
+    width: 350px;
+    height: 427px;
+  }
+
+  .project-image img {
+    width: 350px;
+    height: 427px;
+    object-fit: cover;
   }
   .project-content {
     font-size: 14px;
@@ -599,12 +604,13 @@ body::-webkit-scrollbar {
     height: auto;
   }
   .floorplan-img {
-    width: 300px;
-    height: 230px;
+    width: 350px;
+    height: 427px;
   }
   .floorplan-img img {
-    width: 300px;
-    height: 230px;
+    width: 350px;
+    height: 427px;
+    object-fit: cover;
   }
   .specification-mainbox {
     padding: 40px 15px;
@@ -686,6 +692,7 @@ body::-webkit-scrollbar {
   }
   .project-intro-mainbox {
     padding: 40px 40px;
+    height: 680px;
   }
   .project-intro-subbox {
     width: 100%;
@@ -695,8 +702,14 @@ body::-webkit-scrollbar {
     font-size: 24px;
   }
   .project-image {
-    width: 100%;
-    height: 400px;
+    width: 400px;
+    height: 488px;
+  }
+
+  .project-image img {
+    width: 400px;
+    height: 488px;
+    object-fit: cover;
   }
   .project-content {
     font-size: 14px;
@@ -763,13 +776,15 @@ body::-webkit-scrollbar {
     height: auto;
   }
   .floorplan-img {
-    width: 300px;
-    height: 230px;
+    width: 400px;
+    height: 488px;
   }
   .floorplan-img img {
-    width: 300px;
-    height: 230px;
+    width: 400px;
+    height: 488px;
+    object-fit: cover;
   }
+
   .specification-mainbox {
     padding: 40px 40px;
   }
@@ -797,18 +812,24 @@ body::-webkit-scrollbar {
     font-size: 16px;
   }
   .project-intro-mainbox {
-    padding: 50px 40px;
-  }
-  .project-intro-subbox {
     width: 100%;
-    gap: 25px;
+    padding: 50px 40px;
+    height: 850px;
+    justify-content: center;
   }
+
   .project-title {
     font-size: 28px;
   }
   .project-image {
-    width: 700px;
-    height: 400px;
+    width: 500px;
+    height: 610px;
+  }
+
+  .project-image img {
+    width: 500px;
+    height: 610px;
+    object-fit: cover;
   }
   .project-content {
     font-size: 16px;
@@ -862,10 +883,7 @@ body::-webkit-scrollbar {
   .floorplan-mainbox {
     padding: 50px 40px;
   }
-  .floorplan-subbox {
-    width: 100%;
-    gap: 40px;
-  }
+
   .floorplan-container-box {
     gap: 26px;
   }
@@ -875,12 +893,12 @@ body::-webkit-scrollbar {
     height: auto;
   }
   .floorplan-img {
-    width: 350px;
-    height: 270px;
+    width: 615px;
+    height: 750px;
   }
   .floorplan-img img {
-    width: 350px;
-    height: 270px;
+    width: 615px;
+    height: 750px;
   }
   .specification-mainbox {
     padding: 50px 40px;
